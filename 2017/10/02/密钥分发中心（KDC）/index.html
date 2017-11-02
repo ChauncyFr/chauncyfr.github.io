@@ -3,19 +3,19 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Happy Birthday To You, My Girlfriend -- 丹岑</title>
+  <title>Hello World | Happy Birthday To You, My Girlfriend -- 丹岑</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="密钥分发中心（KDC） 密钥分发中心是一种运行在物理安全服务器上的服务，KDC维护着领域中所有安全主体账户信息数据库。 与每一个安全主体的其他信息一起，KDC存储了仅安全主体和KDC知道的加密密钥，这个密钥也称长效密钥（主密钥），用于在安全主体和KDC之间进行交换。 KDC是作为发起方和接收方共同信任的第三方，因为他维护者一个存储着该域中所有账户的账户数据库，也就是说，他知道属于每个账户的名称和派">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Happy Birthday To You, My Girlfriend -- 丹岑">
+<meta property="og:title" content="Hello World">
 <meta property="og:url" content="http://yoursite.com/2017/10/02/密钥分发中心（KDC）/index.html">
 <meta property="og:site_name" content="Happy Birthday To You, My Girlfriend -- 丹岑">
 <meta property="og:description" content="密钥分发中心（KDC） 密钥分发中心是一种运行在物理安全服务器上的服务，KDC维护着领域中所有安全主体账户信息数据库。 与每一个安全主体的其他信息一起，KDC存储了仅安全主体和KDC知道的加密密钥，这个密钥也称长效密钥（主密钥），用于在安全主体和KDC之间进行交换。 KDC是作为发起方和接收方共同信任的第三方，因为他维护者一个存储着该域中所有账户的账户数据库，也就是说，他知道属于每个账户的名称和派">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fk4ams2bxcj30tw0buab9.jpg">
-<meta property="og:updated_time" content="2017-10-02T14:58:48.015Z">
+<meta property="og:updated_time" content="2017-11-02T17:16:10.001Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Happy Birthday To You, My Girlfriend -- 丹岑">
+<meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="密钥分发中心（KDC） 密钥分发中心是一种运行在物理安全服务器上的服务，KDC维护着领域中所有安全主体账户信息数据库。 与每一个安全主体的其他信息一起，KDC存储了仅安全主体和KDC知道的加密密钥，这个密钥也称长效密钥（主密钥），用于在安全主体和KDC之间进行交换。 KDC是作为发起方和接收方共同信任的第三方，因为他维护者一个存储着该域中所有账户的账户数据库，也就是说，他知道属于每个账户的名称和派">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tKfTcly1fk4ams2bxcj30tw0buab9.jpg">
   
@@ -80,14 +80,24 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Hello World
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="密钥分发中心（KDC）"><a href="#密钥分发中心（KDC）" class="headerlink" title="密钥分发中心（KDC）"></a>密钥分发中心（KDC）</h3><blockquote>
+        <h2 id="密钥分发中心（KDC）"><a href="#密钥分发中心（KDC）" class="headerlink" title="密钥分发中心（KDC）"></a>密钥分发中心（KDC）</h2><blockquote>
 <p>密钥分发中心是一种运行在物理安全服务器上的服务，KDC维护着领域中所有安全主体账户信息数据库。</p>
 <p>与每一个安全主体的其他信息一起，KDC存储了仅安全主体和KDC知道的加密密钥，这个密钥也称长效密钥（主密钥），用于在安全主体和KDC之间进行交换。</p>
 <p>KDC是作为发起方和接收方共同信任的第三方，因为他维护者一个存储着该域中所有账户的账户数据库，也就是说，他知道属于每个账户的名称和派生于该账户密码的Master Key（主密钥）。而用于Alice和Bob相互认证的会话密钥就是由KDC分发的，下面详细讲解KDC分发会话密钥的过程。</p>
 </blockquote>
-<h4 id="分发会话密钥过程"><a href="#分发会话密钥过程" class="headerlink" title="分发会话密钥过程"></a>分发会话密钥过程</h4><p>1、首先客户端向KDC发送一个会话密钥申请。这个申请的内容可以简单概括为”我是某客户端，我需要个Session Key用于与某服务器通话“。</p>
+<h3 id="分发会话密钥过程"><a href="#分发会话密钥过程" class="headerlink" title="分发会话密钥过程"></a>分发会话密钥过程</h3><p>1、首先客户端向KDC发送一个会话密钥申请。这个申请的内容可以简单概括为”我是某客户端，我需要个Session Key用于与某服务器通话“。</p>
 <p>2、KDC在接收到这个请求的时候，生成一个会话密钥。为了保证这个会话密钥仅仅限于发送请求的客户端和它希望访问的服务器知道，KDC会为这个会话密钥生成两个副本，分别被客户端和服务器使用。然后从账户数据库中提取客户端和服务器的主密钥分别对这两个副本进行对称加密。对于服务器，与会话密钥一起被加密的还包含关于客户端的一些信息，以便对发起连接请求的客户端进行身份认证。</p>
 <pre><code>注意：KDC不是直接把这两个会话密钥副本分发客户端和服务器的，因为如果这样做，对于服务器来说会
 出现下面两个问题。由于一个服务器会面对若干不同的客户端，而每个客户端都具有一个不同的Session
@@ -109,7 +119,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/10/02/密钥分发中心（KDC）/" data-id="cj9iqcjyf0002nstolkmfk6f4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/10/02/密钥分发中心（KDC）/" data-id="cj9iqg8tw0001ohtov9humg4w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -170,7 +180,7 @@
           </li>
         
           <li>
-            <a href="/2017/10/02/密钥分发中心（KDC）/">(no title)</a>
+            <a href="/2017/10/02/密钥分发中心（KDC）/">Hello World</a>
           </li>
         
       </ul>
