@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>/2017/11/02/%E5%AF%86%E9%92%A5%E5%88%86%E5%8F%91%E4%B8%AD%E5%BF%83%EF%BC%88KDC%EF%BC%89/</url>
+      <content type="html"><![CDATA[<h2 id="密钥分发中心（KDC）"><a href="#密钥分发中心（KDC）" class="headerlink" title="密钥分发中心（KDC）"></a>密钥分发中心（KDC）</h2><blockquote>
+<p>密钥分发中心是一种运行在物理安全服务器上的服务，KDC维护着领域中所有安全主体账户信息数据库。</p>
+<p>与每一个安全主体的其他信息一起，KDC存储了仅安全主体和KDC知道的加密密钥，这个密钥也称长效密钥（主密钥），用于在安全主体和KDC之间进行交换。</p>
+<p>KDC是作为发起方和接收方共同信任的第三方，因为他维护者一个存储着该域中所有账户的账户数据库，也就是说，他知道属于每个账户的名称和派生于该账户密码的Master Key（主密钥）。而用于Alice和Bob相互认证的会话密钥就是由KDC分发的，下面详细讲解KDC分发会话密钥的过程。</p>
+</blockquote>
+<h3 id="分发会话密钥过程"><a href="#分发会话密钥过程" class="headerlink" title="分发会话密钥过程"></a>分发会话密钥过程</h3><p>1、首先客户端向KDC发送一个会话密钥申请。这个申请的内容可以简单概括为”我是某客户端，我需要个Session Key用于与某服务器通话“。</p>
+<p>2、KDC在接收到这个请求的时候，生成一个会话密钥。为了保证这个会话密钥仅仅限于发送请求的客户端和它希望访问的服务器知道，KDC会为这个会话密钥生成两个副本，分别被客户端和服务器使用。然后从账户数据库中提取客户端和服务器的主密钥分别对这两个副本进行对称加密。对于服务器，与会话密钥一起被加密的还包含关于客户端的一些信息，以便对发起连接请求的客户端进行身份认证。</p>
+<pre><code>注意：KDC不是直接把这两个会话密钥副本分发客户端和服务器的，因为如果这样做，对于服务器来说会
+出现下面两个问题。由于一个服务器会面对若干不同的客户端，而每个客户端都具有一个不同的Session
+ Key。那么服务器就会为所有的客户端维护这样一个会话密钥的列表，这样对服务器来说工作量就非常
+ 大了。由于网络传输的不确定性，可能会出现这样一种情况：客户端很快获得会话密钥用于副本，并将
+ 这个会话密钥作为凭据随同访问请求发送到服务器，但是用于服务器的会话密钥却还没有收到，并且很
+ 有可能这个会话密钥永远也到不了服务器端，这样客户端将永远得不到认证。为了解决这个问题，
+ Kerberos将这两个被加密的副本一同发送给客户端，属于服务器的那份由客户端发送给服务器。因为
+ 这两个会话密钥副本分别是由客户端和服务器端的主密钥加密的，所以不用担心安全问题。
+</code></pre><p>3、通过上面的过程，客户端实际上获得了两组信息：一个是通过自己主密钥加密的会话密钥；另一个是被Server的主密钥加密的数据包，包含会话密钥和关于自己的一些确认信息。在这个基础上，我们再来看看服务器是如何对客户端进行认证的。</p>
+<p>4、客户端通过用自己的主密钥对KDC加密的会话密钥进行解密从而获得会话密钥，随后创建认证符（Authenticator，包括客户端信息和时间戳（Timestamp）），并用会话密钥对其加密。最后连同从KDC获得的、被服务器的主密钥加密过的数据包（客户端信息和会话密钥）一并发送到服务器端。我们把通过服务器的主密钥加密过的数据包称为服务票证（Session Ticket）。</p>
+<p>5、当服务器接收到这两组数据后，先使用它自己的主密钥对服务票证进行解密，从而获得会话密钥。随后使用该会话密钥解密认证符，通过比较由客户端发送来的认证符中的客户端信息（Client Info）和服务票证中的客户端信息实现对客户端身份的验证。</p>
+<p>双方进行了身份认证的同时也获得了会话密钥，那么双方可以进行会话了。</p>
+<p>流程图如下：</p>
+<p>客户端简称为Alice，服务端简称为Bob</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fk4ams2bxcj30tw0buab9.jpg" alt=""></p>
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><a href="http://book.51cto.com/art/200907/140554.htm" target="_blank" rel="external">参考文章</a></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[test]]></title>
+      <url>/2017/11/02/test/</url>
+      <content type="html"><![CDATA[<p>你好，欢迎来到我的个人技术博客</p>
+<p>hhhhh</p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[Hello World]]></title>
+      <url>/2017/11/02/hello-world/</url>
+      <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+      
+        
+    </entry>
+    
+  
+  
+</search>
