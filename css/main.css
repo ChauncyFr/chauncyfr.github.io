@@ -1635,9 +1635,9 @@ pre .javascript .function {
   cursor: pointer;
   border: 0;
   outline: 0;
-  border-radius: 100%;
   padding: 0;
   margin: 0;
+  border-radius: 5px;
   letter-spacing: normal;
   text-transform: none;
   text-indent: 0px;
@@ -1650,7 +1650,7 @@ pre .javascript .function {
   border-radius: 5px;
   color: #fff;
   font-weight: 400;
-  font-style: normal;
+  font-style: bold;
   font-variant: normal;
   font-stretch: normal;
   font-size: 18px;
@@ -1671,16 +1671,6 @@ pre .javascript .function {
   max-width: 100%;
   display: inline-block;
   margin: 0.8em 2em 0 2em;
-}
-#wechat:hover p {
-  animation: roll 0.1s infinite linear;
-  -webkit-animation: roll 0.1s infinite linear;
-  -moz-animation: roll 0.1s infinite linear;
-}
-#alipay:hover p {
-  animation: roll 0.1s infinite linear;
-  -webkit-animation: roll 0.1s infinite linear;
-  -moz-animation: roll 0.1s infinite linear;
 }
 #bitcoin:hover p {
   animation: roll 0.1s infinite linear;
@@ -1928,7 +1918,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #819f22;
+  background: #82ff9f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3035,9 +3025,6 @@ pre .javascript .function {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
 }
 .links-of-author-item a {
   display: block;
@@ -3086,9 +3073,6 @@ pre .javascript .function {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  transition-duration: 0.2s;
-  transition-timing-function: ease-in-out;
-  transition-delay: 0s;
 }
 @media (max-width: 767px) {
   .post-body {
