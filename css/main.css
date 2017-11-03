@@ -2020,7 +2020,7 @@ img:hover {
 .links-of-author a {
   display: inline-block;
   vertical-align: middle;
-  margin-right: 10px;
+  margin-right: 5px;
   margin-bottom: 10px;
   border-bottom-color: #555;
   font-size: 13px;
@@ -2033,7 +2033,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #e3ff2e;
+  background: #f6303d;
 }
 .links-of-blogroll {
   font-size: 13px;
