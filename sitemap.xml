@@ -2,6 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/child/about/index.html</loc>
+    
+    <lastmod>2017-11-07T14:29:30.524Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/child/tags/index.html</loc>
+    
+    <lastmod>2017-11-07T14:29:24.463Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/child/categories/index.html</loc>
+    
+    <lastmod>2017-11-07T14:28:48.759Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/child/2017/11/07/hello-world/</loc>
     
     <lastmod>2017-11-07T14:24:43.511Z</lastmod>
@@ -26,27 +47,6 @@
     <loc>http://yoursite.com/child/2017/11/02/iTerm%202%20%E5%AE%9E%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
     
     <lastmod>2017-11-07T14:15:24.039Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/child/about/index.html</loc>
-    
-    <lastmod>2017-11-03T13:45:39.550Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/child/categories/index.html</loc>
-    
-    <lastmod>2017-11-03T13:40:32.352Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/child/tags/index.html</loc>
-    
-    <lastmod>2017-11-03T09:00:03.316Z</lastmod>
     
   </url>
   
