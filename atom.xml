@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/child/"/>
-  <updated>2017-11-07T14:05:59.707Z</updated>
+  <updated>2017-11-07T14:07:11.122Z</updated>
   <id>http://yoursite.com/child/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://yoursite.com/child/2017/11/02/iTerm%202%20%E5%AE%9E%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>http://yoursite.com/child/2017/11/02/iTerm 2 实用快捷键/</id>
     <published>2017-11-02T15:47:44.000Z</published>
-    <updated>2017-11-07T14:05:59.707Z</updated>
+    <updated>2017-11-07T14:07:11.122Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fl9vg5t5njj31hc0zktj4.jpg" alt=""></p><ul><li>⌘ + Click：可以打开文件，文件夹和链接</li><li>⌘ + n：新建窗口</li><li>⌘ + t：新建标签页</li><li>⌘ + w：关闭当前页</li><li>⌘ + 数字 &amp; ⌘ + 方向键：切换标签页</li><li>⌥⌘ + 数字：切换窗口</li><li>⌘ + enter：切换全屏</li><li>⌘ + d：左右分屏ß</li><li>⇧⌘ + d：上下分屏</li><li>⌘ + ;：自动补全历史记录</li><li>⇧⌘ + h：自动补全剪贴板历史</li><li>⌥⌘ + e：查找所有来定位某个标签页</li><li>⌘ + r &amp; ⌃ + l：清屏</li><li>⌘ + /：显示光标位置</li><li>⌥⌘ + b：历史回放</li><li>⌘ + f：查找，然后用 tab 和 ⇧ + tab 可以向右和向左补全，补全之后的内容会被自动复制， 还可以用 ⌥ + enter 将查找结果输入终端</li><li>选中即复制，鼠标中键粘贴</li></ul><p>很多快捷键都是通用的，和 Emace 等都是一样的</p><ul><li>⌃ + u：清空当前行</li><li>⌃ + a：移动到行首</li><li>⌃ + e：移动到行尾</li><li>⌃ + f：向前移动</li><li>⌃ + b：向后移动</li><li>⌃ + p：上一条命令</li><li>⌃ + n：下一条命令</li><li>⌃ + r：搜索历史命令</li><li>⌃ + y：召回最近用命令删除的文字</li><li>⌃ + h：删除光标之前的字符</li><li>⌃ + d：删除光标所指的字符</li><li>⌃ + w：删除光标之前的单词</li><li>⌃ + k：删除从光标到行尾的内容</li><li>⌃ + t：交换光标和之前的字符</li></ul>]]></content>
     
