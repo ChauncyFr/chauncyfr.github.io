@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/child/"/>
-  <updated>2017-11-07T14:09:08.101Z</updated>
+  <updated>2017-11-07T14:15:24.039Z</updated>
   <id>http://yoursite.com/child/</id>
   
   <author>
@@ -21,13 +21,13 @@
     <link href="http://yoursite.com/child/2017/11/02/iTerm%202%20%E5%AE%9E%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>http://yoursite.com/child/2017/11/02/iTerm 2 实用快捷键/</id>
     <published>2017-11-02T15:47:44.000Z</published>
-    <updated>2017-11-07T14:09:08.101Z</updated>
+    <updated>2017-11-07T14:15:24.039Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fl9vg5t5njj31hc0zktj4.jpg" alt=""></p> <a id="more"></a><ul><li>⌘ + Click：可以打开文件，文件夹和链接</li><li>⌘ + n：新建窗口</li><li>⌘ + t：新建标签页</li><li>⌘ + w：关闭当前页</li><li>⌘ + 数字 &amp; ⌘ + 方向键：切换标签页</li><li>⌥⌘ + 数字：切换窗口</li><li>⌘ + enter：切换全屏</li><li>⌘ + d：左右分屏ß</li><li>⇧⌘ + d：上下分屏</li><li>⌘ + ;：自动补全历史记录</li><li>⇧⌘ + h：自动补全剪贴板历史</li><li>⌥⌘ + e：查找所有来定位某个标签页</li><li>⌘ + r &amp; ⌃ + l：清屏</li><li>⌘ + /：显示光标位置</li><li>⌥⌘ + b：历史回放</li><li>⌘ + f：查找，然后用 tab 和 ⇧ + tab 可以向右和向左补全，补全之后的内容会被自动复制， 还可以用 ⌥ + enter 将查找结果输入终端</li><li>选中即复制，鼠标中键粘贴</li></ul><p>很多快捷键都是通用的，和 Emace 等都是一样的</p><ul><li>⌃ + u：清空当前行</li><li>⌃ + a：移动到行首</li><li>⌃ + e：移动到行尾</li><li>⌃ + f：向前移动</li><li>⌃ + b：向后移动</li><li>⌃ + p：上一条命令</li><li>⌃ + n：下一条命令</li><li>⌃ + r：搜索历史命令</li><li>⌃ + y：召回最近用命令删除的文字</li><li>⌃ + h：删除光标之前的字符</li><li>⌃ + d：删除光标所指的字符</li><li>⌃ + w：删除光标之前的单词</li><li>⌃ + k：删除从光标到行尾的内容</li><li>⌃ + t：交换光标和之前的字符</li></ul>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fl9vptkwalj314m0eejv7.jpg" alt=""></p> <a id="more"></a><ul><li>⌘ + Click：可以打开文件，文件夹和链接</li><li>⌘ + n：新建窗口</li><li>⌘ + t：新建标签页</li><li>⌘ + w：关闭当前页</li><li>⌘ + 数字 &amp; ⌘ + 方向键：切换标签页</li><li>⌥⌘ + 数字：切换窗口</li><li>⌘ + enter：切换全屏</li><li>⌘ + d：左右分屏ß</li><li>⇧⌘ + d：上下分屏</li><li>⌘ + ;：自动补全历史记录</li><li>⇧⌘ + h：自动补全剪贴板历史</li><li>⌥⌘ + e：查找所有来定位某个标签页</li><li>⌘ + r &amp; ⌃ + l：清屏</li><li>⌘ + /：显示光标位置</li><li>⌥⌘ + b：历史回放</li><li>⌘ + f：查找，然后用 tab 和 ⇧ + tab 可以向右和向左补全，补全之后的内容会被自动复制， 还可以用 ⌥ + enter 将查找结果输入终端</li><li>选中即复制，鼠标中键粘贴</li></ul><p>很多快捷键都是通用的，和 Emace 等都是一样的</p><ul><li>⌃ + u：清空当前行</li><li>⌃ + a：移动到行首</li><li>⌃ + e：移动到行尾</li><li>⌃ + f：向前移动</li><li>⌃ + b：向后移动</li><li>⌃ + p：上一条命令</li><li>⌃ + n：下一条命令</li><li>⌃ + r：搜索历史命令</li><li>⌃ + y：召回最近用命令删除的文字</li><li>⌃ + h：删除光标之前的字符</li><li>⌃ + d：删除光标所指的字符</li><li>⌃ + w：删除光标之前的单词</li><li>⌃ + k：删除从光标到行尾的内容</li><li>⌃ + t：交换光标和之前的字符</li></ul>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;img src=&quot;https://ws3.sinaimg.cn/large/006tNc79ly1fl9vg5t5njj31hc0zktj4.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+      &lt;p&gt;&lt;img src=&quot;https://ws2.sinaimg.cn/large/006tNc79ly1fl9vptkwalj314m0eejv7.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
     
     </summary>
     
@@ -43,13 +43,14 @@
     <link href="http://yoursite.com/child/2017/11/02/%E5%AF%86%E9%92%A5%E5%88%86%E5%8F%91%E4%B8%AD%E5%BF%83%EF%BC%88KDC%EF%BC%89/"/>
     <id>http://yoursite.com/child/2017/11/02/密钥分发中心（KDC）/</id>
     <published>2017-11-02T15:46:15.000Z</published>
-    <updated>2017-11-07T14:10:22.602Z</updated>
+    <updated>2017-11-07T14:17:11.959Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>密钥分发中心是一种运行在物理安全服务器上的服务，KDC维护着领域中所有安全主体账户信息数据库。</p><p>与每一个安全主体的其他信息一起，KDC存储了仅安全主体和KDC知道的加密密钥，这个密钥也称长效密钥（主密钥），用于在安全主体和KDC之间进行交换。</p></blockquote> <a id="more"></a><blockquote><p>KDC是作为发起方和接收方共同信任的第三方，因为他维护者一个存储着该域中所有账户的账户数据库，也就是说，他知道属于每个账户的名称和派生于该账户密码的Master Key（主密钥）。而用于Alice和Bob相互认证的会话密钥就是由KDC分发的，下面详细讲解KDC分发会话密钥的过程。</p></blockquote><h3 id="分发会话密钥过程"><a href="#分发会话密钥过程" class="headerlink" title="分发会话密钥过程"></a>分发会话密钥过程</h3><p>1、首先客户端向KDC发送一个会话密钥申请。这个申请的内容可以简单概括为”我是某客户端，我需要个Session Key用于与某服务器通话“。</p><p>2、KDC在接收到这个请求的时候，生成一个会话密钥。为了保证这个会话密钥仅仅限于发送请求的客户端和它希望访问的服务器知道，KDC会为这个会话密钥生成两个副本，分别被客户端和服务器使用。然后从账户数据库中提取客户端和服务器的主密钥分别对这两个副本进行对称加密。对于服务器，与会话密钥一起被加密的还包含关于客户端的一些信息，以便对发起连接请求的客户端进行身份认证。</p><pre><code>注意：KDC不是直接把这两个会话密钥副本分发客户端和服务器的，因为如果这样做，对于服务器来说会出现下面两个问题。由于一个服务器会面对若干不同的客户端，而每个客户端都具有一个不同的Session Key。那么服务器就会为所有的客户端维护这样一个会话密钥的列表，这样对服务器来说工作量就非常 大了。由于网络传输的不确定性，可能会出现这样一种情况：客户端很快获得会话密钥用于副本，并将 这个会话密钥作为凭据随同访问请求发送到服务器，但是用于服务器的会话密钥却还没有收到，并且很 有可能这个会话密钥永远也到不了服务器端，这样客户端将永远得不到认证。为了解决这个问题， Kerberos将这两个被加密的副本一同发送给客户端，属于服务器的那份由客户端发送给服务器。因为 这两个会话密钥副本分别是由客户端和服务器端的主密钥加密的，所以不用担心安全问题。</code></pre><p>3、通过上面的过程，客户端实际上获得了两组信息：一个是通过自己主密钥加密的会话密钥；另一个是被Server的主密钥加密的数据包，包含会话密钥和关于自己的一些确认信息。在这个基础上，我们再来看看服务器是如何对客户端进行认证的。</p><p>4、客户端通过用自己的主密钥对KDC加密的会话密钥进行解密从而获得会话密钥，随后创建认证符（Authenticator，包括客户端信息和时间戳（Timestamp）），并用会话密钥对其加密。最后连同从KDC获得的、被服务器的主密钥加密过的数据包（客户端信息和会话密钥）一并发送到服务器端。我们把通过服务器的主密钥加密过的数据包称为服务票证（Session Ticket）。</p><p>5、当服务器接收到这两组数据后，先使用它自己的主密钥对服务票证进行解密，从而获得会话密钥。随后使用该会话密钥解密认证符，通过比较由客户端发送来的认证符中的客户端信息（Client Info）和服务票证中的客户端信息实现对客户端身份的验证。</p><p>双方进行了身份认证的同时也获得了会话密钥，那么双方可以进行会话了。</p><p>流程图如下：</p><p>客户端简称为Alice，服务端简称为Bob</p><p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fk4ams2bxcj30tw0buab9.jpg" alt=""></p><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><a href="http://book.51cto.com/art/200907/140554.htm" target="_blank" rel="external">参考文章</a></p>]]></content>
+    <content type="html"><![CDATA[<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fl9vriv380j30rs0kuads.jpg" alt=""></p><h3 id="简言"><a href="#简言" class="headerlink" title="简言"></a>简言</h3><blockquote><p>密钥分发中心是一种运行在物理安全服务器上的服务，KDC维护着领域中所有安全主体账户信息数据库。</p><p>与每一个安全主体的其他信息一起，KDC存储了仅安全主体和KDC知道的加密密钥，这个密钥也称长效密钥（主密钥），用于在安全主体和KDC之间进行交换。</p></blockquote> <a id="more"></a><blockquote><p>KDC是作为发起方和接收方共同信任的第三方，因为他维护者一个存储着该域中所有账户的账户数据库，也就是说，他知道属于每个账户的名称和派生于该账户密码的Master Key（主密钥）。而用于Alice和Bob相互认证的会话密钥就是由KDC分发的，下面详细讲解KDC分发会话密钥的过程。</p></blockquote><h3 id="分发会话密钥过程"><a href="#分发会话密钥过程" class="headerlink" title="分发会话密钥过程"></a>分发会话密钥过程</h3><p>1、首先客户端向KDC发送一个会话密钥申请。这个申请的内容可以简单概括为”我是某客户端，我需要个Session Key用于与某服务器通话“。</p><p>2、KDC在接收到这个请求的时候，生成一个会话密钥。为了保证这个会话密钥仅仅限于发送请求的客户端和它希望访问的服务器知道，KDC会为这个会话密钥生成两个副本，分别被客户端和服务器使用。然后从账户数据库中提取客户端和服务器的主密钥分别对这两个副本进行对称加密。对于服务器，与会话密钥一起被加密的还包含关于客户端的一些信息，以便对发起连接请求的客户端进行身份认证。</p><pre><code>注意：KDC不是直接把这两个会话密钥副本分发客户端和服务器的，因为如果这样做，对于服务器来说会出现下面两个问题。由于一个服务器会面对若干不同的客户端，而每个客户端都具有一个不同的Session Key。那么服务器就会为所有的客户端维护这样一个会话密钥的列表，这样对服务器来说工作量就非常 大了。由于网络传输的不确定性，可能会出现这样一种情况：客户端很快获得会话密钥用于副本，并将 这个会话密钥作为凭据随同访问请求发送到服务器，但是用于服务器的会话密钥却还没有收到，并且很 有可能这个会话密钥永远也到不了服务器端，这样客户端将永远得不到认证。为了解决这个问题， Kerberos将这两个被加密的副本一同发送给客户端，属于服务器的那份由客户端发送给服务器。因为 这两个会话密钥副本分别是由客户端和服务器端的主密钥加密的，所以不用担心安全问题。</code></pre><p>3、通过上面的过程，客户端实际上获得了两组信息：一个是通过自己主密钥加密的会话密钥；另一个是被Server的主密钥加密的数据包，包含会话密钥和关于自己的一些确认信息。在这个基础上，我们再来看看服务器是如何对客户端进行认证的。</p><p>4、客户端通过用自己的主密钥对KDC加密的会话密钥进行解密从而获得会话密钥，随后创建认证符（Authenticator，包括客户端信息和时间戳（Timestamp）），并用会话密钥对其加密。最后连同从KDC获得的、被服务器的主密钥加密过的数据包（客户端信息和会话密钥）一并发送到服务器端。我们把通过服务器的主密钥加密过的数据包称为服务票证（Session Ticket）。</p><p>5、当服务器接收到这两组数据后，先使用它自己的主密钥对服务票证进行解密，从而获得会话密钥。随后使用该会话密钥解密认证符，通过比较由客户端发送来的认证符中的客户端信息（Client Info）和服务票证中的客户端信息实现对客户端身份的验证。</p><p>双方进行了身份认证的同时也获得了会话密钥，那么双方可以进行会话了。</p><p>流程图如下：</p><p>客户端简称为Alice，服务端简称为Bob</p><p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fk4ams2bxcj30tw0buab9.jpg" alt=""></p><h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><a href="http://book.51cto.com/art/200907/140554.htm" target="_blank" rel="external">参考文章</a></p>]]></content>
     
     <summary type="html">
     
-      &lt;blockquote&gt;
+      &lt;p&gt;&lt;img src=&quot;https://ws1.sinaimg.cn/large/006tNc79ly1fl9vriv380j30rs0kuads.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+&lt;h3 id=&quot;简言&quot;&gt;&lt;a href=&quot;#简言&quot; class=&quot;headerlink&quot; title=&quot;简言&quot;&gt;&lt;/a&gt;简言&lt;/h3&gt;&lt;blockquote&gt;
 &lt;p&gt;密钥分发中心是一种运行在物理安全服务器上的服务，KDC维护着领域中所有安全主体账户信息数据库。&lt;/p&gt;
 &lt;p&gt;与每一个安全主体的其他信息一起，KDC存储了仅安全主体和KDC知道的加密密钥，这个密钥也称长效密钥（主密钥），用于在安全主体和KDC之间进行交换。&lt;/p&gt;
 &lt;/blockquote&gt;
