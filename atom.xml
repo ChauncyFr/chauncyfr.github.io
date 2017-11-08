@@ -2,12 +2,12 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>妖言惑众</title>
   
-  <subtitle>朝闻道，夕死可矣。</subtitle>
+  
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/child/"/>
+  <link href="http://fengxru.cn/"/>
   <updated>2017-11-07T14:24:43.511Z</updated>
-  <id>http://yoursite.com/child/</id>
+  <id>http://fengxru.cn/</id>
   
   <author>
     <name>SeaBaby</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/child/2017/11/07/hello-world/"/>
-    <id>http://yoursite.com/child/2017/11/07/hello-world/</id>
+    <link href="http://fengxru.cn/title.html"/>
+    <id>http://fengxru.cn/title.html</id>
     <published>2017-11-07T15:46:15.000Z</published>
     <updated>2017-11-07T14:24:43.511Z</updated>
     
@@ -37,8 +37,8 @@
   
   <entry>
     <title>iTerm 2 实用快捷键</title>
-    <link href="http://yoursite.com/child/2017/11/02/iTerm%202%20%E5%AE%9E%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
-    <id>http://yoursite.com/child/2017/11/02/iTerm 2 实用快捷键/</id>
+    <link href="http://fengxru.cn/title.html"/>
+    <id>http://fengxru.cn/title.html</id>
     <published>2017-11-02T15:47:44.000Z</published>
     <updated>2017-11-07T14:15:24.039Z</updated>
     
@@ -50,17 +50,17 @@
     
     </summary>
     
-      <category term="Mac" scheme="http://yoursite.com/child/categories/Mac/"/>
+      <category term="Mac" scheme="http://fengxru.cn/categories/Mac/"/>
     
     
-      <category term="iTem2" scheme="http://yoursite.com/child/tags/iTem2/"/>
+      <category term="iTem2" scheme="http://fengxru.cn/tags/iTem2/"/>
     
   </entry>
   
   <entry>
     <title>密钥分发中心（KDC）</title>
-    <link href="http://yoursite.com/child/2017/11/02/%E5%AF%86%E9%92%A5%E5%88%86%E5%8F%91%E4%B8%AD%E5%BF%83%EF%BC%88KDC%EF%BC%89/"/>
-    <id>http://yoursite.com/child/2017/11/02/密钥分发中心（KDC）/</id>
+    <link href="http://fengxru.cn/title.html"/>
+    <id>http://fengxru.cn/title.html</id>
     <published>2017-11-02T15:46:15.000Z</published>
     <updated>2017-11-07T14:17:11.959Z</updated>
     
@@ -76,19 +76,19 @@
     
     </summary>
     
-      <category term="计算机网络" scheme="http://yoursite.com/child/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="http://fengxru.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
     
-      <category term="KDC" scheme="http://yoursite.com/child/tags/KDC/"/>
+      <category term="KDC" scheme="http://fengxru.cn/tags/KDC/"/>
     
-      <category term="密钥" scheme="http://yoursite.com/child/tags/%E5%AF%86%E9%92%A5/"/>
+      <category term="密钥" scheme="http://fengxru.cn/tags/%E5%AF%86%E9%92%A5/"/>
     
   </entry>
   
   <entry>
     <title>对称密钥加密体系 — DES</title>
-    <link href="http://yoursite.com/child/2017/11/02/%E5%AF%B9%E7%A7%B0%E5%AF%86%E9%92%A5%E5%8A%A0%E5%AF%86%E4%BD%93%E7%B3%BB%20%E2%80%94%20DES/"/>
-    <id>http://yoursite.com/child/2017/11/02/对称密钥加密体系 — DES/</id>
+    <link href="http://fengxru.cn/title.html"/>
+    <id>http://fengxru.cn/title.html</id>
     <published>2017-11-02T15:46:15.000Z</published>
     <updated>2017-11-07T14:21:30.596Z</updated>
     
@@ -103,12 +103,12 @@
     
     </summary>
     
-      <category term="计算机网络" scheme="http://yoursite.com/child/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+      <category term="计算机网络" scheme="http://fengxru.cn/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
     
     
-      <category term="KDC" scheme="http://yoursite.com/child/tags/KDC/"/>
+      <category term="KDC" scheme="http://fengxru.cn/tags/KDC/"/>
     
-      <category term="密钥" scheme="http://yoursite.com/child/tags/%E5%AF%86%E9%92%A5/"/>
+      <category term="密钥" scheme="http://fengxru.cn/tags/%E5%AF%86%E9%92%A5/"/>
     
   </entry>
   
