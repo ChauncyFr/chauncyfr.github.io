@@ -2068,7 +2068,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #08b9bd;
+  background: #90ffda;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3260,6 +3260,42 @@ a {
 }
 .with-love {
   color: #ff71a8;
+}
+img#github-emoji {
+  margin: 0;
+  padding: 0;
+  display: inline !important;
+  vertical-align: bottom;
+  border: none;
+  cursor: text;
+}
+.post-body a {
+  color: #0593d3;
+  border-bottom: none;
+  text-decoration: underline;
+}
+.post-body a:hover {
+  color: #ff7600;
+  border-bottom: none;
+  text-decoration: underline;
+}
+.tag-cloud a {
+  color: #0593d3;
+  border-bottom: 1px solid #0593d3;
+  text-decoration: none;
+}
+.tag-cloud a:hover {
+  color: #ff7600;
+  border-bottom: 1px solid #ff7600;
+  text-decoration: none;
+}
+.post-button .btn {
+  text-decoration: none;
+  border: 1.5px solid #ff7600;
+}
+.post-button .btn:hover {
+  text-decoration: none;
+  border: 1.5px solid #ff7600;
 }
 @-moz-keyframes heartAnimate {
   0%, 100% {
