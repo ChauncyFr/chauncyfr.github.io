@@ -2068,7 +2068,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff58;
+  background: #ff2fb0;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3162,6 +3162,10 @@ hr {
 }
 .ds-top-threads li a:hover {
   border-left: 8px solid #4d768c;
+}
+.header {
+  height: 18vh;
+  background: #dedede;
 }
 .site-meta {
   float: none;
