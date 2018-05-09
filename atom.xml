@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fengxru.cn/"/>
-  <updated>2018-05-08T16:27:45.448Z</updated>
+  <updated>2018-05-09T04:21:15.801Z</updated>
   <id>http://fengxru.cn/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://fengxru.cn/2018/05/08/Mac%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%99%E7%A8%8B/"/>
     <id>http://fengxru.cn/2018/05/08/Mac常用快捷键教程/</id>
     <published>2018-05-08T15:38:49.000Z</published>
-    <updated>2018-05-08T16:27:45.448Z</updated>
+    <updated>2018-05-09T04:21:15.801Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fr4czzw6xfj312s0ny4f3.jpg" alt=""></p><a id="more"></a><h2 id="用option快速输入一些特殊符号"><a href="#用option快速输入一些特殊符号" class="headerlink" title="用option快速输入一些特殊符号"></a>用option快速输入一些特殊符号</h2><ul><li>option V： 输入  √</li><li>option /： 输入  ÷</li><li>option =： 输入  ≠</li><li>option &gt;： 输入  ≥</li><li>option &lt;： 输入  ≤</li><li>option K： 输入  ˚</li><li>option X： 输入  ≈</li><li>option =： 输入  ≠</li><li>option 2： 输入 ™</li><li>option R： 输入  ®</li><li>option Y： 输入  ¥</li><li>option P： 输入  π</li><li>option G： 输入  ©</li><li>option + shift + K： </li><li>command + option + I：查看多个文件一共有多大</li></ul><h4 id="通知中心开关"><a href="#通知中心开关" class="headerlink" title="通知中心开关"></a>通知中心开关</h4><blockquote><p>按住 option 点击桌面右上角通知中心，即可直接关闭或开启通知。不用在通知中心中打开了。</p></blockquote><p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fr4dwwsrc0g30gu08mq3t.gif" alt=""></p><blockquote><p>比如用 Mac 全屏看电影又不想被右上角的消息弹出打扰的话，暂时开启勿扰（关闭通知）就是了.</p></blockquote><h4 id="WIFI状态"><a href="#WIFI状态" class="headerlink" title="WIFI状态"></a>WIFI状态</h4><p>按住 option 点击 Wi-Fi 图标即可查看 IP 地址、Wi-Fi 信号强度等等 Wi-Fi 的详细信息。<br><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fr4dwnmbmuj30hg0nw406.jpg" alt=""></p><h2 id="通用快捷键"><a href="#通用快捷键" class="headerlink" title="通用快捷键"></a>通用快捷键</h2><ul><li>command + M：最小化窗口</li><li>command + H：隐藏窗口</li><li>command + N：新建窗口</li><li>command + O：打开</li><li>command + Shift + S：另存为</li><li>command + P：打印</li><li>command + W：关闭</li><li>command + Q：退出</li></ul><h2 id="文件管理器"><a href="#文件管理器" class="headerlink" title="文件管理器"></a>文件管理器</h2><ul><li>command + I：显示简介</li><li>command + F：搜索</li><li>command + delete：删除</li><li>command + Shift + delete：清空回收站</li></ul><h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><ul><li>command + +\=：放大</li><li>command + --：缩小</li><li>command + T：新建一个选项卡</li><li>command + N：新建一个新窗口</li><li>command + R：刷新</li><li>command + F：搜索</li><li>command + W：关闭当前选项卡</li><li>command + D：将网页加入个人收藏</li><li>command + option + Q：退出 Safari，在下次打开的时候，会自动加载上次的所有窗口</li></ul><h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><ul><li>command + option + esc：强制退出程序</li><li>command + shift + Y：生成便签</li><li>command + space：切换输入法</li><li>command：按住command即可用鼠标移动拖动顶部图标排列</li><li>control + command + space：快速调出emoji表情和各种特殊符号输入</li></ul><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>后续会继续补充。有什么遗漏的，可以留言。</p><hr>]]></content>
     
@@ -37,6 +37,8 @@
       <category term="Mac" scheme="http://fengxru.cn/tags/Mac/"/>
     
       <category term="快捷键" scheme="http://fengxru.cn/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
+    
+      <category term="键盘" scheme="http://fengxru.cn/tags/%E9%94%AE%E7%9B%98/"/>
     
   </entry>
   
@@ -72,7 +74,7 @@
     <link href="http://fengxru.cn/2017/11/02/iTerm%202%20%E5%AE%9E%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/"/>
     <id>http://fengxru.cn/2017/11/02/iTerm 2 实用快捷键/</id>
     <published>2017-11-02T15:47:44.000Z</published>
-    <updated>2018-05-08T15:34:17.783Z</updated>
+    <updated>2018-05-09T04:20:59.161Z</updated>
     
     <content type="html"><![CDATA[<p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fl9vptkwalj314m0eejv7.jpg" alt=""></p> <a id="more"></a><ul><li>⌘ + Click：可以打开文件，文件夹和链接</li><li>⌘ + n：新建窗口</li><li>⌘ + t：新建标签页</li><li>⌘ + w：关闭当前页</li><li>⌘ + 数字 &amp; ⌘ + 方向键：切换标签页</li><li>⌥⌘ + 数字：切换窗口</li><li>⌘ + enter：切换全屏</li><li>⌘ + d：左右分屏ß</li><li>⇧⌘ + d：上下分屏</li><li>⌘ + ;：自动补全历史记录</li><li>⇧⌘ + h：自动补全剪贴板历史</li><li>⌥⌘ + e：查找所有来定位某个标签页</li><li>⌘ + r &amp; ⌃ + l：清屏</li><li>⌘ + /：显示光标位置</li><li>⌥⌘ + b：历史回放</li><li>⌘ + f：查找，然后用 tab 和 ⇧ + tab 可以向右和向左补全，补全之后的内容会被自动复制， 还可以用 ⌥ + enter 将查找结果输入终端</li><li>选中即复制，鼠标中键粘贴</li></ul><p>很多快捷键都是通用的，和 Emace 等都是一样的</p><ul><li>⌃ + u：清空当前行</li><li>⌃ + a：移动到行首</li><li>⌃ + e：移动到行尾</li><li>⌃ + f：向前移动</li><li>⌃ + b：向后移动</li><li>⌃ + p：上一条命令</li><li>⌃ + n：下一条命令</li><li>⌃ + r：搜索历史命令</li><li>⌃ + y：召回最近用命令删除的文字</li><li>⌃ + h：删除光标之前的字符</li><li>⌃ + d：删除光标所指的字符</li><li>⌃ + w：删除光标之前的单词</li><li>⌃ + k：删除从光标到行尾的内容</li><li>⌃ + t：交换光标和之前的字符</li></ul>]]></content>
     
@@ -84,6 +86,8 @@
     
       <category term="Mac" scheme="http://fengxru.cn/categories/Mac/"/>
     
+    
+      <category term="Mac" scheme="http://fengxru.cn/tags/Mac/"/>
     
       <category term="iTem2" scheme="http://fengxru.cn/tags/iTem2/"/>
     
