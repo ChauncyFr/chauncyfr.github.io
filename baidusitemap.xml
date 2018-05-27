@@ -5,16 +5,21 @@
     
   <url>
     <loc>http://fengxru.cn/2018/05/26/TensorFlow%E4%B8%AD%E7%9A%84%E7%BB%B4%E5%BA%A6%E5%92%8Cshape%E7%9A%84%E7%90%86%E8%A7%A3/</loc>
-    <lastmod>2018-05-27T14:53:35.016Z</lastmod>
+    <lastmod>2018-05-27T14:55:35.701Z</lastmod>
     <data>
         <display>
         <title>TensorFlow中的维度和shape的理解</title>
         <pubTime>2018-05-26T02:59:33.000Z</pubTime>
         
-        <tag>TensorFlow|深度学习</tag>
+        <tag>TensorFlow</tag>
+         
+        <tag>深度学习</tag>
          
          
            
+             
+              <breadCrumb title="深度学习" url="http://fengxru.cn/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+          
         </display>
     </data>
     </url>
