@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fengxru.cn/"/>
-  <updated>2018-05-27T15:26:40.655Z</updated>
+  <updated>2018-05-27T15:40:12.740Z</updated>
   <id>http://fengxru.cn/</id>
   
   <author>
@@ -17,16 +17,22 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>photoPostName</title>
+    <title>测试博客照片功能</title>
     <link href="http://fengxru.cn/2018/05/27/photoPostName/"/>
     <id>http://fengxru.cn/2018/05/27/photoPostName/</id>
     <published>2018-05-27T15:18:51.000Z</published>
-    <updated>2018-05-27T15:26:40.655Z</updated>
+    <updated>2018-05-27T15:40:12.740Z</updated>
     
     <summary type="html">
     
+      测试照片功能，心情美美哒，亲爱的
+    
     </summary>
     
+      <category term="相册" scheme="http://fengxru.cn/categories/%E7%9B%B8%E5%86%8C/"/>
+    
+    
+      <category term="照片" scheme="http://fengxru.cn/tags/%E7%85%A7%E7%89%87/"/>
     
   </entry>
   

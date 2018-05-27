@@ -5,14 +5,19 @@
     
   <url>
     <loc>http://fengxru.cn/2018/05/27/photoPostName/</loc>
-    <lastmod>2018-05-27T15:26:40.655Z</lastmod>
+    <lastmod>2018-05-27T15:40:12.740Z</lastmod>
     <data>
         <display>
-        <title>photoPostName</title>
+        <title>测试博客照片功能</title>
         <pubTime>2018-05-27T15:18:51.000Z</pubTime>
         
+        <tag>照片</tag>
+         
          
            
+             
+              <breadCrumb title="相册" url="http://fengxru.cn/categories/%E7%9B%B8%E5%86%8C/"/>
+          
         </display>
     </data>
     </url>

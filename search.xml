@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[photoPostName]]></title>
+    <title><![CDATA[测试博客照片功能]]></title>
     <url>%2F2018%2F05%2F27%2FphotoPostName%2F</url>
     <content type="text"></content>
+      <categories>
+        <category>相册</category>
+      </categories>
+      <tags>
+        <tag>照片</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[TensorFlow中的维度和shape的理解]]></title>
