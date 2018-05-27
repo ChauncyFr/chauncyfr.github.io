@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fengxru.cn/"/>
-  <updated>2018-05-27T14:57:43.677Z</updated>
+  <updated>2018-05-27T15:25:35.195Z</updated>
   <id>http://fengxru.cn/</id>
   
   <author>
@@ -15,6 +15,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>photoPostName</title>
+    <link href="http://fengxru.cn/2018/05/27/photoPostName/"/>
+    <id>http://fengxru.cn/2018/05/27/photoPostName/</id>
+    <published>2018-05-27T15:18:51.000Z</published>
+    <updated>2018-05-27T15:25:35.195Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>TensorFlow中的维度和shape的理解</title>
