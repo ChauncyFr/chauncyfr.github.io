@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fengxru.cn/"/>
-  <updated>2018-05-27T15:40:12.740Z</updated>
+  <updated>2018-05-28T01:03:27.456Z</updated>
   <id>http://fengxru.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>测试博客照片功能</title>
+    <link href="http://fengxru.cn/2018/05/27/%E6%B5%8B%E8%AF%95%E6%B7%BB%E5%8A%A0%E6%8C%89%E9%92%AE%E5%8A%9F%E8%83%BD/"/>
+    <id>http://fengxru.cn/2018/05/27/测试添加按钮功能/</id>
+    <published>2018-05-27T15:18:51.000Z</published>
+    <updated>2018-05-28T01:03:27.456Z</updated>
+    
+    <content type="html"><![CDATA[<span class="post-button text-center"><a class="btn" href="#"><i class="fa fa-home fa-5x"></i></a></span>]]></content>
+    
+    <summary type="html">
+    
+      测试按钮功能，心情美美哒，亲爱的
+    
+    </summary>
+    
+      <category term="相册" scheme="http://fengxru.cn/categories/%E7%9B%B8%E5%86%8C/"/>
+    
+    
+      <category term="照片" scheme="http://fengxru.cn/tags/%E7%85%A7%E7%89%87/"/>
+    
+  </entry>
   
   <entry>
     <title>测试博客照片功能</title>
