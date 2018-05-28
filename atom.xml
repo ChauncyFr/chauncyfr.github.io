@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fengxru.cn/"/>
-  <updated>2018-05-27T15:40:12.740Z</updated>
+  <updated>2018-05-28T07:15:14.933Z</updated>
   <id>http://fengxru.cn/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hexo 配置1--markdown文章常用功能</title>
+    <link href="http://fengxru.cn/2018/05/28/Hexo-%E9%85%8D%E7%BD%AE1-markdown%E6%96%87%E7%AB%A0%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/"/>
+    <id>http://fengxru.cn/2018/05/28/Hexo-配置1-markdown文章常用功能/</id>
+    <published>2018-05-28T05:12:04.000Z</published>
+    <updated>2018-05-28T07:15:14.933Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1frqzdt6v9vj31kw0l0q3z.jpg" alt=""></p><a id="more"></a><h2 id="文本居中引用"><a href="#文本居中引用" class="headerlink" title="文本居中引用"></a>文本居中引用</h2><blockquote><p>此标签将生成一个带上下分割线的引用，同时引用内文本将自动居中。 文本居中时，多行文本若长度不等，视觉上会显得不对称，因此建议在引用单行文本的场景下使用。 例如作为文章开篇引用 或者 结束语之前的总结引用。</p></blockquote><h4 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h4><ul><li><strong>HTML方式：</strong>使用这种方式时，给<code>img</code>添加属性<code>class=&quot;blockquote-center&quot;</code>即可。</li><li><strong>标签方式：</strong>使用<code>centerquote</code>或者简写<code>cq</code>。</li></ul><p> <img src="https://ws2.sinaimg.cn/large/006tNc79ly1frr1z2kpx8j318a0dojs8.jpg" alt=""></p><h4 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h4><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1frr141ybcsj311i07waa0.jpg" alt=""></p><p>代码如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 标签别名 --&gt;</div><div class="line">&#123;% cq %&#125; </div><div class="line">人的一切痛苦，本质上都是对自己的无能的愤怒</div><div class="line"></div><div class="line">  </div><div class="line">&lt;font color=black size=4 face=&quot;黑体&quot;&gt;冯相如 </div><div class="line">&lt;/font&gt;</div><div class="line">&#123;% endcq %&#125;</div></pre></td></tr></table></figure><blockquote><p>这句话与签名者姓名（冯相如）中间间隔的行数越多（回车越多），则最后效果中间间隔就会越大。</p><p>至于签名者姓名，你可以用markdown中的字体大小颜色进行设置，如：</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;font face=&quot;黑体&quot;&gt;我是黑体字&lt;/font&gt;</div><div class="line">&lt;font face=&quot;微软雅黑&quot;&gt;我是微软雅黑&lt;/font&gt;</div><div class="line">&lt;font face=&quot;STCAIYUN&quot;&gt;我是华文彩云&lt;/font&gt;</div><div class="line">&lt;font color=#0099ff size=12 face=&quot;黑体&quot;&gt;黑体&lt;/font&gt;</div><div class="line">&lt;font color=#00ffff size=3&gt;null&lt;/font&gt;</div><div class="line">&lt;font color=gray size=5&gt;gray&lt;/font&gt;</div></pre></td></tr></table></figure><p>但是不要误解，这句话不是我说的，我只不过是为了测试“标签签名”功能。</p><h2 id="Bootstrap-Callout"><a href="#Bootstrap-Callout" class="headerlink" title="Bootstrap Callout"></a>Bootstrap Callout</h2><h4 id="使用方式-1"><a href="#使用方式-1" class="headerlink" title="使用方式"></a>使用方式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% note class_name %&#125; Content (md partial supported) &#123;% endnote %&#125;</div></pre></td></tr></table></figure><p>其中，<code>class_name</code>可以是以下列表中的一个值：</p><ul><li><code>default</code></li><li><code>primary</code></li><li><code>success</code></li><li><code>info</code></li><li><code>warning</code></li><li><code>danger</code> </li></ul><h4 id="效果示例"><a href="#效果示例" class="headerlink" title="效果示例"></a>效果示例</h4><p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1frr27va9h5j311o0dgmxa.jpg" alt=""></p><p>对应代码如下；</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% note class_name %&#125; Content of class_name &#123;% endnote %&#125;</div><div class="line"></div><div class="line">&#123;% note default %&#125; Content of default &#123;% endnote %&#125;</div><div class="line"></div><div class="line">&#123;% note primary %&#125; Content of primary &#123;% endnote %&#125;</div></pre></td></tr></table></figure><h2 id="突破容器宽度限制的图片"><a href="#突破容器宽度限制的图片" class="headerlink" title="突破容器宽度限制的图片"></a>突破容器宽度限制的图片</h2><div class="note class_name"><p>当使用此标签引用图片时，图片将自动扩大 26%，并突破文章容器的宽度。 此标签使用于需要突出显示的图片, 图片的扩大与容器的偏差从视觉上提升图片的吸引力。 此标签有两种调用方式（详细参看底下示例）： </p></div>#### 使用方式* HTML方式：使用这种方式时，为`img`添加属性 `class="full-image"`即可。* 标签方式：使用`fullimage` 或者简写`fi`，并传递图片地址、 `alt` 和 `title` 属性即可。 属性之间以逗号分隔。![](https://ws4.sinaimg.cn/large/006tNc79ly1frr2ar14m7j31840dimxq.jpg)#### 效果示例![](https://ws4.sinaimg.cn/large/006tNc79ly1frr2blr6bfj315y0vy77g.jpg)## 添加emoji表情#### 使用方式<div class="note class_name"><p>我的是Mac电脑，所以直接用快捷键，<code>control+command+space</code>调出表情框，然后点击输入即可；对于其他电脑，应该也可以直接搜到复制到markdown就好了。 </p></div><h4 id="效果示例-1"><a href="#效果示例-1" class="headerlink" title="效果示例"></a>效果示例</h4><p>🤣😜🤨🤩😎🐸🚗❤️🇨🇳</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="note class_name"><p>我会持续更新，今天先写到这儿，有什么不对，请指正。 </p></div><hr>]]></content>
+    
+    <summary type="html">
+    
+      介绍了用hexo next主题搭建的博客网站后，写博客时常用的一些小功能。
+    
+    </summary>
+    
+      <category term="hexo" scheme="http://fengxru.cn/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="http://fengxru.cn/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>测试博客照片功能</title>
@@ -26,28 +48,6 @@
     <summary type="html">
     
       测试照片功能，心情美美哒，亲爱的
-    
-    </summary>
-    
-      <category term="相册" scheme="http://fengxru.cn/categories/%E7%9B%B8%E5%86%8C/"/>
-    
-    
-      <category term="照片" scheme="http://fengxru.cn/tags/%E7%85%A7%E7%89%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>测试博客照片功能</title>
-    <link href="http://fengxru.cn/2018/05/27/photoPostName%E7%9A%84%E5%89%AF%E6%9C%AC/"/>
-    <id>http://fengxru.cn/2018/05/27/photoPostName的副本/</id>
-    <published>2018-05-27T15:18:51.000Z</published>
-    <updated>2018-05-28T03:51:59.089Z</updated>
-    
-    <content type="html"><![CDATA[<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><span class="post-button text-center"><a class="btn" href="#"><i class="fa fa-arrow-left fa-1x"></i></a></span><span class="post-button text-center"><a class="btn" href="#"><i class="fa fa-home fa-fw"></i>文字 & 图标 (适当宽度)</a></span><!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --><!-- 其中 class="blockquote-center" 是必须的 --><!-- 标签别名 --><blockquote class="blockquote-center"><p> 人的一切痛苦，本质上都是对自己的无能的愤怒</p><font color="black" size="4" face="黑体">冯相如 </font></blockquote><span itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/![](https://ws1.sinaimg.cn/large/006tKfTcly1frp7z57mjuj30p00fr0ta.jpg)" class="full-image" alt="alt" title="title"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>]]></content>
-    
-    <summary type="html">
-    
-      测试按钮功能，心情美美哒，亲爱的
     
     </summary>
     
