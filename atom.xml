@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fengxru.cn/"/>
-  <updated>2018-05-28T02:06:53.424Z</updated>
+  <updated>2018-05-27T15:40:12.740Z</updated>
   <id>http://fengxru.cn/</id>
   
   <author>
@@ -18,16 +18,14 @@
   
   <entry>
     <title>测试博客照片功能</title>
-    <link href="http://fengxru.cn/2018/05/27/photoPostName%E7%9A%84%E5%89%AF%E6%9C%AC/"/>
-    <id>http://fengxru.cn/2018/05/27/photoPostName的副本/</id>
+    <link href="http://fengxru.cn/2018/05/27/photoPostName/"/>
+    <id>http://fengxru.cn/2018/05/27/photoPostName/</id>
     <published>2018-05-27T15:18:51.000Z</published>
-    <updated>2018-05-28T02:06:53.424Z</updated>
-    
-    <content type="html"><![CDATA[<p><a href="#" class="myButton">MyButton</a></p>]]></content>
+    <updated>2018-05-27T15:40:12.740Z</updated>
     
     <summary type="html">
     
-      测试按钮功能，心情美美哒，亲爱的
+      测试照片功能，心情美美哒，亲爱的
     
     </summary>
     
@@ -40,14 +38,16 @@
   
   <entry>
     <title>测试博客照片功能</title>
-    <link href="http://fengxru.cn/2018/05/27/photoPostName/"/>
-    <id>http://fengxru.cn/2018/05/27/photoPostName/</id>
+    <link href="http://fengxru.cn/2018/05/27/photoPostName%E7%9A%84%E5%89%AF%E6%9C%AC/"/>
+    <id>http://fengxru.cn/2018/05/27/photoPostName的副本/</id>
     <published>2018-05-27T15:18:51.000Z</published>
-    <updated>2018-05-27T15:40:12.740Z</updated>
+    <updated>2018-05-28T03:51:59.089Z</updated>
+    
+    <content type="html"><![CDATA[<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script><span class="post-button text-center"><a class="btn" href="#"><i class="fa fa-arrow-left fa-1x"></i></a></span><span class="post-button text-center"><a class="btn" href="#"><i class="fa fa-home fa-fw"></i>文字 & 图标 (适当宽度)</a></span><!-- HTML方式: 直接在 Markdown 文件中编写 HTML 来调用 --><!-- 其中 class="blockquote-center" 是必须的 --><!-- 标签别名 --><blockquote class="blockquote-center"><p> 人的一切痛苦，本质上都是对自己的无能的愤怒</p><font color="black" size="4" face="黑体">冯相如 </font></blockquote><span itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="/![](https://ws1.sinaimg.cn/large/006tKfTcly1frp7z57mjuj30p00fr0ta.jpg)" class="full-image" alt="alt" title="title"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>]]></content>
     
     <summary type="html">
     
-      测试照片功能，心情美美哒，亲爱的
+      测试按钮功能，心情美美哒，亲爱的
     
     </summary>
     

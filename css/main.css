@@ -2068,7 +2068,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff8333;
+  background: #4aa8bb;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3409,39 +3409,4 @@ img#github-emoji {
     -o-transform: scale(1.1);
     transform: scale(1.1);
   }
-}
-.myButton {
-  background-color: #fff;
-  -moz-border-radius: 15px;
-  -webkit-border-radius: 15px;
-  border-radius: 6px;
-  display: inline-block;
-  border: 2px solid #4e6096;
-  cursor: pointer;
-  color: #fff;
-  font-family: Arial;
-  font-size: 12px;
-  padding: 11px 20px;
-  text-decoration: none;
-  text-shadow: 0px 1px 0px #2f6627;
-}
-.myButton:hover {
-  background-color: #555;
-}
-.myButton:active {
-  position: relative;
-  top: 1px;
-  text-decoration: none;
-}
-a:link {
-  text-decoration: none;
-}
-a:visited {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
-}
-a:active {
-  text-decoration: none;
 }

@@ -2,8 +2,8 @@
 <search>
   <entry>
     <title><![CDATA[测试博客照片功能]]></title>
-    <url>%2F2018%2F05%2F27%2FphotoPostName%E7%9A%84%E5%89%AF%E6%9C%AC%2F</url>
-    <content type="text"><![CDATA[MyButton]]></content>
+    <url>%2F2018%2F05%2F27%2FphotoPostName%2F</url>
+    <content type="text"></content>
       <categories>
         <category>相册</category>
       </categories>
@@ -13,8 +13,8 @@
   </entry>
   <entry>
     <title><![CDATA[测试博客照片功能]]></title>
-    <url>%2F2018%2F05%2F27%2FphotoPostName%2F</url>
-    <content type="text"></content>
+    <url>%2F2018%2F05%2F27%2FphotoPostName%E7%9A%84%E5%89%AF%E6%9C%AC%2F</url>
+    <content type="text"><![CDATA[文字 & 图标 (适当宽度) 人的一切痛苦，本质上都是对自己的无能的愤怒 冯相如]]></content>
       <categories>
         <category>相册</category>
       </categories>
