@@ -1,1216 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title><![CDATA[Hexo 配置1--markdown文章常用功能]]></title>
-      <url>/2018/05/28/Hexo-%E9%85%8D%E7%BD%AE1-markdown%E6%96%87%E7%AB%A0%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD/</url>
-      <content type="html"><![CDATA[<span itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="https://ws2.sinaimg.cn/large/006tNc79ly1frqzdt6v9vj31kw0l0q3z.jpg" class="full-image" alt="alt" title="介绍了hexo写博客时markdown中常用的小技巧"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span>
-<a id="more"></a>
-<h2 id="文本居中引用"><a href="#文本居中引用" class="headerlink" title="文本居中引用"></a>文本居中引用</h2><blockquote>
-<p>此标签将生成一个带上下分割线的引用，同时引用内文本将自动居中。 文本居中时，多行文本若长度不等，视觉上会显得不对称，因此建议在引用单行文本的场景下使用。 例如作为文章开篇引用 或者 结束语之前的总结引用。</p>
-</blockquote>
-<h4 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h4><ul>
-<li><strong>HTML方式：</strong>使用这种方式时，给<code>img</code>添加属性<code>class=&quot;blockquote-center&quot;</code>即可。</li>
-<li><strong>标签方式：</strong>使用<code>centerquote</code>或者简写<code>cq</code>。</li>
-</ul>
-<p> <img src="https://ws2.sinaimg.cn/large/006tNc79ly1frr1z2kpx8j318a0dojs8.jpg" alt=""></p>
-<h4 id="效果展示"><a href="#效果展示" class="headerlink" title="效果展示"></a>效果展示</h4><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1frr141ybcsj311i07waa0.jpg" alt=""></p>
-<p>代码如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">&lt;!-- 标签别名 --&gt;</div><div class="line">&#123;% cq %&#125; </div><div class="line">人的一切痛苦，本质上都是对自己的无能的愤怒</div><div class="line"></div><div class="line">  </div><div class="line">&lt;font color=black size=4 face=&quot;黑体&quot;&gt;冯相如 </div><div class="line">&lt;/font&gt;</div><div class="line">&#123;% endcq %&#125;</div></pre></td></tr></table></figure>
-<blockquote>
-<p>这句话与签名者姓名（冯相如）中间间隔的行数越多（回车越多），则最后效果中间间隔就会越大。</p>
-<p>至于签名者姓名，你可以用markdown中的字体大小颜色进行设置，如：</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;font face=&quot;黑体&quot;&gt;我是黑体字&lt;/font&gt;</div><div class="line">&lt;font face=&quot;微软雅黑&quot;&gt;我是微软雅黑&lt;/font&gt;</div><div class="line">&lt;font face=&quot;STCAIYUN&quot;&gt;我是华文彩云&lt;/font&gt;</div><div class="line">&lt;font color=#0099ff size=12 face=&quot;黑体&quot;&gt;黑体&lt;/font&gt;</div><div class="line">&lt;font color=#00ffff size=3&gt;null&lt;/font&gt;</div><div class="line">&lt;font color=gray size=5&gt;gray&lt;/font&gt;</div></pre></td></tr></table></figure>
-<p>但是不要误解，这句话不是我说的，我只不过是为了测试“标签签名”功能。</p>
-<h2 id="Bootstrap-Callout"><a href="#Bootstrap-Callout" class="headerlink" title="Bootstrap Callout"></a>Bootstrap Callout</h2><h4 id="使用方式-1"><a href="#使用方式-1" class="headerlink" title="使用方式"></a>使用方式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#123;% note class_name %&#125; Content (md partial supported) &#123;% endnote %&#125;</div></pre></td></tr></table></figure>
-<p>其中，<code>class_name</code>可以是以下列表中的一个值：</p>
-<ul>
-<li><code>default</code></li>
-<li><code>primary</code></li>
-<li><code>success</code></li>
-<li><code>info</code></li>
-<li><code>warning</code></li>
-<li><code>danger</code> </li>
-</ul>
-<h4 id="效果示例"><a href="#效果示例" class="headerlink" title="效果示例"></a>效果示例</h4><p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1frr27va9h5j311o0dgmxa.jpg" alt=""></p>
-<p>对应代码如下；</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;% note class_name %&#125; Content of class_name &#123;% endnote %&#125;</div><div class="line"></div><div class="line">&#123;% note default %&#125; Content of default &#123;% endnote %&#125;</div><div class="line"></div><div class="line">&#123;% note primary %&#125; Content of primary &#123;% endnote %&#125;</div></pre></td></tr></table></figure>
-<h2 id="突破容器宽度限制的图片"><a href="#突破容器宽度限制的图片" class="headerlink" title="突破容器宽度限制的图片"></a>突破容器宽度限制的图片</h2><div class="note class_name"><p>当使用此标签引用图片时，图片将自动扩大 26%，并突破文章容器的宽度。 此标签使用于需要突出显示的图片, 图片的扩大与容器的偏差从视觉上提升图片的吸引力。 此标签有两种调用方式（详细参看底下示例）： </p></div>
-<h4 id="使用方式-2"><a href="#使用方式-2" class="headerlink" title="使用方式"></a>使用方式</h4><ul>
-<li>HTML方式：使用这种方式时，为<code>img</code>添加属性 <code>class=&quot;full-image&quot;</code>即可。</li>
-<li>标签方式：使用<code>fullimage</code> 或者简写<code>fi</code>，并传递图片地址、 <code>alt</code> 和 <code>title</code> 属性即可。 属性之间以逗号分隔。</li>
-</ul>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1frr2ar14m7j31840dimxq.jpg" alt=""></p>
-<h4 id="效果示例-1"><a href="#效果示例-1" class="headerlink" title="效果示例"></a>效果示例</h4><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1frr2blr6bfj315y0vy77g.jpg" alt=""></p>
-<h2 id="添加emoji表情"><a href="#添加emoji表情" class="headerlink" title="添加emoji表情"></a>添加emoji表情</h2><h4 id="使用方式-3"><a href="#使用方式-3" class="headerlink" title="使用方式"></a>使用方式</h4><div class="note class_name"><p>我的是Mac电脑，所以直接用快捷键，<code>control+command+space</code>调出表情框，然后点击输入即可；对于其他电脑，应该也可以直接搜到复制到markdown就好了。</p></div>
-<h4 id="效果示例-2"><a href="#效果示例-2" class="headerlink" title="效果示例"></a>效果示例</h4><p>🤣😜🤨🤩😎🐸🚗❤️🇨🇳</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><div class="note class_name"><p>我会持续更新，今天先写到这儿，有什么不对，请指正。 </p></div>
-<hr>]]></content>
-      
-        <categories>
-            
-            <category> hexo </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> hexo </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[测试博客照片功能]]></title>
-      <url>/2018/05/27/photoPostName/</url>
-      <content type="html"></content>
-      
-        <categories>
-            
-            <category> 相册 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 照片 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[TensorFlow中的维度和shape的理解]]></title>
-      <url>/2018/05/26/TensorFlow%E4%B8%AD%E7%9A%84%E7%BB%B4%E5%BA%A6%E5%92%8Cshape%E7%9A%84%E7%90%86%E8%A7%A3/</url>
-      <content type="html"><![CDATA[<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1frp7z57mjuj30p00fr0ta.jpg" alt=""></p>
-<blockquote>
-<p>TensorFlow 的名字已经说明了它最重要的两个概念—Tensor和Flow。Tensor就是张量，Flow翻译成中文就是“流”，它直观的表达了张量之间通过计算相互转化的过程。</p>
-</blockquote>
-<a id="more"></a>
-<blockquote>
-<p>Tensor在TensorFlow中是N维矩阵，所以涉及到Tensor的方法，也都是矩阵的处理。由于十多位，在TensorFlow中Tensor的流动过程就涉及到了升维降维。</p>
-<p>该篇通过讲解Tensor张量中的shape的理解和一些接口的使用，来体会Tensor的维度概念。</p>
-</blockquote>
-<h2 id="理解TensorFlow的shape"><a href="#理解TensorFlow的shape" class="headerlink" title="理解TensorFlow的shape"></a>理解TensorFlow的shape</h2><blockquote>
-<p>TensorFlow和python中的numpy库一样，读shape时应该从外向内读。</p>
-</blockquote>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[[1,2,3],[4,5,6]]</div></pre></td></tr></table></figure>
-<p>和</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">[[1,2,3],</div><div class="line"> [4,5,6]]</div></pre></td></tr></table></figure>
-<p>是一样的，都是2行三列(shape(2,3))。</p>
-<p>这该怎么理解呢？首先拿掉最外层的中括号，变成了[1,2,3],[4,5,6]这两个元素，每个元素（如[1,2,3]）拿掉中括号后，剩下1，2，3这三个元素，所以shape=[2,3]。</p>
-<p>也就是说<strong>shape是从外向内读，然后记录下每一层（即每一个中括号）的元素个数</strong>。</p>
-<p>比如，shape=[1,1,2]，则表示的数据应该是这样的：[[[a,b]]].</p>
-<h2 id="什么是维度？什么是轴（axis）？"><a href="#什么是维度？什么是轴（axis）？" class="headerlink" title="什么是维度？什么是轴（axis）？"></a>什么是维度？什么是轴（axis）？</h2><p>什么是维度？维基百科说：</p>
-<blockquote>
-<p>维度，又称维数，是数学中独立参数的数目。在物理学和哲学的领域内，指独立的时空坐标的数目。</p>
-<p>0维是一个点，没有长度。1维是线，只有长度。2维是一个平面，是由长度和宽度（或曲线）形成面积。3维是2维加上高度形成的“体积面”。虽然一般人习惯了整数维，但在分形中维度不一定是整数，可能会是一个非整的有理数或者无理数。</p>
-</blockquote>
-<p>看上面的话，可能很费解，我也是！那么就接着往下看吧，会越来越简单的。</p>
-<p>总结：<strong>维度是用来索引一个多维数组中某个具体数所需要最少的坐标数量。</strong></p>
-<p>这句话很有深度，但是你多读几遍，加上下面的例子，你肯定会有自己的理解。</p>
-<p>不同的维度的形式如下：</p>
-<ul>
-<li>0维，又称0维张量，数字，标量：1</li>
-<li>1维，又称1维张量，数组，vector：[1,2,3]</li>
-<li>2维，，又称2维张量，矩阵，二维数组：[[1,2],[3,4]]</li>
-<li>3维，又称3维张量，立方，三维数组：[[[1,2],[3,4]],[[5,6],[7,8]]]</li>
-<li>n维，你应该可以自己总结出来了吧！</li>
-</ul>
-<p><strong>再多的维只不过是把上一个维度当做自己的元素</strong></p>
-<p>所以看一个张量是几维的，就看最深的数字外有几个中括号！</p>
-<h3 id="什么是axis"><a href="#什么是axis" class="headerlink" title="什么是axis"></a>什么是axis</h3><blockquote>
-<p><strong>axis 是多维数组每个维度的坐标</strong></p>
-</blockquote>
-<p>也就是说，对于[ [[1,2], [3,4]], [[5,6], [7,8]] ]这个3维情况，[[1,2],[[5,6]], [[3,4], [7,8]]这两个矩阵的axis是0，[1,2]，[3,4]，[5,6]，[7,8]这4个数组的axis是1，而1，2，3，4，5，6，7，8这8个数的axis是2。</p>
-<h2 id="Tensor维度理解"><a href="#Tensor维度理解" class="headerlink" title="Tensor维度理解"></a>Tensor维度理解</h2><blockquote>
-<p>这里通过<code>tf.reduce_mean</code>来理解一下维度</p>
-</blockquote>
-<h3 id="tf-reduce-mean"><a href="#tf-reduce-mean" class="headerlink" title="tf.reduce_mean"></a>tf.reduce_mean</h3><pre><code>reduce_mean(
-    input_tensor,
-    axis=None,
-    keep_dims=False,
-    name=None,
-    reduction_indices=None
-)
-</code></pre><p>计算Tensor各个维度元素的均值，这个方法是通过输入参数<code>axis</code>的维度上减少输入<code>input_tensor</code>的维度。</p>
-<p>举个例子：</p>
-<pre><code>x = tf.constant([1.,1.],[2.,2.])
-tf.reduce_mean(x)    # 1.5
-tf.reduce_mean(x,0)    # [1.5, 1.5]
-tf.reduce_mean(x,1)    # [1., 2.]
-</code></pre><p>x 是 <strong>二维数组</strong>：</p>
-<ul>
-<li>当<code>axis</code>参数取默认值时，计算整个数组的均值：(1.+1.+2.+2.)/4 = 1.5</li>
-<li>当<code>axis</code>取0，意味着对<strong>列取均值</strong>：[1.5, 1.5]</li>
-<li>当<code>axis</code>去1，意味着对<strong>行取均值</strong>：[1.0, 2.0]</li>
-</ul>
-<p>在换一个 3*3 的矩阵：</p>
-<pre><code>sess = tf.Session()
-x = tf.constant([[1., 2., 3.], [4.,     5., 6.], [7., 8., 9.]])
-print(sess.run(x))
-print(sess.run(tf.reduce_mean(x)))
-print(sess.run(tf.reduce_mean(x, 0)))
-print(sess.run(tf.reduce_mean(x, 1)))
-</code></pre><p>输出结果为：</p>
-<pre><code>[[ 1.  2.  3.]
-  [ 4.  5.  6.]
-  [ 7.  8.  9.]]
-5.0
-[ 4.  5.  6.]
-[ 2.  5.  8.]
-</code></pre><p>如果我再加<strong>一维</strong>会是怎么样计算？</p>
-<pre><code>sess = tf.Session()
-x = tf.constant([[[1., 1.], [2.,     2.]], [[3., 3.], [4., 4.]]])
-print(sess.run(x))
-print(sess.run(tf.reduce_mean(x)))
-print(sess.run(tf.reduce_mean(x, 0)))
-print(sess.run(tf.reduce_mean(x, 1)))
-print(sess.run(tf.reduce_mean(x, 2)))
-</code></pre><p>我给输入的Tensor是三维数组：</p>
-<pre><code>[[[ 1.  1.]
-  [ 2.  2.]]
-
-[[ 3.  3.]
- [ 4.  4.]]]
-</code></pre><p>推测一下，前面的二维经过处理都变成了一维的，也就是经过了一次降维，那么现在的三维或许应该变成了二维。但是现在多了一维，应该从哪个方向做计算呢？<br>首先看输出结果：</p>
-<pre><code>2.5        # x
-[[ 2.  2.]    # x,0
-  [ 3.  3.]]    
-[[ 1.5  1.5]    # x,1
- [ 3.5  3.5]]
-[[ 1.  2.]    # x,2
- [ 3.  4.]]
-</code></pre><p>发现：</p>
-<ul>
-<li>当<code>axis</code>参数取默认值时，依然是计算整个数组的均值：(float)(1+2+3+4+1+2+3+4)/8=2.5</li>
-<li><p>当<code>axis</code>取0，计算方式是：</p>
-<pre><code>  [[(1+3)/2, (1+3)/2],
-  [(2+4)/2, (2+4)/2]]
-</code></pre></li>
-<li><p>当<code>axis</code>取1，计算方式是：</p>
-<pre><code>  [[(1+2)/2, (1+2)/2],
-  [(3+4)/2, (3+4)/2]]
-</code></pre></li>
-<li><p>当<code>axis</code>取2，计算方式是：</p>
-<pre><code>  [[(1+1)/2, (2+2)/2],
-  [(3+3)/2, (4+4)/2]]
-</code></pre></li>
-</ul>
-<p>总结：</p>
-<blockquote>
-<p>规律：</p>
-<p>对于k维的，</p>
-<ol>
-<li><p>tf.reduce_mean(x,axis=k-1)的结果是对最里面的一维所有元素求和取平均</p>
-</li>
-<li><p>tf.reduce_mean(x,axis=k-2)的结果是对倒数第二层里的向量对应的元素进行求和取平均</p>
-</li>
-<li><p>tf.reduce_mean(x,axis=k-3)的结果是对倒数第三层的每个向量对应元素进行求和取平均</p>
-</li>
-</ol>
-<p><a href="https://www.zhihu.com/question/51325408/answer/238082462" target="_blank" rel="external">参考链接</a></p>
-</blockquote>
-<p>附图理解：</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fromjszfxrj30ky09vt9n.jpg" alt=""></p>
-<p>在TensorFlow 1.0版本中，<code>reduction_indices</code>被改为了<code>axis</code>，在所有的reduce_xxx系列操作中，都有axis也就是reduction_indices这个参数。</p>
-<h2 id=""><a href="#" class="headerlink" title=" "></a> </h2><hr>]]></content>
-      
-        <categories>
-            
-            <category> 深度学习 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> TensorFlow </tag>
-            
-            <tag> 深度学习 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[曹晨每周必做题--2]]></title>
-      <url>/2018/05/19/%E6%9B%B9%E6%99%A8%E6%AF%8F%E5%91%A8%E5%BF%85%E5%81%9A%E9%A2%982/</url>
-      <content type="html"><![CDATA[<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1frh1a83e1tj30m80hsabi.jpg" alt=""><br><a id="more"></a></p>
-<blockquote>
-<p>除了下面每天必做的题目外，这周还需要把以下课后习题做了</p>
-<p><strong>39页习题7.3</strong>： <strong>1、2题</strong></p>
-<p><strong>41页的A组复习题</strong>：2(第二题中的4、5、6小问)、4</p>
-<p><strong>43页的B组复习题</strong>：3、5</p>
-<p><strong>44页的C组复习题</strong>：2、3</p>
-<p><strong>77页习题8.5</strong>：2、4、5、6</p>
-<p>别怕，后面我只出了三天的题，你可以在五天内挑出三天来完成😝，这些题也不会太难了，I believe you！加油！</p>
-</blockquote>
-<h3 id="周一"><a href="#周一" class="headerlink" title="周一"></a>周一</h3><h4 id="计算题"><a href="#计算题" class="headerlink" title="计算题"></a>计算题</h4><h5 id="1-解不等式组"><a href="#1-解不等式组" class="headerlink" title="1.解不等式组"></a>1.解不等式组</h5><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frh1v9t4wkj305y03wt8r.jpg" alt=""></p>
-<h2 id="答：原不等式组的解集为－7＜x≤1．"><a href="#答：原不等式组的解集为－7＜x≤1．" class="headerlink" title="答：原不等式组的解集为－7＜x≤1．"></a>答：原不等式组的解集为－7＜x≤1．</h2><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frh2y0uttlj308u056mx9.jpg" alt=""><br>答：x&lt;1</p>
-<h5 id="2-解方程组"><a href="#2-解方程组" class="headerlink" title="2.解方程组"></a>2.解方程组</h5><p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1frh1xdk2jej30940403yl.jpg" alt=""></p>
-<h2 id="答：-x-frac-3-2-，-y-2"><a href="#答：-x-frac-3-2-，-y-2" class="headerlink" title="答：$x=-\frac{3}{2}$，$y=-2$"></a>答：$x=-\frac{3}{2}$，$y=-2$</h2><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frh2odemgmj3080020t8p.jpg" alt=""></p>
-<h2 id="答：x-0，y-2"><a href="#答：x-0，y-2" class="headerlink" title="答：x=0，y=-2"></a>答：x=0，y=-2</h2><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frh2txsxllj305y03qaa2.jpg" alt=""></p>
-<h2 id="答：x-3，y-1"><a href="#答：x-3，y-1" class="headerlink" title="答：x=3，y=-1"></a>答：x=3，y=-1</h2><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frh2z2iqscj307q032q30.jpg" alt=""></p>
-<h2 id="答：x-2，y-1"><a href="#答：x-2，y-1" class="headerlink" title="答：x=2，y=1"></a>答：x=2，y=1</h2><h5 id="3-选择题"><a href="#3-选择题" class="headerlink" title="3.选择题"></a>3.选择题</h5><p>1.<img src="https://ws3.sinaimg.cn/large/006tKfTcly1frh24qpk2mj30ta04cdgb.jpg" alt=""></p>
-<h2 id="答：D"><a href="#答：D" class="headerlink" title="答：D"></a>答：D</h2><p>2.<img src="https://ws4.sinaimg.cn/large/006tKfTcly1frh25mretoj30rs05wq3l.jpg" alt=""></p>
-<h2 id="答：A"><a href="#答：A" class="headerlink" title="答：A"></a>答：A</h2><p>3.<img src="https://ws4.sinaimg.cn/large/006tKfTcly1frh2fdt7v1j30ro03qjrt.jpg" alt=""></p>
-<h2 id="答：D-1"><a href="#答：D-1" class="headerlink" title="答：D"></a>答：D</h2><p>4.<img src="https://ws1.sinaimg.cn/large/006tKfTcly1frh2lpttzkj30mg05g3z4.jpg" alt=""></p>
-<h2 id="答：D-2"><a href="#答：D-2" class="headerlink" title="答：D"></a>答：D</h2><h5 id="4-填空题"><a href="#4-填空题" class="headerlink" title="4.填空题"></a>4.填空题</h5><p>1.<img src="https://ws4.sinaimg.cn/large/006tKfTcly1frh2a4237yj30mc028jrk.jpg" alt=""></p>
-<h2 id="答：-2"><a href="#答：-2" class="headerlink" title="答：-2"></a>答：-2</h2><p>2.<img src="https://ws3.sinaimg.cn/large/006tKfTcly1frh2ryqa26j30au01yt8q.jpg" alt=""></p>
-<h2 id="答：1，2"><a href="#答：1，2" class="headerlink" title="答：1，2"></a>答：1，2</h2><p>3.<img src="https://ws4.sinaimg.cn/large/006tKfTcly1frh2w3ujktj30y203cdg9.jpg" alt=""></p>
-<h2 id="答：k-2，m-3"><a href="#答：k-2，m-3" class="headerlink" title="答：k=2，m=3"></a>答：k=2，m=3</h2><h4 id="应用题"><a href="#应用题" class="headerlink" title="应用题"></a>应用题</h4><h2 id=""><a href="#" class="headerlink" title=""></a><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frh2d9g02bj30su0iy0wu.jpg" alt=""></h2><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frh2e5zedaj30tq0xi0xo.jpg" alt=""></p>
-<h3 id="周二"><a href="#周二" class="headerlink" title="周二"></a>周二</h3><h4 id="计算题-1"><a href="#计算题-1" class="headerlink" title="计算题"></a>计算题</h4><h5 id="1-解不等式组-1"><a href="#1-解不等式组-1" class="headerlink" title="1.解不等式组"></a>1.解不等式组</h5><p>（1）</p>
-<script type="math/tex; mode=display">2+\frac{3(x+1)}{8} < 3-\frac{x-1}{4}</script><script type="math/tex; mode=display">\frac{3x-1}{3} - \frac{9-2x}{3} ≤ \frac{5x+1}{2}</script><p>答：原不等式组的解集为$-\frac{23}{5}≤ x &lt; \frac{7}{5}$．</p>
-<p>—<br>(2)</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fri471e5jdj308803c74c.jpg" alt=""></p>
-<p>答：x≤1</p>
-<p>—<br>(3)</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fri4na55o6j30a005ijri.jpg" alt=""></p>
-<p>答：3&lt;x≤4</p>
-<h5 id="2-解方程组-1"><a href="#2-解方程组-1" class="headerlink" title="2.解方程组"></a>2.解方程组</h5><p>(1)</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fri47xg6loj309w03mt8w.jpg" alt=""></p>
-<p>答：$x=2$，$y=2$</p>
-<p>—<br>(2)</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fri4atms0oj305a02ojrd.jpg" alt=""></p>
-<p>答：a=2，b= -1</p>
-<p>—<br>(3)</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fri4lokr7qj30a804cq32.jpg" alt=""></p>
-<p>答：x=5，y=7</p>
-<hr>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1frh2z2iqscj307q032q30.jpg" alt=""></p>
-<h2 id="答：x-2，y-1-1"><a href="#答：x-2，y-1-1" class="headerlink" title="答：x=2，y=1"></a>答：x=2，y=1</h2><h5 id="3-选择题-1"><a href="#3-选择题-1" class="headerlink" title="3.选择题"></a>3.选择题</h5><p>(1)</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fri4pa5r5mj311m02yaar.jpg" alt=""></p>
-<p>答：D</p>
-<p>—<br>(2)</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fri4t1ttcuj30rm04oaap.jpg" alt=""></p>
-<p>答：C</p>
-<p>—<br>(3)</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fri4v63eyaj30r2044aak.jpg" alt=""></p>
-<p>答：C</p>
-<p>—<br>(4)</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fri53368nvj30ss06e0tj.jpg" alt=""></p>
-<h2 id="答：A-1"><a href="#答：A-1" class="headerlink" title="答：A"></a>答：A</h2><h5 id="4-填空题-1"><a href="#4-填空题-1" class="headerlink" title="4.填空题"></a>4.填空题</h5><p>(1)<img src="https://ws3.sinaimg.cn/large/006tKfTcly1fri4encdb8j30mi02mq38.jpg" alt=""></p>
-<p>答：$x=\frac{7}{3}, y=-\frac{1}{3}, a = -2$</p>
-<p>—<br>(2)<img src="https://ws3.sinaimg.cn/large/006tKfTcly1fri4k8qyodj30wm04274r.jpg" alt=""></p>
-<p>答：$k=-\frac{3}{2}$</p>
-<p>—<br>(3)<img src="https://ws2.sinaimg.cn/large/006tKfTcly1fri4qvzaluj30n802y3yr.jpg" alt=""></p>
-<p>答：3</p>
-<p>—<br>(4)</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fri4wwiivxj30gm01ewej.jpg" alt=""></p>
-<p>答：m=1，n=0</p>
-<h4 id="应用题-1"><a href="#应用题-1" class="headerlink" title="应用题"></a>应用题</h4><blockquote>
-<p>某储运站现有甲种货物1530吨，乙种货物1150吨，安排用一列货车将这批货物运往青岛，这列货车可挂A，B两种不同规格的货厢50节．已知甲种货物35吨和乙种货物15吨可装满一节A型货厢，甲种货物25吨和乙种货物35吨可装满一节B型货厢，按此要求安排A,B两种货厢的节数，有哪几种运输方案？请设计出来．</p>
-</blockquote>
-<p> 解：设用A型货厢x节，则用B型货厢（50-x）节，由题意，得</p>
-<script type="math/tex; mode=display">35x+25(50-x) ≥ 1530</script><script type="math/tex; mode=display">15x + 35(50-x)≥1150</script><p> 解得28≤x≤30． 因为x为整数，所以x只能取28，29，30．相应地（50-x）的值为22，21，20．</p>
-<p>所以共有三种调运方案：</p>
-<ul>
-<li>第一种调运方案：用 A型货厢 28节,B型货厢22节；</li>
-<li>第二种调运方案：用A型货厢29节,B型货厢21节；</li>
-<li>第三种调运方案：用A型货厢30节,用B型货厢20节．    </li>
-</ul>
-<h3 id="周三"><a href="#周三" class="headerlink" title="周三"></a>周三</h3><h4 id="计算题-2"><a href="#计算题-2" class="headerlink" title="计算题"></a>计算题</h4><h5 id="1-解不等式组-2"><a href="#1-解不等式组-2" class="headerlink" title="1.解不等式组"></a>1.解不等式组</h5><p>1.</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fri5605sayj308q05et8t.jpg" alt=""></p>
-<p>答：原不等式组的解集为$-1≤ x &lt; 2$．</p>
-<p>—<br>(2)</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fri471e5jdj308803c74c.jpg" alt=""></p>
-<p>答：x≤1</p>
-<p>—<br>(3)</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fri4na55o6j30a005ijri.jpg" alt=""></p>
-<p>答：3&lt;x≤4</p>
-<h5 id="2-解方程组-2"><a href="#2-解方程组-2" class="headerlink" title="2.解方程组"></a>2.解方程组</h5><p>1.</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fri5aa8xogj30s402oweq.jpg" alt=""></p>
-<p>答：$\frac{5}{2}$</p>
-<p>—<br>2.计算</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fri5cuctexj309w01ut8p.jpg" alt=""></p>
-<p>答：$16x^4-y^4$</p>
-<p>—<br>3.</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fri5iq2fm5j30ce03sjrk.jpg" alt=""></p>
-<p>答：x=3，y=-1</p>
-<hr>
-<p>4.</p>
-<script type="math/tex; mode=display">4x-y-5=0</script><script type="math/tex; mode=display">\frac{1}{2}x + \frac{1}{3}y = 2</script><p>答：x=2，y=3</p>
-<p>—</p>
-<h5 id="3-选择题-2"><a href="#3-选择题-2" class="headerlink" title="3.选择题"></a>3.选择题</h5><p>1.</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fri5f3bww5j311o056jsa.jpg" alt=""></p>
-<p>答：D</p>
-<p>—<br>2.</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1fri5g82klmj310c03cmxo.jpg" alt=""></p>
-<p>答：A</p>
-<p>—<br>3.</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fri5m1wyocj316e04gaby.jpg" alt=""></p>
-<p>答：C</p>
-<p>—<br>4.</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fri5oktn3oj311s042mxs.jpg" alt=""></p>
-<p>答：C</p>
-<p>—</p>
-<h5 id="4-填空题-2"><a href="#4-填空题-2" class="headerlink" title="4.填空题"></a>4.填空题</h5><p>1.</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fri583hdjvj30gi02aaa5.jpg" alt=""></p>
-<p>答：36</p>
-<p>—<br>2</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fri5heow77j30qa02it8z.jpg" alt=""></p>
-<p>答：-1</p>
-<p>—<br>3.</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fri5unj5kij30nm04a0tp.jpg" alt=""></p>
-<p>答：1、3</p>
-<p>—<br>4.</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1fri5qg9ib5j311e05gjs1.jpg" alt=""></p>
-<p>答：2</p>
-<h4 id="应用题-2"><a href="#应用题-2" class="headerlink" title="应用题"></a>应用题</h4><p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1fri5y7xy7sj316209oq7a.jpg" alt=""></p>
-<p>—</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fri5z9xbkoj315w0oqn3f.jpg" alt=""></p>
-<hr>]]></content>
-      
-        <categories>
-            
-            <category> 家教 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 曹晨 </tag>
-            
-            <tag> 家教 </tag>
-            
-            <tag> 案例 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[分式方程应用各个类型案例讲解]]></title>
-      <url>/2018/05/18/%E5%88%86%E5%BC%8F%E6%96%B9%E7%A8%8B%E5%BA%94%E7%94%A8%E9%A2%98%E5%88%86%E7%B1%BB%E8%AE%B2%E8%A7%A3/</url>
-      <content type="html"><![CDATA[<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1frggs2s4j5j30sg0iztbk.jpg" alt=""><br><a id="more"></a></p>
-<h2 id="一、【行程中的应用性问题】"><a href="#一、【行程中的应用性问题】" class="headerlink" title="一、【行程中的应用性问题】"></a>一、【行程中的应用性问题】</h2><h3 id="例1"><a href="#例1" class="headerlink" title="例1"></a>例1</h3><blockquote>
-<p>甲、乙两个车站相距96千米，快车和慢车同时从甲站开出，1小时后快车在慢车前12千米，快车比慢车早40分钟到达乙站，快车和慢车的速度各是多少？</p>
-</blockquote>
-<p>===</p>
-<blockquote>
-<p>分析：等量关系是什么？ —- 慢车用时 = 快车用时 + $\frac{40}{60}$</p>
-</blockquote>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th></th>
-<th style="text-align:right">所行距离</th>
-<th style="text-align:right">速度</th>
-<th style="text-align:center">时间</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>快车</td>
-<td style="text-align:right">96 km</td>
-<td style="text-align:right">x km/h</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td>慢车</td>
-<td style="text-align:right">96 km</td>
-<td style="text-align:right">x-12 km/h</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>解：设快车速度为 x km/h，则慢车的速度为 （x - 12）km/h</p>
-<p>所以：</p>
-<script type="math/tex; mode=display">\frac{96}{x-12} = \frac{96}{x} + \frac{40}{60}</script><p>解得：x = 48 km/h , x - 12 = 36 km/h</p>
-<p>答：快车速度为 48 km/h , 慢车速度为 36 km/h。</p>
-<h3 id="例2"><a href="#例2" class="headerlink" title="例2"></a>例2</h3><blockquote>
-<p>甲、乙两地相距828km，一列普通快车与一列直达快车都由甲地开往乙地，直达快车的平均速度是普通快车平均速度的1.5倍．直达快车比普通快车晚出发2h，比普通快车早4h到达乙地，求两车的平均速度．</p>
-</blockquote>
-<p>==</p>
-<p>解：设普通快车车的平均速度为 x km／h，则直达快车的平均速度为 1.5x km／h，依题意，得：</p>
-<script type="math/tex; mode=display">\frac{828-6x}{x} = \frac{828}{1.5x}</script><p>解得：x = 46. 经检验，x = 46 是方程的根，且符合题意。</p>
-<p>∴ x = 46，1.5x = 69</p>
-<p>答：普通快车车的平均速度为46km／h，直达快车的平均速度为69km／h。</p>
-<h3 id="例3"><a href="#例3" class="headerlink" title="例3"></a>例3</h3><blockquote>
-<p>A、B两地相距87千米，甲骑自行车从A地出发向B地驶去，经过30分钟后，乙骑自行车由B地出发，用每小时比甲快4千米的速度向A地驶来，两人在距离B地45千米C处相遇，求甲乙的速度。</p>
-</blockquote>
-<p>分析：<br><img src="https://ws3.sinaimg.cn/large/006tKfTcly1frfwruhjr5j30im046dg9.jpg" alt=""></p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th></th>
-<th style="text-align:right">所行距离</th>
-<th style="text-align:right">速度</th>
-<th style="text-align:center">时间</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>甲</td>
-<td style="text-align:right">87-45 km</td>
-<td style="text-align:right">x km/h</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td>乙</td>
-<td style="text-align:right">45 km</td>
-<td style="text-align:right">x+4 km/h</td>
-</tr>
-</tbody>
-</table>
-</div>
-<p>等量关系：：甲用时间=乙用时间+ $\frac{30}{60}$   （小时）</p>
-<p>解：设甲的速度为 x km/h ，则乙的速度为 (x+4) km/h</p>
-<p>所以，</p>
-<script type="math/tex; mode=display">\frac{87-45}{x} = \frac{45}{x+4} + \frac{30}{60}</script><p>解得：$x<em>{1} = -24$（不符合题意，舍去）$x</em>{2} = 14 km/h$，所以乙的速度为 18 km/h</p>
-<p>答：…….</p>
-<h3 id="例4"><a href="#例4" class="headerlink" title="例4"></a>例4</h3><blockquote>
-<p>某客车从甲地到乙地走全长480Km的高速公路，从乙地到甲地走全长600Km的普通公路。又知在高速公路上行驶的平均速度比在普通公路上快45Km，由高速公路从甲地到乙地所需的时间是由普通公路从乙地到甲地所需时间的一半，求该客车由高速公路从甲地到乙地所需要的时间。</p>
-</blockquote>
-<h2 id="二、【工程类应用性问题】"><a href="#二、【工程类应用性问题】" class="headerlink" title="二、【工程类应用性问题】"></a>二、【工程类应用性问题】</h2><h3 id="例1-1"><a href="#例1-1" class="headerlink" title="例1"></a>例1</h3><blockquote>
-<p>甲乙两个工程队合作一项工程，两队合作2天后，由乙队单独做1天就完成了全部工程。已知乙队单独做所需天数是甲队单独做所需天数的 $\frac{3}{2}$ 倍，问甲乙单独做各需多少天？</p>
-</blockquote>
-<p>解：设甲单独做需要 x 天，则乙单独做需要 $\frac{3x}{2}$天，则：</p>
-<script type="math/tex; mode=display">\frac{2}{x} + \frac{3}{\frac{3x}{2}} = 1</script><p>解得：x = 4，则$\frac{3x}{2} = 6$</p>
-<p>答：甲单独做需要4天，乙单独做需要6天。</p>
-<h4 id="分析："><a href="#分析：" class="headerlink" title="分析："></a>分析：</h4><p>这个等式的意思是什么？我们知道设 甲单独做需要 x 天，则按照题意，甲在这个项目中一共做了2天，则这两天完成了这个项目的百分之多少呢？ 不就是 $\frac{2}{x}$；则乙在这个项目中一共做了 3天，则这三天做了整个项目的百分之多少呢？ 不就是 $\frac{3}{\frac{3x}{2}}$。</p>
-<p>所以加起来就是把这个项目完成了百分之百，即1. 所以等式为：</p>
-<script type="math/tex; mode=display">\frac{2}{x} + \frac{3}{\frac{3x}{2}} = 1</script><h3 id="例2-1"><a href="#例2-1" class="headerlink" title="例2"></a>例2</h3><blockquote>
-<p>甲、乙两个施工队共同完成某居民小区绿化改造工程，乙队先单独做2天后，再由两队合作10天就能完成全部工程．已知乙队单独完成此项工程所需天数是甲队单独完成此项工程所需天数的$\frac{4}{5}$，求甲、乙两个施工队单独完成此项工程各需多少天？</p>
-</blockquote>
-<p>解：设甲施工队单独完成此项工程需x天，则乙施工队单独完成此项工程需$\frac{4x}{5}$天，根据题意，得:　</p>
-<script type="math/tex; mode=display">\frac{10}{x}＋\frac{12}{\frac{4x}{5}}＝1</script><p>解这个方程，得x＝25，经检验，x＝25是所列方程的根，所以 $\frac{4x}{5} = 20$</p>
-<p>答：甲单独完成需要25天，乙单独完成需要20天。</p>
-<h2 id="三、【营销类应用性问题】"><a href="#三、【营销类应用性问题】" class="headerlink" title="三、【营销类应用性问题】"></a>三、【营销类应用性问题】</h2><blockquote>
-<p>营销类应用性问题，涉及 <strong>进货价、售货价、利润率、单价、混合价、赢利、亏损</strong> 等概念，要结合实际问题对它们表述的意义有所了解，同时，要掌握好基本公式，巧妙建立关系式．随着市场经济体制的建立，这类问题具有较强的时代气息，因而成为中考常考不衰的热点问题．</p>
-</blockquote>
-<h3 id="例1-2"><a href="#例1-2" class="headerlink" title="例1"></a>例1</h3><blockquote>
-<p>某校办工厂将总价值为2000元的甲种原料与总价值为4800元的乙种原料混合后，其平均价比原甲种原料每千克少3元，比乙种原料每千克多1元，问混合后的单价每千克是多少元？</p>
-</blockquote>
-<p>解：设混合后的单价为每千克 x 元，则甲种原料的单价为每千克 (x+3) 元，混合后的总价值为 $(2000＋4800)$ 元，混合后的重量为 $\frac{2000+4800}{x}$ 斤，甲种原料的重量为 $\frac{2000}{x+3}$ ，乙种原料的重量为 $\frac{4800}{x-1}$，依题意，得：</p>
-<script type="math/tex; mode=display">\frac{2000}{x+3} + \frac{4800}{x-1} = \frac{2000+4800}{x}</script><p>解得：x = 17，经检验，x = 17 是原方程的根，所以 x=17．即混合后单价每千克为17元。</p>
-<p>答：……..</p>
-<h3 id="例2-2"><a href="#例2-2" class="headerlink" title="例2"></a>例2</h3><blockquote>
-<p>某商场销售某种商品，一月份销售了若干件，共获得利润30000元;二月份把这种商品的单价降低了 0.4元，但是销售量比一月份增加了5000件，从而获得利润比一月份多2000元，调价前每件商品的利润为多少元？</p>
-</blockquote>
-<p>== </p>
-<blockquote>
-<p>分析： 可以列出三个等量关系</p>
-<p>1．2月份销售量一1月份销售量=5000</p>
-<p>2．2月份销售量×2月份利润=2月份总利润</p>
-<p>3．1月份利润一2月份利润=0.4</p>
-</blockquote>
-<p>解：由题意知，根据 二月所获利润 = 30000 + 2000 等式列方程，设调价前每件商品利润为 x 元，则调价后即2月份每件商品利润为 （x-0.4）元，得：</p>
-<script type="math/tex; mode=display">(x-0.4)(\frac{30000}{x} + 5000) = 30000 + 2000</script><p>化简得：$5x^2 -4x -12 = 0$，所以$(x-2)(5x+6) = 0$</p>
-<p>解得 x=2 或 x=-1.2（舍去）</p>
-<p>答：调价前每件商品利润是2元。</p>
-<h3 id="例三"><a href="#例三" class="headerlink" title="例三"></a>例三</h3><blockquote>
-<p>某商厦进货员预测一种应季衬衫能畅销市场，就用8万元购进这种衬衫，面市后果然供不应求，商厦又用17.6万元购进了第二批这种衬衫，所购数量是第一批购进量的2倍，但单价贵了4元，商厦销售这种衬衫时每件定价都是58元，最后剩下的150件按八折销售，很快售完，在这两笔生意中，商厦共赢利多少元。</p>
-</blockquote>
-<p>解：由题意知，设商场第一次购进 x 件衬衫，则第二次购进 2x 件，</p>
-<script type="math/tex; mode=display">\frac{80000}{x} = \frac{176000}{2x} -4</script><p>解得：x = 2000，经检验，x=2000是这个方程的根，∴ 2x=4000。</p>
-<p>商场利润 = 两次总共所买获得总钱 - 两次进购所花总钱。</p>
-<script type="math/tex; mode=display">(2000+4000-150)*58+58*0.8*150 - 80000 - 176000 = 90260 （元）</script><p>答：在这两笔生意中，商场总共盈利90260元。</p>
-<h3 id="例4-1"><a href="#例4-1" class="headerlink" title="例4"></a>例4</h3><blockquote>
-<p>一个批发兼零售的文具店规定：凡一次购买铅笔300枝以上，（不包括300枝），可以按批发价付款，购买300枝以下，（包括300枝）只能按零售价付款。小明来该店购买铅笔，如果给八年级学生每人购买1枝，那么只能按零售价付款，需用120元，如果多购买60枝，那么可以按批发价付款，同样需要120元，</p>
-<p>（1）这个八年级的学生总数在什么范围内？</p>
-<p>（2）若按批发价购买6枝与按零售价购买5枝的款相同，那么这个学校八年级学生有多少人？</p>
-</blockquote>
-<p>解：（1）由题意知，设八年级总人数为 x 人，每人购买一支，只能按零售价，所以 x≤300，如果多购买60支，则可按批发价，则 x + 60 &gt; 300</p>
-<p>所以， 240 &lt; x ≤ 300</p>
-<p>（2）根据按批发价购买6支与零售价购买5支的所需钱相同，列等式求解：</p>
-<script type="math/tex; mode=display">\frac{120}{x}*5 = \frac{120}{x+60}*6</script><p>解得，x = 300，经检验，x=300是原方程的根。</p>
-<p>答：这个学校八年级人数有300人。</p>
-<h3 id="例5"><a href="#例5" class="headerlink" title="例5"></a>例5</h3><blockquote>
-<p>某种商品价格，每千克上涨1/3，上回用了15元，而这次则是30元，已知这次比上回多买5千克，求这次的价格。</p>
-</blockquote>
-<h3 id="例6"><a href="#例6" class="headerlink" title="例6"></a>例6</h3><blockquote>
-<p>小明和同学一起去书店买书，他们先用15元买了一种科普书，又用15元买了一种文学书，科普书的价格比文学书的价格高出一半，因此他们买的文学书比科普书多一本，这种科普和文学书的价格各是多少</p>
-</blockquote>
-<h2 id="四、【轮船顺逆水应用问题】"><a href="#四、【轮船顺逆水应用问题】" class="headerlink" title="四、【轮船顺逆水应用问题】"></a>四、【轮船顺逆水应用问题】</h2><h3 id="例1-3"><a href="#例1-3" class="headerlink" title="例1"></a>例1</h3><blockquote>
-<p>轮船顺流、逆流各走48千米，共需5小时，如果水流速度是4千米/小时，求轮船在静水中的速度。</p>
-</blockquote>
-<p>===</p>
-<blockquote>
-<p>分析：顺流速度=轮船在静水中的速度+水流的速度</p>
-<p>   逆流速度=轮船在静水中的速度-水流的速度</p>
-</blockquote>
-<p>解：设轮船在净水中的速度为 x km/h，得：</p>
-<script type="math/tex; mode=display">\frac{48}{x+4}+\frac{48}{x-4} = 5</script><p>解得：x = 20 或 x=-0.8（舍去）</p>
-<p>答：船在静水中速度为 20 km/h。</p>
-<h3 id="例2-3"><a href="#例2-3" class="headerlink" title="例2"></a>例2</h3><blockquote>
-<p>例2  轮船在顺水中航行30千米的时间与在逆水中航行20千米所用的时间相等，已知水流速度为2千米／时，求船在静水中的速度。（10）</p>
-</blockquote>
-<h3 id="例3-1"><a href="#例3-1" class="headerlink" title="例3"></a>例3</h3><blockquote>
-<p>轮船顺水航行80千米所需要的时间和逆水航行60千米所用的时间相同。已知水流的速度是3千米/时，求轮船在静水中的速度。</p>
-</blockquote>
-<h3 id="例4-2"><a href="#例4-2" class="headerlink" title="例4"></a>例4</h3><blockquote>
-<p>已知一个汽船在顺流中航行46千米和逆流中航行34千米共用去的时间正好等于它在静水中航行80千米用去的时间并且水流的速度是每小时2千米求汽船在静水中的速度。</p>
-</blockquote>
-<h3 id="例5-1"><a href="#例5-1" class="headerlink" title="例5"></a>例5</h3><blockquote>
-<p>9、一艘轮船在静水中的最大航速为30千米/时，它沿江以最大航速顺流航行100千米所用的时间与以最大航速逆流航行60千米所用的时间相等，问：江水的流速为多少？设江水的流速为x千米/时，则可列方程?</p>
-</blockquote>
-<p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1frgg8ndctmj30ry03kmxl.jpg" alt=""></p>
-<h2 id="五、【其他应用性问题】"><a href="#五、【其他应用性问题】" class="headerlink" title="五、【其他应用性问题】"></a>五、【其他应用性问题】</h2><h3 id="例1-4"><a href="#例1-4" class="headerlink" title="例1"></a>例1</h3><blockquote>
-<p>例1  要在15%的盐水40千克中加入多少盐才能使盐水的浓度变为20%．</p>
-<p>分析：设加入盐千克．浓度问题的基本关系是：$\frac{溶质}{溶液}=浓度$</p>
-</blockquote>
-<p>解：设应加入盐 x 千克，依题意，得</p>
-<script type="math/tex; mode=display">\frac{40*15\%+x}{40+x} = 20\%</script><p>解得：x=2.5，经检验，x=2.5是原方程的根</p>
-<p>答：需要加入2.5kg的盐。</p>
-<h3 id="例2-4"><a href="#例2-4" class="headerlink" title="例2"></a>例2</h3><blockquote>
-<p>某校招生录取时，为了防止数据输入出错，2640名学生的成绩数据分别由两位程序操作员各向计算机输入一遍，然后让计算机比较两人的输入是否一致，已知甲的输入速度是乙的2倍，结果甲比乙少用2小时输完。问这两个操作员每分钟各能输入多少名学生的成绩？</p>
-</blockquote>
-<h3 id="例3-2"><a href="#例3-2" class="headerlink" title="例3"></a>例3</h3><blockquote>
-<p>供电局的电力维修工要到30千米远的郊区进行电力抢修，技术工人骑摩托车先走，15分钟后，抢修车装载这所需材料出发，结果他们同时到达，，已知抢修的速度是摩托车的1.5倍。求这两种车的速度。</p>
-</blockquote>
-]]></content>
-      
-        <categories>
-            
-            <category> 家教 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 曹晨 </tag>
-            
-            <tag> 家教 </tag>
-            
-            <tag> 案例 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[基于网格的运动统计，用于快速、超鲁棒性的匹配]]></title>
-      <url>/2018/05/16/GMS-Grid-base%20Motion%20Statistics%20for%20Fast%EF%BC%8CUltra-robust%20Feature%20Correspondence/</url>
-      <content type="html"><![CDATA[<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frd3ed5h5jj30dw07twf9.jpg" alt=""><br> <a id="more"></a></p>
-<h2 id="前序"><a href="#前序" class="headerlink" title="前序"></a>前序</h2><p>今天分为两个部分讲解：</p>
-<ol>
-<li>关于Feature Matching 的介绍，可能有些人对feature matching本身不太了解。</li>
-<li>最近几年关于关于feature matching的文章，主要有三篇。</li>
-</ol>
-<p>前两篇文章主要的工作是：把feature matching做的特别的robust，之前的一些作法可能能基本的实现基本的match，但是因为match的质量不高，导致很多应用是不能用的，比如三维重构。但是经过前两篇文章，就可以实现之前不能实现的了，提升了鲁棒性，具有了很大的提高。该篇文章主要是对前两篇文章的优化，因为前两篇虽然最终效果很好，但是速度很慢。对于三维重构来说速度勉强可以，但是对于机器人导航、SLAM、无人机这些应用来说，速度就不够了，作者就对这个问题进行了时间的优化，最终达到的效果就是：性能和前两篇文章实现的相近，时间提升了很多，很快。希望能把这个算法应用到更多实时应用上。</p>
-<h2 id="Feature-Matching-Introduction"><a href="#Feature-Matching-Introduction" class="headerlink" title="Feature Matching Introduction"></a>Feature Matching Introduction</h2><p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1frcwu3y7i5j30gi05w44b.jpg" alt=""></p>
-<p>我们可以看一下这两张图，图中山峰是同一个山峰，但是是由人由两个角度进行拍照。所以我们如果能把两张图片中对应的点找来，找出来有什么用呢？我们知道上面的两幅图是由人从不同的角度拍照得来的，那么这两幅图中间是有一个几何关系，这个几何关系可以由一个方程来表示。那么每一个匹配点就相当于这个方程的解，如果我们有足够多的正确匹配的点，我们就可以用这些点来估算这个方程里面的参数，相当于我们知道了两张图片中对应的几何关系</p>
-<h3 id="Correct-Correspondences的应用"><a href="#Correct-Correspondences的应用" class="headerlink" title="Correct Correspondences的应用"></a>Correct Correspondences的应用</h3><p>你把两张图片中相同的点匹配起来有什么用？</p>
-<ul>
-<li>Geometry between 2 views，Geometry就是两张图片中的几何关系，这样我们便可以用来做很多事情：比如：Estimate Camera Pose Localization(SFM)、Tracking(SLAM):就是你能把一帧一帧图像之间的相对应的几何关系能算出来，如果很准的话，你就能画出来人运动的轨迹，就是一个人导航问题。</li>
-<li>Similarity（Number of matches），根据Feature matching的多少评测两张图片的相似度。然后我们就可以用来做Image Retrieval(图像检索)、Object Recognition(目标识别)、Loop Closing(SLAM)….</li>
-</ul>
-<h3 id="如何实现Feature-Matching"><a href="#如何实现Feature-Matching" class="headerlink" title="如何实现Feature Matching"></a>如何实现Feature Matching</h3><p>就是在两张Image中相同的这些部分找到，再把它们匹配起来。</p>
-<ol>
-<li>首先是如何找到，包含两个步骤：Detection、Description。<ul>
-<li>Detection：首先找到的是角点，再者比较容易找的是边缘的点。</li>
-<li>Description：对于这些每一个点计算出周围的特征，比如sift是用128维的数字去描述他的一个description。</li>
-<li>matching的时候，只要用这个128维的数字计算跟哪个点的距离最小，就是最相似的</li>
-<li>Geometry：你拿到这些点的匹配后，去做一个他们之间的相关的几何匹配，模拟几何关系，符合这个几何关系的就是正确匹配的点，不符合的就是错误的点。有了几何关系就可以坐后面的事情了。</li>
-</ul>
-</li>
-</ol>
-<p>LIFT：是用深度学习做的，他认为用深度学习得到的feature比手动提取的feature 更加有用</p>
-<p>Matching Algorithms：CODE、RepMatch、GMS。因为Brute-Force和Approximate（FLANN）所获取的匹配点是杂乱的，大量的，这样你最后算几何关系就会很慢，效果还不好。我们这些Matching Algorithms算法是用来从Nearest-Nerighbor match中找出正确的匹配点，错的剔除去。</p>
-<h3 id="如何估计两张图片之间的几何关系"><a href="#如何估计两张图片之间的几何关系" class="headerlink" title="如何估计两张图片之间的几何关系"></a>如何估计两张图片之间的几何关系</h3><p>一般用的是RANSAC-based方法。</p>
-<p>RANSAC：Random Sample Consensus，它是根据一组包含异常数据的样本数据集，计算出数据的数据模型参数，得到有效样本数据的算法。</p>
-<p>RANSAC也做了一下假设：给定一组（通常很小的）局内点（符合最优模型的点为局内点，不符合的定义为据外点），存在一个可以估计模型参数的过程而该模型能够解释或者适用于局内点 </p>
-<p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1frcxgtq6ehj30vk0guju0.jpg" alt=""></p>
-<p>一个简单的例子就是从一组观测数据中找到合适的2维直线。假设检测到的数据如上图左图。简单的最小二乘法不能找出适应与局内点的直线，原因是最小二乘法尽量去适应包括局外点在内的所有的点。相反，RANSAC能够得出一个仅仅用局内点计算出模型，并且概率还足够高。但是RANSAC并不能保证结果一定正确，为了保证算法有足够搞得合理概率，我们必须小心的选择算法的参数。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frcxhlslf4j30jq0dy3zu.jpg" alt=""></p>
-<p>在我们的Feature matching里面，它的RANSAC就不是一条直线了，而是两张图片中的几何关系。这里有两个普遍的几何关系：</p>
-<ul>
-<li>Fundamental Matrix（for 3D scenes）：Point to Line(weak, general)<br>只能是点对线的匹配，就是给定第一张图片中的一个点，它会在第二张图片中画出这个点所在的线。<em>能把一个点和一条线对应起来，这就是它们之间的几何关系，这个几何关系能够恢复出来相机的旋转和平移，用的方法主要是RANSAC方法</em></li>
-<li>Homography (for 2D scenes)：Point to Point（strong，narrow range）<br>只对2D场景有效，比如你拍一张墙的照片，然后对其中一个点，就能匹配到第二张图片的点。</li>
-</ul>
-<h2 id="Recent-Robust-Matchers"><a href="#Recent-Robust-Matchers" class="headerlink" title="Recent Robust Matchers"></a>Recent Robust Matchers</h2><h3 id="CODE-1"><a href="#CODE-1" class="headerlink" title="CODE [1]"></a>CODE [1]</h3><blockquote>
-<p>该算法解决的是 wide-baseline matching问题。</p>
-</blockquote>
-<h4 id="wide-baseline-matching-？"><a href="#wide-baseline-matching-？" class="headerlink" title="wide-baseline matching ？"></a>wide-baseline matching ？</h4><p>基线的本意是指立体视觉系统中量摄像机光心之间的距离。一句拍摄两幅图，像的视点位置可将对应点匹配问题分为宽基线和窄基线。宽基线一词用于匹配时，泛指两幅图像有明显不同的情况下匹配。产生这种情况的原因有可能为摄像机之间的位置相差很大，也有可能由于摄像机旋转或焦距的变化等因素产生。</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1frcxjfh009j30oa0lw1kx.jpg" alt=""></p>
-<p>每一幅图片中的其实是两幅图片，图片中的墙是相同的一个墙，只是由于拍摄的角度特别的大，传统的一些算法处理的不是很好，但是code算法可以，匹配的比较多，准确率也比较高</p>
-<h4 id="Idea"><a href="#Idea" class="headerlink" title="Idea"></a>Idea</h4><p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frcxjrpjtxj30s00lok26.jpg" alt=""></p>
-<p>整体思想如上图，包含了三个回归模型，likelihood是第一个模型，affine motion 为第二第三个模型。这些回归模型就相当于分类器。</p>
-<ol>
-<li>首先输入的是 Selected matches ，就是先挑一些比较好的match，把它们记录下来，去fit第一个模型，其实就相当于是一个分类器，然后用这个分类器把所有match做一个过滤，符合这个的留下来，不符合的剔除。</li>
-<li>然后再用后面两个模型（即分类器）去过滤，最后都通过的才算最终正确的匹配点。</li>
-</ol>
-<p>这三个回归是怎么做的？看下图（回归模型）</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1frcxkf79soj30ms07iwj2.jpg" alt=""></p>
-<p>有一堆散的点，用这些数据去fit一个平面，这个平面上的你认为是对的，不在这个平面上，你认为是错误的。这样的regression总共有三步。</p>
-<h5 id="Likelihood"><a href="#Likelihood" class="headerlink" title="Likelihood"></a>Likelihood</h5><ul>
-<li>train data：是我们选出来的那些好的match</li>
-<li>test data：是所有的的match</li>
-<li>features of a correspondence：把每一个match点定义为8位的向量，x,y是它的空间位置，dx，dy描述了它的motion，就是一对match点，左右各有一个点，用第二个点（第二幅图）的x2 减去 第一个点x1得到dx。T1-T4是一个矩阵的变换。我们看到的是点对点的匹配，其实是区域的匹配，这四个参数就是描述了左边的这个小区域到右边的对应的小区域的变换。</li>
-<li>Label：我们开始初始化为都是1，认为都是对的。</li>
-<li>Non-linear Optimization：描述了所有correspondence之间的相似性，相似性大的就是1，小的就是0</li>
-</ul>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frcxkwi8wxj30pg07iwg0.jpg" alt=""></p>
-<p>likelihood模型为什么有用，它就是用来区分连续的Motion和不连续的Motion，作者认为不连续的Motion一般就是错的。第一个模型就是找那些correspondened是连续的。第二个模型就是把它的精度提升了一下，把x和y都预测了一下。作者认为 (a) (b) 这样的图像中的点是正确的点，而像 (c) 这两个比较近的点的方向还差这么大，就认为是错的。第一个模型likelihood就是找到连续的motion，那些点的motion是连续的。<br>第二个模型就是提升了它的精度，把x和y都测了一下。</p>
-<h4 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h4><p>code算法的input就是那个Nearest Neighbor match，它里面是乱七八糟，所有的match都有，而code就是把其中的对的找出来。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frcxlbkbtij30yo0kye81.jpg" alt=""></p>
-<h4 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h4><p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frcxmak1twj30yg0g0h0y.jpg" alt=""></p>
-<p>主要是三维重构，你上面第二幅图是用商业软件做的，并不是很好，第三幅是用SFM做的，第四幅还是用SFM做的，但是它把SFM中的Feature matching替换成CODE算法得出的feature matching，效果就好很多。</p>
-<h4 id="Run-time-comparison"><a href="#Run-time-comparison" class="headerlink" title="Run time comparison"></a>Run time comparison</h4><p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1frcxmocctwj30uo0fo41r.jpg" alt=""></p>
-<p>纵轴是时间表示，以 s 为单位，横轴是matches的数量，可以看到code运行的时间要比其他的好很多，但是对于slam ，机器人导航，一秒钟要读取几十帧，code这个算法的时间还是不够的。</p>
-<h3 id="RepMatch-2"><a href="#RepMatch-2" class="headerlink" title="RepMatch [2]"></a>RepMatch [2]</h3><blockquote>
-<p>基于第一个算法之上，解决一个重复结构（repeated structure）的问题。它是用第一个算法的输出，然后在这个输出上再做一次优化，筛选一些对的点。</p>
-</blockquote>
-<h4 id="repeated-structure到底是一个什么问题"><a href="#repeated-structure到底是一个什么问题" class="headerlink" title="repeated structure到底是一个什么问题"></a>repeated structure到底是一个什么问题</h4><p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1frcxni5kc2j310a0a8133.jpg" alt=""></p>
-<p>比如 (a) 图中，我们拍了一栋楼的正面，侧面，反面等照片，然后进行SFM三维重构，发现结果它是给我化成了四个部分，但其实它是一栋楼，就是说三维重构并没有重构出这栋楼。<br>原因：因为（a）图像中的楼的各个面的窗口都很像，你也不能确定正面的窗口和背面的窗口有什么不一样，所以导致一个问题：比如SFM就给你标出四个独立的模型，这明明是一栋楼，它合不起来。主要是因为他们之间错误的匹配太多了，你把楼的前面跟后面匹配在一起，它脑子就乱了，根本不知道这是个什么模型。</p>
-<p> 然后用了RepMatch，就能构造一个完整的模型，周围的每一个点是每一张相片拍照的位置，中间这一圈就是楼的俯视图，你他最后dense  reconstruction的结果就是最右边的图</p>
-<h4 id="Repetitive-Structure（怎么做到的构建成功的）"><a href="#Repetitive-Structure（怎么做到的构建成功的）" class="headerlink" title="Repetitive Structure（怎么做到的构建成功的）"></a>Repetitive Structure（怎么做到的构建成功的）</h4><p>idea:是做分类<br>它是建立在CODE 输出结果之上的。它把输出结果分为了几类：</p>
-<ul>
-<li>第一类：把结果放的严一些，然后结果数就很少。</li>
-</ul>
-<h3 id="GMS"><a href="#GMS" class="headerlink" title="GMS"></a>GMS</h3><p>这篇文章主要是把前面两篇文章的主要思想掌握到，然后把它变快，能够把它应用到更多上面。</p>
-<p>首先我们看一个小视频，上面的是作者的GMS算法，下面的是sift，我们可以发现，GMS的match首先在数量上就比sift的多很多，这样我们就能保证最后验证那个几何关系比较准，如果点比较少的话，你做RANSAC的话，就会不稳定，出错之类的。作者的算法比sift这个算法更快更好。</p>
-<h4 id="Motivation：为什么又要质量好又要速度快"><a href="#Motivation：为什么又要质量好又要速度快" class="headerlink" title="Motivation：为什么又要质量好又要速度快"></a>Motivation：为什么又要质量好又要速度快</h4><p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1frcxo7udm1j312w0l60xv.jpg" alt=""></p>
-<p>最常用的算法可能就是Ratio Test，比较流行，比较快，但是不具备鲁棒性。当前的算法比如code等，效果很好，但是很慢。GMS特点就是：又快又好。</p>
-<p>论文GMS的方法实际上是消除错误匹配的一种方案，比如可以替换ransac。算法执行的大致流程是：先执行任意一种特征点的检测和特征点的描述子计算，论文中采用的是ORB特征。然后执行暴力匹配BF，最后执行GMS以消除错误匹配。</p>
-<h4 id="Key-Idea"><a href="#Key-Idea" class="headerlink" title="Key Idea"></a>Key Idea</h4><p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1frcxp52no1j310s0dy1kx.jpg" alt="">True matches(green) are visually smooth while false matches(cyan) are not.  </p>
-<p>正确匹配的点我们用绿色的标注出来，错误匹配的点用青涩标注出来。首先我们可以看到正确匹配的点，举个例子，假设随便拿出来两个正确匹配的点（绿色标注的）记为1号点和2号点，1、2号点在另一幅图中对应匹配的点为1‘和2’。我们可以看到1号点对应的匹配点1‘与2号点对应的匹配点2’位置差不多，相似，整个过程是一个比较smooth的过程。而两个相近错误的点（青色的标注），对应的匹配点一个去了楼上，一个去了天上，这就是我们从观察上得到的信息。<em>那么如何把这个观察的信息变成一个算法去验证这个点是对还是不对，这就是算法的核心</em>。</p>
-<p>首先我们说了一个正确的match看起来比较smooth，所以我们有没有办法把这些看起来比较smooth的match提取出来，我们就认为这些match是对的。<br>根据贝叶斯上讲，既然正确的match看起来比较smooth，那么比较smooth的match应该也是正确的。</p>
-<p>Key Idea：核心思想就是我们如何把match中比较smooth的match拿出来。</p>
-<p><em>方法</em>主要分为三部分：</p>
-<ol>
-<li>Motion Statistics：motion统计</li>
-<li>Grid Framework：grid结构是用来加速的</li>
-<li>Motion Kernels：也是用来加速的</li>
-</ol>
-<p>后面两个部分都是为了实现第一个部分Motion统计，让它变得很快。</p>
-<h4 id="Motion-Statistics"><a href="#Motion-Statistics" class="headerlink" title="Motion Statistics"></a>Motion Statistics</h4><h5 id="Motion-Statistics-Model"><a href="#Motion-Statistics-Model" class="headerlink" title="Motion Statistics Model"></a>Motion Statistics Model</h5><p>首先看一下统计模型是怎么样的，对每一个match，比如说match xi，给他左边和右边各画一个圈，数一下圈中还有多少个其他的match</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1frcxq8nm9sj30y20hytw9.jpg" alt=""></p>
-<p>这个有什么道理：如果一个正确的match，它旁边还有正确的match的话，应该是支持它的。（就像之前的图中显示那样，对的，周围一般Motion是相似的）道理就是一个正确的match旁边可能有对的点在帮你，而对于一个错误的match，你的这个错误是随机发生的，你很难再找到一个点跟你犯一样的错误。所以这两个的概率相差非常大的，第一种正确的match这个圈里面总会有一些点来支持它，而错误的match 支持它的点可能有，但是会很少，这就是这个算法的模型。</p>
-<p>这个图中Si就是表示统计值，这张图中Si = 2，Sj是下面那个，没有人支持他，所以是0.<br>所以motion统计就是这样一件事情。</p>
-<p>Si = 2；Sj = 0.</p>
-<h4 id="我们分析一下这个模型为什么对于判断“这个点是否正确”有效"><a href="#我们分析一下这个模型为什么对于判断“这个点是否正确”有效" class="headerlink" title="我们分析一下这个模型为什么对于判断“这个点是否正确”有效"></a>我们分析一下这个模型为什么对于判断“这个点是否正确”有效</h4><p>我们假设一个点的统计值 Si ，</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frcxqz5w9dj30kw04o3zj.jpg" alt=""><br>它应该服从这个binomial distribution（二项分布）。<br>就假设这个 xi 是正确的的话，那么用 pt 表示这个概率，这个概率是指：假设上图中左边的圈为A，右边的圈为B，那么如果这个点 xi 匹配是正确的话，它周围的点从A到B的可能性是多少，就是支持这个点 xi 的可能性是多少。<br>对于这个 pf ，如果这个 xi 匹配是错的，那么它周围的点支持它的概率是多少。</p>
-<p>我们用 fa 表示 A 这个圈中额外支持它的n个点中的一个点。然后去算这个概率，我们要给出一个事件和假设，如下图：</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1frcxrds8qpj30ws09e40k.jpg" alt=""></p>
-<ul>
-<li>第一个事件表示：fa这个点匹配正确，它的概率为 t，这个概率跟这个算法有关，匹配的质量越高，那么这个概率当然要高</li>
-<li>第二个事件表示：fa 这个点匹配错误，它的概率就是 1-t</li>
-<li>第三个事件表示：fa 这个点 匹配到了 B 圈中的一个点（但不一定是正确的）</li>
-</ul>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frcxroffjfj31040aqac3.jpg" alt=""></p>
-<p>定义这三个事件后，我们给出一个假设：如果一个点它匹配错了，它的匹配还是从A到B的话，那么它的概率是多少 。我们知道如果是A中的一个点匹配错了，那有可能匹配到右边Image中的任何一个点，而它恰好匹配到B圈中的点，如果是随机分布的话，那么这个概率应该为 (m / M), m为B圈中的点的个数，M 为右边图中所有的点的个数。但是可能很多Image是这样的分布，但是有一些Image不是，我们为了弥补这个假设（随机分布），我们给它乘以一个 “贝塔”参数，当这个参数比较大的时候，这个假设就不那么成立了 。这个参数为1的时候，这个假设正好成立。 </p>
-<p>我们算一下这个概率，如下图：<br><img src="https://ws2.sinaimg.cn/large/006tNc79ly1frcxs4c06oj30tw0i0n1z.jpg" alt=""></p>
-<p>因为m很小，所以 pf 是一个接近 0 的概率。<br>而 pt 是一个接近 t 的数，因为 pf 是接近 0 的数 。所以这两个的差异很大，另外我们要怎么才能让这个差异变得更大？</p>
-<p>我们上面是在两张图中各画了一个小圈AB，这个小的区域中，他们的正确的点motion是连续的，通常一个Image中，不是只有这个一个小的区域中的motion是连续的，更大的区域应该也是连续的。</p>
-<p>比如，之前那张狗的图片，我们只是画了狗的鼻子的一小块区域，但是其实鼻子旁边的区域也是连续的，当然我们不是画整张图片，只是比那个小圈更大一些，所以扩展到了 3*3的这样一个区域，相当于比之前的一个圈扩大了9倍，如下图：</p>
-<p> <img src="https://ws4.sinaimg.cn/large/006tNc79ly1frcxsgt12oj30tk0h0wge.jpg" alt=""></p>
-<p>我们之前只是画了a、b这两个圈，现在我们画了9个这样圈，并且统计这个 3 * 3 这样的区域中的 Si。这样便能增大这个distribution之间的差异，如下图：</p>
-<p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1frcxtro02rj30lm048jsp.jpg" alt=""></p>
-<p>因为是3*3，所以 K=9 ，这个Si的分布中 pt 和 pf 是跟之前的一样的，因为只有K变化了。所以计算一下均值和方差，如下图：</p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1frcxu00evbj30s803s76e.jpg" alt=""></p>
-<p>这个是后面要用到。</p>
-<p>现在我们分析一下这个模型有什么用</p>
-<h4 id="Analysis-Model"><a href="#Analysis-Model" class="headerlink" title="Analysis Model"></a>Analysis Model</h4><ul>
-<li><p>Partionalbility</p>
-<p>这个词是表示，对的点和错的点之间有多大的差距，看起来在这个模型中有多么不一样。<br><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frcxuymvwzj30oe038q3s.jpg" alt=""><br>P就是用来定义这两个分布（错的和正确的分布）的距离。P越大，表示这个错误的点和正确的点看起来越不一样，那么这个模型就越强。 </p>
-</li>
-<li><p>Quantity-Quality equivalence</p>
-</li>
-</ul>
-<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1frcxv626d2j30kc02ydfw.jpg" alt=""><br>我们可以看到这个 P 是正比于这个 Kn 的，就是说你用越多的点在里面，那么这个模型就越强，错的点和对的点的区别就越大。</p>
-<ul>
-<li>Relationship to Descriptors</li>
-</ul>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1frcxvbftmvj30n402k74p.jpg" alt=""><br>看与这个descriptors的关系，这个descriptors就是 t ，比如你用sift特征点，假如这个sift特征特别强的话，那么这个P是趋近于无穷大的。这就能验证我们的算法是对的。，也比较合乎道理，你特征越强，你越好分割，所以 P 趋近于无穷大。</p>
-<h4 id="Experiments-on-real-data"><a href="#Experiments-on-real-data" class="headerlink" title="Experiments on real data"></a>Experiments on real data</h4><p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frcxwj273hj30g20dy3zs.jpg" alt=""><br><img src="https://ws2.sinaimg.cn/large/006tNc79ly1frcxx02a4xj30ws046aba.jpg" alt=""><br>该模型在Oxford Affine Dataset上进行评估。 在这里，我们运行SIFT匹配并根据基础事实将所有匹配标记为内点或外点。 我们计算每个匹配的一个小区域内的支持的个数。</p>
-<p>纵轴表示了每个matching旁边画了两个小圈，然后数一数这个小圈中 正确的Inlier周围中到底有多少个点支持它，错的点到底有几个点支持它。</p>
-<p>它有8的小的datasets，每个dataset里面有五对张照片，这五对照片匹配起来<br>一对比一对难，就是越来越难，每个数据，是用8个datasets的数据做了平均得到的。</p>
-<p>所以从上图可以看出：对于正确的点，就算是最难得时候，也有接近8个点支持它，而对于错误的点，始终没有超过1个点支持它。所以可以看出这个模型对于正确的点和错误的点的认识性还是很强的。</p>
-<p>这个算法我们已经知道了，那么如何去加速实现它呢？</p>
-<h4 id="Grid-Framework"><a href="#Grid-Framework" class="headerlink" title="Grid Framework"></a>Grid Framework</h4><p>我们刚才是给每对匹配点画两个圈，一个点一个圈，这样的问题就是：你要想知道有多少个点这个圈内，那你必须要把所有的点过滤一遍。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frcxxlai2dj31260hmq6m.jpg" alt=""><br>所以现在我们的做法是不要给这个匹配点画圈，我们直接把image 打成网格，然后这个匹配点自然就会落在这个Image的网格中，那么它这个网格就代表他的这个小圈，就没有了两个小圈的匹配，而变成了两个网格的匹配，你只要数一下这个网格中有多少个点跟它一样就可以了。 只要你一开始把这些 Feature matching丢进这些网格中，你很容易数清楚。这样算法的时间复杂度就从O(n) -&gt; O(1). 所以会变得很快。</p>
-<h4 id="Motion-Kernel"><a href="#Motion-Kernel" class="headerlink" title="Motion Kernel"></a>Motion Kernel</h4><p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1frcxxraymdj30y60l440x.jpg" alt=""><br>因为我们之前已经知道用更多的region会产生更好的结果，因为我们进行统计的时候就变成了统计这九个小网格的正确点的数量就好了，就很容易能数清楚。</p>
-<h4 id="Empirical-parameters（经验参数）"><a href="#Empirical-parameters（经验参数）" class="headerlink" title="Empirical parameters（经验参数）"></a>Empirical parameters（经验参数）</h4><ul>
-<li><p>你用多少个网格？</p>
-<ul>
-<li>太细的话，统计不好</li>
-<li>太粗的话，精度太低</li>
-<li>经验上作者是说用 20 * 20</li>
-</ul>
-</li>
-<li><p>How to set the threshold？怎么设置阈值？<br>就是认为计算出来的这个值（用 τ 表示）过了多少是对的，没过多少是错的。用的是一个平均值加一个方差，这是经验得到的，并没有什么道理可言。<br><img src="https://ws3.sinaimg.cn/large/006tNc79ly1frcxy19p42j30ry08sgnk.jpg" alt=""><br>这个 α 参数一般我们设置为 0.6 。</p>
-</li>
-</ul>
-<h4 id="Grid-Motion-Statistics-Algorithm"><a href="#Grid-Motion-Statistics-Algorithm" class="headerlink" title="Grid Motion Statistics Algorithm"></a>Grid Motion Statistics Algorithm</h4><p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frcxy972w1j30pm0ms0zx.jpg" alt=""><br>首先是给定这个 Correspondences（匹配点）、scale、rotation，然后产生这个 Kernel 和 Grid（20 * 20）。确定好了，去计算每一个点的统计值 Si ，然后去计算这个 τ，如果这个 Si &gt; τ，那么这个点就是对的。没过就是错的。</p>
-<h4 id="Full-feature-matching-pipeline"><a href="#Full-feature-matching-pipeline" class="headerlink" title="Full feature matching pipeline"></a>Full feature matching pipeline</h4><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1frcxyged1wj30qy0lkwll.jpg" alt=""><br>这是一个完整的流程，首先获取 feature 然后做 match，然后交给GMS，因为这个scale、rotation可能有多个值，你可以多试几遍，找到一个最好的值。 </p>
-<h4 id="Run-time"><a href="#Run-time" class="headerlink" title="Run time"></a>Run time</h4><p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frcxym1mzzj310y0g2n0h.jpg" alt=""><br>这里是提取10000个点为例。<br>这个值可以再Video上实时的，因为ORB和Nearest neighbor可以并行</p>
-<h4 id="Evaluation"><a href="#Evaluation" class="headerlink" title="Evaluation"></a>Evaluation</h4><p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1frcxzfbmt4j311e0ncaro.jpg" alt=""></p>
-<p>我们测试了4个dataset，第一个是TUM。做slam的可能知道，下面是6个视频，然后从中提取出很多帧做测试，所以这个数据集上有3000多个照片。</p>
-<p><img src="https://ws3.sinaimg.cn/large/006tNc79ly1frcxzgleftj30uw0nm7b4.jpg" alt=""><br>0-30是表示两张图片的角度，就是baseline。至于在Strecha和VGG上，Ratio算法表现并不差，是因为这两个数据集太水了，大家是用来发paper的。像TUM这样真正的应用数据上来看，一般的算法根本就不太行了，质量会很差。 </p>
-<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1frcxzial0xj30xk0ow79k.jpg" alt=""><br>X轴是时间，用的是ms表示，Y轴是performance，红色的是作者的算法表现。可以看出GMS实现了结果上差不多，但是时间上快很多倍的效果。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frcxzjw5f1j311u0p07wh.jpg" alt=""><br>我们从上图可以看出，第一幅图，是在平面上，GMS和SIFT比来看，SIFT经过RANSAC后，结果还是勉强可以的。就是说在平面上，这个sift加上RANSAC结果还是可以的。但是在3D中，sift匹配的全都是错误的点，但是GMS依然是表现很好。说明我们这个算法对于wide-baseline问题是真的解决了，不像sift只有在实验中（那些dataset上）表现的还可以接受，但是在现实中的dataset就不行了。</p>
-<p>再就是解决了重复结构的问题，如下图：<br><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frcxzm03dkj311y0jo4qp.jpg" alt=""></p>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frcxzo7hcrj30yy0oghdt.jpg" alt=""><br>之前我们是假设物体是静止的，但是这些猫狗是会动的，动了之后，你拍的图片用sift去匹配的话，如果有的匹配错，并且没有那些RANSAC方法去帮它修正的，那么你匹配对的就是对的，错的就是错的，没有办法去修改。而作者的算法是可以匹配正确的，根本不需要去修正。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 论文 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> GMS </tag>
-            
-            <tag> CVPR 2017 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[曹晨每周必做题答案详解 -- 1]]></title>
-      <url>/2018/05/15/%E6%9B%B9%E6%99%A8%E6%AF%8F%E5%91%A8%E5%BF%85%E5%81%9A%E9%A2%98%E7%AD%94%E6%A1%88%E8%AF%A6%E8%A7%A31/</url>
-      <content type="html"><![CDATA[<p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1frfnvaq8elj30go0ciq3j.jpg" alt=""><br><a id="more"></a></p>
-<h2 id="5-12-遗留问题"><a href="#5-12-遗留问题" class="headerlink" title="5.12 遗留问题"></a>5.12 遗留问题</h2><blockquote>
-<p>数列1、3、6、10、15……的一个通项公式为<strong>_</strong></p>
-</blockquote>
-<p>==</p>
-<blockquote>
-<pre><code>解：仔细观察数列1、3、6、10、15...可以发现：
-   1 = 1
- 3 = 1+2
- 6 = 1+2+3
-10 = 1+2+3+4
-  ...
-</code></pre><p>  所以第 n 项为1+2+3+…+n = $\frac{n(n+1)}{2}$</p>
-</blockquote>
-<h2 id="每周必做题详解"><a href="#每周必做题详解" class="headerlink" title="每周必做题详解"></a>每周必做题详解</h2><h3 id="周一"><a href="#周一" class="headerlink" title="周一"></a>周一</h3><h4 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h4><p> 解: 由题意知，设所混入的乙种糖果为 x 千克，所以列不等式为：</p>
-<pre><code>（1）8 * 20 + 18x ≤ 400
-（2）8 + x ≥ 15
-</code></pre><p>解得：7 ≤ x ≤ $\frac{40}{3}$<br>答：所以所混合的乙种糖果最多是 $\frac{40}{3}$千克，最少是7千克</p>
-<h4 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h4><p>解：</p>
-<p>（1）由题意知，m = 3x + 8<br>（2）根据题意得：</p>
-<pre><code> 3x + 8 - 5(x-1) &gt; 0    (1)
- 3x + 8 - 5(x-1) &lt; 3    (2)
-</code></pre><p>解得：$5 &lt; x &lt; \frac{13}{2}$ ，因为 x 是整数，所以 x 取 6.</p>
-<p>答：该校的获奖人数为6人,所买的课外读物的本数为26本.</p>
-<h4 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h4><p>解：分式的加减运算，所以由原式得：</p>
-<script type="math/tex; mode=display">\frac{a^2+3}{a^2-1} - \frac{(a+1)^2}{a^2-1}+1</script><script type="math/tex; mode=display">\qquad \quad = \frac{a^2+3-(a^2+2a+1) - (a^2-1)}{a^2-1}</script><script type="math/tex; mode=display">= \frac{(a-1)^2}{a^2-1}\qquad \quad \qquad \quad</script><script type="math/tex; mode=display">= \frac{(a-1)}{a+1} \qquad \qquad \qquad</script><h3 id="周二"><a href="#周二" class="headerlink" title="周二"></a>周二</h3><h4 id="第一题-1"><a href="#第一题-1" class="headerlink" title="第一题"></a>第一题</h4><p>解：由题意知：设该植物种植在海拔高度为 x 米的山区较适宜,</p>
-<p>每升高100米,气温下降0.6,那么每升高1米,气温下降了$\frac{0.6}{100}$米；海拔为x米,每升高了x米,气温就在22的基础上下降了 $ \frac{x • 0.6}{100}$ ,温度适宜的范围是18～22.所以列方程为</p>
-<script type="math/tex; mode=display">18≤ 22 - \frac{x}{100} •0.6≤22</script><p>解得：0 ≤ x ≤ 667</p>
-<p>答：该植物种在山上的0-667米的高度之间为宜。</p>
-<h4 id="第二题-1"><a href="#第二题-1" class="headerlink" title="第二题"></a>第二题</h4><p>解：</p>
-<p>（1）设购进甲种商品x件，乙种商品（20-x）件，根据题意得：</p>
-<script type="math/tex; mode=display">190≤12x+8（20-x）≤200</script><p>解得：7.5 ≤ x ≤ 10，因为 x 必须为非负整数，所以，x 取 8、9、10，所有有如下三种进货方案：</p>
-<ul>
-<li>①购甲种商品8件，乙种商品12件；</li>
-<li>②购甲种商品9件，乙种商品11件；</li>
-<li>③购甲种商品10件，乙种商品10件。</li>
-</ul>
-<p>（2）由题意知，得 </p>
-<script type="math/tex; mode=display">利润 = x•(14.5-12）+（20-x）•（10-8）=0.5x+40</script><p><strong>∴</strong> 购甲种商品10件，乙种商品10件时，可获得最大利润，最大利润是45万元。</p>
-<p>（3）</p>
-<ul>
-<li>①全进甲，能购买3件，利润为（14.5-12）×3=7.5万元；</li>
-<li>②全进乙，能购买5件，利润为（10-8）×5=10万元；</li>
-<li>③甲进1件，同时乙进4件，利润为（14.5-12）×1+（10-8）×4=10.5万；</li>
-<li>④甲进2件，同时乙进2件，利润为2.5×2+2×2=9万元；</li>
-<li>⑤甲进3件，同时乙进1件，利润为2.5×3+2×1=9.5万元；</li>
-</ul>
-<p>所以购甲种商品1件，乙种商品4件时，可获得最大利润为10.5万元。</p>
-<h3 id="周三"><a href="#周三" class="headerlink" title="周三"></a>周三</h3><h4 id="第一题-2"><a href="#第一题-2" class="headerlink" title="第一题"></a>第一题</h4><p>解：由题意知，设共到x个交通路口值勤，有学生（4x+78）人，所以列不等式为：</p>
-<script type="math/tex; mode=display">8(x-1)+4≤4x+78</script><script type="math/tex; mode=display">4x+78 < 8x \qquad \qquad</script><p>解得：19.5 ＜ x ≤ 20.5</p>
-<p>根据题意x取20，这时学生为158人．</p>
-<p>答：学校派出的是158名学生，分到了20个交通路口安排值勤．</p>
-<h4 id="第二题-2"><a href="#第二题-2" class="headerlink" title="第二题"></a>第二题</h4><p>解：设安排生产A种产品x件，则生产B种产品（80-x）件，根据题意得：</p>
-<pre><code>  5x+2.5(80-x)≤290
-  1.5x+3.5(80-x) ≤212                                     
-</code></pre><p>解得：34 ≤ x ≤ 36 。</p>
-<p>因为x是整数，所以x只能取34或35或36。该厂现有的原料能保证生产，有三种生产方案。</p>
-<pre><code>   第一种：A产品34件，B产品46件；
-   第二种：A产品35件，B 产品45件；
-   第三种：A 产品36件，B 产品44件。
-</code></pre><h4 id="第三题-1"><a href="#第三题-1" class="headerlink" title="第三题"></a>第三题</h4><p>解得：</p>
-<script type="math/tex; mode=display">原式 = \frac{3-a}{(3-a)(3+a)} - \frac{6}{(3-a)(3+a)} \\
-       =  \frac{3-a -6}{(3-a)(3+a)} \qquad \qquad \\
-       = \frac{-(3+a)}{(3+a)(3-a)}  \qquad \qquad \\
-       = \frac{1}{a-3} \qquad \qquad\qquad \quad</script><h3 id="周四"><a href="#周四" class="headerlink" title="周四"></a>周四</h3><h4 id="第一题-3"><a href="#第一题-3" class="headerlink" title="第一题"></a>第一题</h4><p>解：(1)设商店购进电视机 x 台，则购进洗衣机(100－x)台，列不等式得：</p>
-<script type="math/tex; mode=display">x ≥ \frac{100-x}{2} \qquad \qquad \qquad \quad</script><script type="math/tex; mode=display">1800x + 1500(100-x) ≤ 16180</script><p>解不等式组，得 $\frac{100}{3}≤x≤\frac{118}{3}$</p>
-<p>所以，购进电视机最少 34 台，最多 39 台，商店有 6 种进货方案．</p>
-<p>（2）根据题意，得</p>
-<script type="math/tex; mode=display">利润 ＝ (2 000－1 800)x＋(1 600－1 500)(100－x)</script><script type="math/tex; mode=display">＝100x＋10 000 \qquad \qquad \qquad \qquad</script><p>∵100&gt;0，∴当 x 最大时，<strong>利润</strong>的值最大．<br>即当 x＝39 时，商店获利最多，为 13900 元</p>
-<p>答：购进电视机39台时洗衣机61台时，商店获利最多，为 13900 元</p>
-<h4 id="第二题-3"><a href="#第二题-3" class="headerlink" title="第二题"></a>第二题</h4><p>（1）由题意知，每亩年租金为 500 元，所以租用 n 亩，年租金为 <strong>500 n</strong>元</p>
-<p>（2）</p>
-<script type="math/tex; mode=display">每亩收益=4×1400+20×160=8800 \qquad \qquad \qquad \qquad</script><script type="math/tex; mode=display">每亩成本=4×（75+525）+20×（15+85）+500=4900</script><script type="math/tex; mode=display">每亩利润=8800 - 4900=3900．\qquad \qquad \qquad \qquad \quad \quad</script><p>（3）设租n亩，则贷款（4900n﹣25000）元．</p>
-<script type="math/tex; mode=display">4900n - 25000 ≤ 25000 \qquad \qquad \quad</script><script type="math/tex; mode=display">3900n - 8\% \quad(4900n﹣25000) > 35000</script><p>解得：$\frac{33000}{3508} ≤ n ≤ \frac{50000}{4900}$因为 x 为整数，取 x =10</p>
-<p>则应向银行贷款为：4900 * 10 - 25000 = 24000元</p>
-<p>答：李大爷应该租10亩水面，并向银行贷款24000元，可使年利润超过35000元。</p>
-<h3 id="周五"><a href="#周五" class="headerlink" title="周五"></a>周五</h3><h4 id="第一题-4"><a href="#第一题-4" class="headerlink" title="第一题"></a>第一题</h4><script type="math/tex; mode=display">原式 = \frac{3}{2(3+x)} - \frac{1}{2(3-x)} + \frac{3}{(3+x)(3-x)}</script><script type="math/tex; mode=display">= \frac{3(3-x) - (3+x) + 2 * 3}{2(3+x)(3-x)} \qquad</script><script type="math/tex; mode=display">= \frac{12 - 4x}{2(3+x)(3-x)} \qquad \qquad \qquad</script><script type="math/tex; mode=display">= \frac{2}{3+x} \qquad \qquad \qquad \qquad \qquad</script><h4 id="第二题-4"><a href="#第二题-4" class="headerlink" title="第二题"></a>第二题</h4><p>解，由题意知，设该班有 x 个学生.根据题意有 </p>
-<script type="math/tex; mode=display">0 < x - \frac{x}{2} - \frac{x}{4} - \frac{x}{7} < 6</script><p>解得:0 &lt; x &lt; 56,</p>
-<p>又是整数,且是2,4,7,的公倍数，所以 x = 28.</p>
-<p>答:这个班有28个学生.</p>
-<h4 id="第三题-2"><a href="#第三题-2" class="headerlink" title="第三题"></a>第三题</h4><p>解：这是一道分式方程的题目，设甲同学每分钟打字 x 个，所以得：</p>
-<script type="math/tex; mode=display">\frac{3000}{x} = \frac{2400}{x-12}</script><p>解得：x = 60，验证 60 不是增根，所以 甲每分钟打字60个，乙每分钟打字 48 个。</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 家教 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 曹晨 </tag>
-            
-            <tag> 家教 </tag>
-            
-            <tag> 答案 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[曹晨每周必做题 -- 1]]></title>
-      <url>/2018/05/14/%E6%9B%B9%E6%99%A8%E6%AF%8F%E5%91%A8%E5%BF%85%E5%81%9A%E9%A2%981/</url>
-      <content type="html"><![CDATA[<p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1framvf54qqj30bu08c3z9.jpg" alt=""></p>
-<blockquote>
-<p>将下面每天需要做的题目，写在一个本子上，要按照考试的步骤写，把每一步骤都写清楚。下次课我回去检查，不会做的到时候会给你详细讲解。</p>
-</blockquote>
-<a id="more"></a>
-<h3 id="周一"><a href="#周一" class="headerlink" title="周一"></a>周一</h3><h4 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h4><blockquote>
-<p>把价格为每千克20元的甲种糖果8千克和价格为每千克18元的乙种糖果若干千克混合，要使总价不超过400元，且糖果不少于15千克，所混合的乙种糖果最多是多少？最少是多少？</p>
-</blockquote>
-<h4 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h4><blockquote>
-<p>某校为了奖励在数学竞赛中获奖的学生,买了若干本课外读物准备送给他们.如果每人送3本,则还余8本;如果前面每人送5本,最后一人得到的课外读物不足3本.设该校买了m本课外读物,有x名学生获奖,请解答下列问题:</p>
-<p>(1)用含x的代数式表示m;</p>
-<p>(2)求出该校的获奖人数及所买课外读物的本数.</p>
-</blockquote>
-<h4 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h4><p><img src="https://ws2.sinaimg.cn/large/006tKfTcly1framkp4ldij306402g3yh.jpg" alt=""></p>
-<h3 id="周二"><a href="#周二" class="headerlink" title="周二"></a>周二</h3><h4 id="第一题-1"><a href="#第一题-1" class="headerlink" title="第一题"></a>第一题</h4><blockquote>
-<p>某种植物适宜生长在温度为18℃～22℃的山区,已知山区海拔每升高100m,气温下降0.6℃,现测 出山脚下的平均气温为22℃,问该植物种在山上的哪一部分为宜(设山脚下的平均海拔高度为0m).</p>
-</blockquote>
-<h4 id="第二题-1"><a href="#第二题-1" class="headerlink" title="第二题"></a>第二题</h4><blockquote>
-<p>某公司经营甲、乙两种商品，每件甲种商品进价12万元，售价14.5万元．每件乙种商品进价8万元，售价10万元，且它们的进价和售价始终不变．现准备购进甲、乙两种商品共20件，所用资金不低于190万元不高于200万元．</p>
-<p>（1）该公司有哪几种进货方案？</p>
-<p>（2）该公司采用哪种进货方案可获得最大利润？最大利润是多少？</p>
-<p>（3）利用（2）中所求得的最大利润再次进货，请直接写出获得最大利润的进货方案．</p>
-</blockquote>
-<h3 id="周三"><a href="#周三" class="headerlink" title="周三"></a>周三</h3><h4 id="第一题-2"><a href="#第一题-2" class="headerlink" title="第一题"></a>第一题</h4><blockquote>
-<p>为了加强学生的交通安全意识，某中学和交警大队联合举行了“我当一日小交警”活动，星期天选派部分学生到交通路口值勤，协助交通警察维护交通秩序．若每一个路口安排4人，那么还剩下78人；若每个路口安排8人，那么最后一个路口不足8人，但不少于4人．求这个中学共选派值勤学生多少人？共有多少个交通路口安排值勤？</p>
-</blockquote>
-<h4 id="第二题-2"><a href="#第二题-2" class="headerlink" title="第二题"></a>第二题</h4><blockquote>
-<p>我市某化工厂现有甲种原料290千克，乙种原料212千克，计划利用这两种原料生产A、B两种产品共80件，生产一件A产品需要甲种原料5千克，乙种原料1.5千克；生产一件B种产品需要甲种原料2.5千克，乙种原料3.5千克，该化工厂现有的原料能否保证生产顺利进行？若能的话，有几种方案？请你设计出来。</p>
-</blockquote>
-<h4 id="第三题-1"><a href="#第三题-1" class="headerlink" title="第三题"></a>第三题</h4><p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1framk0ff0bj305e02uaa0.jpg" alt=""></p>
-<h3 id="周四"><a href="#周四" class="headerlink" title="周四"></a>周四</h3><h4 id="第一题-3"><a href="#第一题-3" class="headerlink" title="第一题"></a>第一题</h4><p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1framm4hkt9j30us0buadr.jpg" alt=""></p>
-<h4 id="第二题-3"><a href="#第二题-3" class="headerlink" title="第二题"></a>第二题</h4><blockquote>
-<p>苏州地处太湖之滨，有丰富的水产养殖资源，水产养殖户李大爷准备进行大闸蟹与河虾的混合养殖，他了解到如下信息：</p>
-<p>①每亩水面的年租金为500元，水面需按整数亩出租；</p>
-<p>②每亩水面可在年初混合投入4kg蟹苗和20kg虾苗；</p>
-<p>③每千克蟹苗的价格为75元，其饲养费用为525元，当年可获1 400元收益；</p>
-<p>④每千克虾苗的价格为15元，其饲养费用为85元，当年可获160元收益．</p>
-</blockquote>
-<p>  (1）若租用水面n亩，则年租金共需<strong><strong>_</strong></strong>元；</p>
-<p>  (2）水产养殖的成本包括水面年租金、苗种费用和饲养费用，求每亩水面蟹虾混合养殖的年利润（利润=收益－成本）；</p>
-<p> （3）李大爷现有资金25 000元，他准备再向银行贷不超过25 000元的款，用于蟹虾混合养殖，已知银行贷款的年利率为8%，试问李大爷应该租多少亩水面，并向银行贷款多少元，可使年利润超过35 000元？</p>
-<h3 id="周五"><a href="#周五" class="headerlink" title="周五"></a>周五</h3><h4 id="第一题-4"><a href="#第一题-4" class="headerlink" title="第一题"></a>第一题</h4><p><img src="https://ws4.sinaimg.cn/large/006tKfTcly1frampcqjr2j308i02cglm.jpg" alt=""></p>
-<h4 id="第二题-4"><a href="#第二题-4" class="headerlink" title="第二题"></a>第二题</h4><blockquote>
-<p>有人问一位老师他所教的班上有多少学生，老师说：“一半的学生在学数学，四分之一的学生在学音乐，七分之一的学生在读外语，不足六位同学在操场上踢足球。”试问这个班共有多少名学生？</p>
-</blockquote>
-<h4 id="第三题-2"><a href="#第三题-2" class="headerlink" title="第三题"></a>第三题</h4><blockquote>
-<p>甲、乙两同学学习计算机打字，甲打一篇3000字的文章与乙打一篇2400字的文章所用的时间相同。已知甲每分钟比乙每分钟多打12个字，问甲、乙两人每分钟各打多少个字？</p>
-</blockquote>
-]]></content>
-      
-        <categories>
-            
-            <category> 家教 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 曹晨 </tag>
-            
-            <tag> 家教 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Mac常用快捷键教程]]></title>
-      <url>/2018/05/08/Mac%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%99%E7%A8%8B/</url>
-      <content type="html"><![CDATA[<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fr4czzw6xfj312s0ny4f3.jpg" alt=""></p>
-<a id="more"></a>
-<h2 id="用option快速输入一些特殊符号"><a href="#用option快速输入一些特殊符号" class="headerlink" title="用option快速输入一些特殊符号"></a>用option快速输入一些特殊符号</h2><ul>
-<li>option V： 输入  √</li>
-<li>option /： 输入  ÷</li>
-<li>option =： 输入  ≠</li>
-<li>option &gt;： 输入  ≥</li>
-<li>option &lt;： 输入  ≤</li>
-<li>option K： 输入  ˚</li>
-<li>option X： 输入  ≈</li>
-<li>option =： 输入  ≠</li>
-<li>option 2： 输入 ™</li>
-<li>option R： 输入  ®</li>
-<li>option Y： 输入  ¥</li>
-<li>option P： 输入  π</li>
-<li>option G： 输入  ©</li>
-<li>option + shift + K： </li>
-</ul>
-<h4 id="通知中心开关"><a href="#通知中心开关" class="headerlink" title="通知中心开关"></a>通知中心开关</h4><blockquote>
-<p>按住 option 点击桌面右上角通知中心，即可直接关闭或开启通知。不用在通知中心中打开了。</p>
-</blockquote>
-<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fr4dwwsrc0g30gu08mq3t.gif" alt=""></p>
-<blockquote>
-<p>比如用 Mac 全屏看电影又不想被右上角的消息弹出打扰的话，暂时开启勿扰（关闭通知）就是了.</p>
-</blockquote>
-<h4 id="WIFI状态"><a href="#WIFI状态" class="headerlink" title="WIFI状态"></a>WIFI状态</h4><p>按住 option 点击 Wi-Fi 图标即可查看 IP 地址、Wi-Fi 信号强度等等 Wi-Fi 的详细信息。<br><img src="https://ws3.sinaimg.cn/large/006tNc79ly1fr4dwnmbmuj30hg0nw406.jpg" alt=""></p>
-<h2 id="通用快捷键"><a href="#通用快捷键" class="headerlink" title="通用快捷键"></a>通用快捷键</h2><ul>
-<li>command + M：最小化窗口</li>
-<li>command + H：隐藏窗口</li>
-<li>command + N：新建窗口</li>
-<li>command + O：打开</li>
-<li>command + Shift + S：另存为</li>
-<li>command + P：打印</li>
-<li>command + W：关闭</li>
-<li>command + Q：退出</li>
-</ul>
-<h2 id="文件管理器"><a href="#文件管理器" class="headerlink" title="文件管理器"></a>文件管理器</h2><ul>
-<li>command + I：显示简介</li>
-<li>command + F：搜索</li>
-<li>command + delete：删除</li>
-<li>command + Shift + delete：清空回收站</li>
-<li>option + 方向键左：将光标移动到前一个单词</li>
-<li>command + option + I：查看多个文件一共有多大</li>
-<li>option + 方向键上：将光标移动到当前段落的开头</li>
-<li>command + shift + 方向键左/右：可以选中一句话</li>
-<li>command + 方向键左：将光标移动到句子的开头</li>
-<li>command + 方向键上：将光标快速移动到整篇文本开头</li>
-</ul>
-<h2 id="浏览器"><a href="#浏览器" class="headerlink" title="浏览器"></a>浏览器</h2><ul>
-<li>command + +\=：放大</li>
-<li>command + --：缩小</li>
-<li>command + T：新建一个选项卡</li>
-<li>command + N：新建一个新窗口</li>
-<li>command + R：刷新</li>
-<li>command + F：搜索</li>
-<li>command + W：关闭当前选项卡</li>
-<li>command + D：将网页加入个人收藏</li>
-<li>command + Z：恢复刚才关闭的网页</li>
-<li>command + shift + B：显示或隐藏收藏栏</li>
-<li>command + shift + N：打开一个全新的隐私浏览器窗口比较合适</li>
-<li>space / space + shift：向下或向上滚动一整页</li>
-<li>command + option + Q：退出 Safari，在下次打开的时候，会自动加载上次的所有窗口</li>
-<li>option + 方向键上/方向键下：网页向上或向下滚动一整页</li>
-</ul>
-<h2 id="系统"><a href="#系统" class="headerlink" title="系统"></a>系统</h2><ul>
-<li>command + option + esc：强制退出程序</li>
-<li>command + shift + Y：生成便签</li>
-<li>command + space：切换输入法</li>
-<li>command：按住command即可用鼠标移动拖动顶部图标排列</li>
-<li>control + command + space：快速调出emoji表情和各种特殊符号输入</li>
-<li>shift + option + F1 / F2：可以以1/4格为单位对屏幕亮度调整，音量也是如此。</li>
-</ul>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>后续会继续补充。有什么遗漏的，可以留言。</p>
-<hr>]]></content>
-      
-        <categories>
-            
-            <category> Mac </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Mac </tag>
-            
-            <tag> 快捷键 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[吵架]]></title>
-      <url>/2018/04/28/2018.4.27/</url>
-      <content type="html"><![CDATA[<p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fqrpbkpmtwj31kw0zk49k.jpg" alt=""></p>
-<blockquote>
-<p>今天是怎么了，或者说这几天是怎么了，天天惹你生气，心情很烦躁，我准备开始写日记，抒发一下自己的心情，要不我可能会被憋死的。</p>
-</blockquote>
-<a id="more"></a>
-<h3 id="前序"><a href="#前序" class="headerlink" title="前序"></a>前序</h3><p>环顾四周和手机应用，竟然没有一个地方可以让我肆无忌惮的畅所欲言的发泄。在朋友圈、空间、微博你敢发吗，人长大了，总是要顾虑这顾虑那，我不想发在朋友圈后，让你再多想，我只是想找一个地方写写我的心情，要不我可能真的会被郁闷死的。</p>
-<h3 id="回忆中学"><a href="#回忆中学" class="headerlink" title="回忆中学"></a>回忆中学</h3><p>初中时候，我个人的品性很差，现在想想那可能是最灰暗的三年了，没有知心朋友，脾气古怪，小心眼，自己一个人卑微的活着，也不知道打了多少架，现在想想，心中只是一阵痛。我只能说，有时候真的不是我的错，我还记得初中上学时，学校不让住校，我就只能在学校外跟同学合租房子，大约有5、6个人吧。其中有一个是邻班的班长，有天晚上，他就突然找我的茬。有人可能说，人家怎么会莫名其妙的找你的茬，但我可以摸着良心说，我真的没有做错什么。那天晚上，他跟我打了一架，我被揍了，哭着跑了出去，大晚上自己一个人走在马路上，一个人哭，最终我还是去给我妈妈打了个电话，最终的结果就是，我妈妈来了学校，他妈妈也来了学校，和解。后来我才知道，他为什么要跟我打架，因为他想让他一个好朋友住进来，把我踢出去，现在想起来我还是很痛恨他。</p>
-<h3 id="事情原委"><a href="#事情原委" class="headerlink" title="事情原委"></a>事情原委</h3><p>话扯远了，今天晚上也不知道为啥心情这么暴躁，刚开始和你打游戏时的心态可能就不对，最后因为我想用法师貂蝉，而队伍中已经有个法师，你就说别让我用法师，换个吧。我当时可能心情就很不爽了，因为之前打了几局都不好，然后就反驳，最后凶了你一句，然后我们就各删了游戏。呵呵，然后就在微信上聊了起来，你说你哭了，觉得自己很委屈，只不过是玩个游戏，我就凶你了，那以后生活的不得水深火热。我当时心中还很烦躁，我这个人要是心情烦躁起来，就不会讲理了。</p>
-<p>聊着聊着，我就问了你一句：“现在后悔还来得及”，其实说完这句话，我很还忐忑，我心中在期待，你肯定的回答，但是没有。但也不意外，毕竟都在气头上，而且还是我的错。</p>
-<p>我很害怕失去你，又不想表达出来，想听你心中最真实的想法，我自己心中的想法是“你要是想离开，我不会挽留”，因为你既然都想好了，我不想要个勉强的你。</p>
-<h3 id="自我反省"><a href="#自我反省" class="headerlink" title="自我反省"></a>自我反省</h3><p>话说回来，也该批评自己了，最近是很膨胀啊。毕竟这几年过得都顺风顺水，没什么大的坎坷，可能自己在心态上就有了变化，脾气也见长了，价值观也有了变化，喜欢购物，花钱，穿好看的。没有了高中那种一花钱就想到父母的辛苦。我觉得这样很不好，我要改变自己，虽然之前删游戏是一时之快，但是我想坚持下来，把更多的时间用在学习上。</p>
-<h4 id="改进之处"><a href="#改进之处" class="headerlink" title="改进之处"></a>改进之处</h4><ul>
-<li>把更多的时间花在学习和陪你上</li>
-<li><p>脾气暴躁需要改改，以后多读书，去图书馆借本自控力的书，每天阅读半个小时</p>
-</li>
-<li><p>爱说脏话，这个要改，但是没啥很好的方法，就平时多自己注意吧</p>
-</li>
-</ul>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>自己写完这些字，心情果然好了点。继续加油，明天会是美好的一天！加油！</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 心情笔记 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 丹岑 </tag>
-            
-            <tag> 心情 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Hello World]]></title>
-      <url>/2017/11/07/hello-world/</url>
-      <content type="html"><![CDATA[<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fl9vx0z3xpj30l30bugll.jpg" alt=""></p>
-<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using <a id="more"></a>Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-]]></content>
-      
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[iTerm 2 实用快捷键]]></title>
-      <url>/2017/11/02/iTerm%202%20%E5%AE%9E%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</url>
-      <content type="html"><![CDATA[<p><img src="https://ws2.sinaimg.cn/large/006tNc79ly1fl9vptkwalj314m0eejv7.jpg" alt=""></p>
- <a id="more"></a>
-<ul>
-<li>⌘ + Click：可以打开文件，文件夹和链接</li>
-<li>⌘ + n：新建窗口</li>
-<li>⌘ + t：新建标签页</li>
-<li>⌘ + w：关闭当前页</li>
-<li>⌘ + 数字 &amp; ⌘ + 方向键：切换标签页</li>
-<li>⌥⌘ + 数字：切换窗口</li>
-<li>⌘ + enter：切换全屏</li>
-<li>⌘ + d：左右分屏ß</li>
-<li>⇧⌘ + d：上下分屏</li>
-<li>⌘ + ;：自动补全历史记录</li>
-<li>⇧⌘ + h：自动补全剪贴板历史</li>
-<li>⌥⌘ + e：查找所有来定位某个标签页</li>
-<li>⌘ + r &amp; ⌃ + l：清屏</li>
-<li>⌘ + /：显示光标位置</li>
-<li>⌥⌘ + b：历史回放</li>
-<li>⌘ + f：查找，然后用 tab 和 ⇧ + tab 可以向右和向左补全，补全之后的内容会被自动复制， 还可以用 ⌥ + enter 将查找结果输入终端</li>
-<li>选中即复制，鼠标中键粘贴</li>
-</ul>
-<p>很多快捷键都是通用的，和 Emace 等都是一样的</p>
-<ul>
-<li>⌃ + u：清空当前行</li>
-<li>⌃ + a：移动到行首</li>
-<li>⌃ + e：移动到行尾</li>
-<li>⌃ + f：向前移动</li>
-<li>⌃ + b：向后移动</li>
-<li>⌃ + p：上一条命令</li>
-<li>⌃ + n：下一条命令</li>
-<li>⌃ + r：搜索历史命令</li>
-<li>⌃ + y：召回最近用命令删除的文字</li>
-<li>⌃ + h：删除光标之前的字符</li>
-<li>⌃ + d：删除光标所指的字符</li>
-<li>⌃ + w：删除光标之前的单词</li>
-<li>⌃ + k：删除从光标到行尾的内容</li>
-<li>⌃ + t：交换光标和之前的字符</li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> Mac </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Mac </tag>
-            
-            <tag> iTem2 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[密钥分发中心（KDC）]]></title>
-      <url>/2017/11/02/%E5%AF%86%E9%92%A5%E5%88%86%E5%8F%91%E4%B8%AD%E5%BF%83%EF%BC%88KDC%EF%BC%89/</url>
-      <content type="html"><![CDATA[<p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1fl9vriv380j30rs0kuads.jpg" alt=""></p>
-<h3 id="简言"><a href="#简言" class="headerlink" title="简言"></a>简言</h3><blockquote>
-<p>密钥分发中心是一种运行在物理安全服务器上的服务，KDC维护着领域中所有安全主体账户信息数据库。</p>
-<p>与每一个安全主体的其他信息一起，KDC存储了仅安全主体和KDC知道的加密密钥，这个密钥也称长效密钥（主密钥），用于在安全主体和KDC之间进行交换。</p>
-</blockquote>
- <a id="more"></a>
-<blockquote>
-<p>KDC是作为发起方和接收方共同信任的第三方，因为他维护者一个存储着该域中所有账户的账户数据库，也就是说，他知道属于每个账户的名称和派生于该账户密码的Master Key（主密钥）。而用于Alice和Bob相互认证的会话密钥就是由KDC分发的，下面详细讲解KDC分发会话密钥的过程。</p>
-</blockquote>
-<h3 id="分发会话密钥过程"><a href="#分发会话密钥过程" class="headerlink" title="分发会话密钥过程"></a>分发会话密钥过程</h3><p>1、首先客户端向KDC发送一个会话密钥申请。这个申请的内容可以简单概括为”我是某客户端，我需要个Session Key用于与某服务器通话“。</p>
-<p>2、KDC在接收到这个请求的时候，生成一个会话密钥。为了保证这个会话密钥仅仅限于发送请求的客户端和它希望访问的服务器知道，KDC会为这个会话密钥生成两个副本，分别被客户端和服务器使用。然后从账户数据库中提取客户端和服务器的主密钥分别对这两个副本进行对称加密。对于服务器，与会话密钥一起被加密的还包含关于客户端的一些信息，以便对发起连接请求的客户端进行身份认证。</p>
-<pre><code>注意：KDC不是直接把这两个会话密钥副本分发客户端和服务器的，因为如果这样做，对于服务器来说会
-出现下面两个问题。由于一个服务器会面对若干不同的客户端，而每个客户端都具有一个不同的Session
- Key。那么服务器就会为所有的客户端维护这样一个会话密钥的列表，这样对服务器来说工作量就非常
- 大了。由于网络传输的不确定性，可能会出现这样一种情况：客户端很快获得会话密钥用于副本，并将
- 这个会话密钥作为凭据随同访问请求发送到服务器，但是用于服务器的会话密钥却还没有收到，并且很
- 有可能这个会话密钥永远也到不了服务器端，这样客户端将永远得不到认证。为了解决这个问题，
- Kerberos将这两个被加密的副本一同发送给客户端，属于服务器的那份由客户端发送给服务器。因为
- 这两个会话密钥副本分别是由客户端和服务器端的主密钥加密的，所以不用担心安全问题。
-</code></pre><p>3、通过上面的过程，客户端实际上获得了两组信息：一个是通过自己主密钥加密的会话密钥；另一个是被Server的主密钥加密的数据包，包含会话密钥和关于自己的一些确认信息。在这个基础上，我们再来看看服务器是如何对客户端进行认证的。</p>
-<p>4、客户端通过用自己的主密钥对KDC加密的会话密钥进行解密从而获得会话密钥，随后创建认证符（Authenticator，包括客户端信息和时间戳（Timestamp）），并用会话密钥对其加密。最后连同从KDC获得的、被服务器的主密钥加密过的数据包（客户端信息和会话密钥）一并发送到服务器端。我们把通过服务器的主密钥加密过的数据包称为服务票证（Session Ticket）。</p>
-<p>5、当服务器接收到这两组数据后，先使用它自己的主密钥对服务票证进行解密，从而获得会话密钥。随后使用该会话密钥解密认证符，通过比较由客户端发送来的认证符中的客户端信息（Client Info）和服务票证中的客户端信息实现对客户端身份的验证。</p>
-<p>双方进行了身份认证的同时也获得了会话密钥，那么双方可以进行会话了。</p>
-<p>流程图如下：</p>
-<p>客户端简称为Alice，服务端简称为Bob</p>
-<p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1fk4ams2bxcj30tw0buab9.jpg" alt=""></p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p><a href="http://book.51cto.com/art/200907/140554.htm" target="_blank" rel="external">参考文章</a></p>
-]]></content>
-      
-        <categories>
-            
-            <category> 计算机网络 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> KDC </tag>
-            
-            <tag> 密钥 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[Hexo 配置1--markdown文章常用功能]]></title>
+    <url>%2F2018%2F05%2F28%2FHexo-%E9%85%8D%E7%BD%AE1-markdown%E6%96%87%E7%AB%A0%E5%B8%B8%E7%94%A8%E5%8A%9F%E8%83%BD%2F</url>
+    <content type="text"><![CDATA[文本居中引用 此标签将生成一个带上下分割线的引用，同时引用内文本将自动居中。 文本居中时，多行文本若长度不等，视觉上会显得不对称，因此建议在引用单行文本的场景下使用。 例如作为文章开篇引用 或者 结束语之前的总结引用。 使用方式 HTML方式：使用这种方式时，给img添加属性class=&quot;blockquote-center&quot;即可。 标签方式：使用centerquote或者简写cq。 效果展示 代码如下： 12345678&lt;!-- 标签别名 --&gt;&#123;% cq %&#125; 人的一切痛苦，本质上都是对自己的无能的愤怒 &lt;font color=black size=4 face=&quot;黑体&quot;&gt;冯相如 &lt;/font&gt;&#123;% endcq %&#125; 这句话与签名者姓名（冯相如）中间间隔的行数越多（回车越多），则最后效果中间间隔就会越大。 至于签名者姓名，你可以用markdown中的字体大小颜色进行设置，如： 123456&lt;font face=&quot;黑体&quot;&gt;我是黑体字&lt;/font&gt;&lt;font face=&quot;微软雅黑&quot;&gt;我是微软雅黑&lt;/font&gt;&lt;font face=&quot;STCAIYUN&quot;&gt;我是华文彩云&lt;/font&gt;&lt;font color=#0099ff size=12 face=&quot;黑体&quot;&gt;黑体&lt;/font&gt;&lt;font color=#00ffff size=3&gt;null&lt;/font&gt;&lt;font color=gray size=5&gt;gray&lt;/font&gt; 但是不要误解，这句话不是我说的，我只不过是为了测试“标签签名”功能。 Bootstrap Callout使用方式1&#123;% note class_name %&#125; Content (md partial supported) &#123;% endnote %&#125; 其中，class_name可以是以下列表中的一个值： default primary success info warning danger 效果示例 对应代码如下； 12345&#123;% note class_name %&#125; Content of class_name &#123;% endnote %&#125;&#123;% note default %&#125; Content of default &#123;% endnote %&#125;&#123;% note primary %&#125; Content of primary &#123;% endnote %&#125; 突破容器宽度限制的图片当使用此标签引用图片时，图片将自动扩大 26%，并突破文章容器的宽度。 此标签使用于需要突出显示的图片, 图片的扩大与容器的偏差从视觉上提升图片的吸引力。 此标签有两种调用方式（详细参看底下示例）： 使用方式 HTML方式：使用这种方式时，为img添加属性 class=&quot;full-image&quot;即可。 标签方式：使用fullimage 或者简写fi，并传递图片地址、 alt 和 title 属性即可。 属性之间以逗号分隔。 效果示例 添加emoji表情使用方式我的是Mac电脑，所以直接用快捷键，control+command+space调出表情框，然后点击输入即可；对于其他电脑，应该也可以直接搜到复制到markdown就好了。 效果示例🤣😜🤨🤩😎🐸🚗❤️🇨🇳 总结我会持续更新，今天先写到这儿，有什么不对，请指正。]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[测试博客照片功能]]></title>
+    <url>%2F2018%2F05%2F27%2FphotoPostName%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>相册</category>
+      </categories>
+      <tags>
+        <tag>照片</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[TensorFlow中的维度和shape的理解]]></title>
+    <url>%2F2018%2F05%2F26%2FTensorFlow%E4%B8%AD%E7%9A%84%E7%BB%B4%E5%BA%A6%E5%92%8Cshape%E7%9A%84%E7%90%86%E8%A7%A3%2F</url>
+    <content type="text"><![CDATA[TensorFlow 的名字已经说明了它最重要的两个概念—Tensor和Flow。Tensor就是张量，Flow翻译成中文就是“流”，它直观的表达了张量之间通过计算相互转化的过程。 Tensor在TensorFlow中是N维矩阵，所以涉及到Tensor的方法，也都是矩阵的处理。由于十多位，在TensorFlow中Tensor的流动过程就涉及到了升维降维。 该篇通过讲解Tensor张量中的shape的理解和一些接口的使用，来体会Tensor的维度概念。 理解TensorFlow的shape TensorFlow和python中的numpy库一样，读shape时应该从外向内读。 1[[1,2,3],[4,5,6]] 和 12[[1,2,3], [4,5,6]] 是一样的，都是2行三列(shape(2,3))。 这该怎么理解呢？首先拿掉最外层的中括号，变成了[1,2,3],[4,5,6]这两个元素，每个元素（如[1,2,3]）拿掉中括号后，剩下1，2，3这三个元素，所以shape=[2,3]。 也就是说shape是从外向内读，然后记录下每一层（即每一个中括号）的元素个数。 比如，shape=[1,1,2]，则表示的数据应该是这样的：[[[a,b]]]. 什么是维度？什么是轴（axis）？什么是维度？维基百科说： 维度，又称维数，是数学中独立参数的数目。在物理学和哲学的领域内，指独立的时空坐标的数目。 0维是一个点，没有长度。1维是线，只有长度。2维是一个平面，是由长度和宽度（或曲线）形成面积。3维是2维加上高度形成的“体积面”。虽然一般人习惯了整数维，但在分形中维度不一定是整数，可能会是一个非整的有理数或者无理数。 看上面的话，可能很费解，我也是！那么就接着往下看吧，会越来越简单的。 总结：维度是用来索引一个多维数组中某个具体数所需要最少的坐标数量。 这句话很有深度，但是你多读几遍，加上下面的例子，你肯定会有自己的理解。 不同的维度的形式如下： 0维，又称0维张量，数字，标量：1 1维，又称1维张量，数组，vector：[1,2,3] 2维，，又称2维张量，矩阵，二维数组：[[1,2],[3,4]] 3维，又称3维张量，立方，三维数组：[[[1,2],[3,4]],[[5,6],[7,8]]] n维，你应该可以自己总结出来了吧！ 再多的维只不过是把上一个维度当做自己的元素 所以看一个张量是几维的，就看最深的数字外有几个中括号！ 什么是axis axis 是多维数组每个维度的坐标 也就是说，对于[ [[1,2], [3,4]], [[5,6], [7,8]] ]这个3维情况，[[1,2],[[5,6]], [[3,4], [7,8]]这两个矩阵的axis是0，[1,2]，[3,4]，[5,6]，[7,8]这4个数组的axis是1，而1，2，3，4，5，6，7，8这8个数的axis是2。 Tensor维度理解 这里通过tf.reduce_mean来理解一下维度 tf.reduce_meanreduce_mean( input_tensor, axis=None, keep_dims=False, name=None, reduction_indices=None ) 计算Tensor各个维度元素的均值，这个方法是通过输入参数axis的维度上减少输入input_tensor的维度。 举个例子： x = tf.constant([1.,1.],[2.,2.]) tf.reduce_mean(x) # 1.5 tf.reduce_mean(x,0) # [1.5, 1.5] tf.reduce_mean(x,1) # [1., 2.] x 是 二维数组： 当axis参数取默认值时，计算整个数组的均值：(1.+1.+2.+2.)/4 = 1.5 当axis取0，意味着对列取均值：[1.5, 1.5] 当axis去1，意味着对行取均值：[1.0, 2.0] 在换一个 3*3 的矩阵： sess = tf.Session() x = tf.constant([[1., 2., 3.], [4., 5., 6.], [7., 8., 9.]]) print(sess.run(x)) print(sess.run(tf.reduce_mean(x))) print(sess.run(tf.reduce_mean(x, 0))) print(sess.run(tf.reduce_mean(x, 1))) 输出结果为： [[ 1. 2. 3.] [ 4. 5. 6.] [ 7. 8. 9.]] 5.0 [ 4. 5. 6.] [ 2. 5. 8.] 如果我再加一维会是怎么样计算？ sess = tf.Session() x = tf.constant([[[1., 1.], [2., 2.]], [[3., 3.], [4., 4.]]]) print(sess.run(x)) print(sess.run(tf.reduce_mean(x))) print(sess.run(tf.reduce_mean(x, 0))) print(sess.run(tf.reduce_mean(x, 1))) print(sess.run(tf.reduce_mean(x, 2))) 我给输入的Tensor是三维数组： [[[ 1. 1.] [ 2. 2.]] [[ 3. 3.] [ 4. 4.]]] 推测一下，前面的二维经过处理都变成了一维的，也就是经过了一次降维，那么现在的三维或许应该变成了二维。但是现在多了一维，应该从哪个方向做计算呢？首先看输出结果： 2.5 # x [[ 2. 2.] # x,0 [ 3. 3.]] [[ 1.5 1.5] # x,1 [ 3.5 3.5]] [[ 1. 2.] # x,2 [ 3. 4.]] 发现： 当axis参数取默认值时，依然是计算整个数组的均值：(float)(1+2+3+4+1+2+3+4)/8=2.5 当axis取0，计算方式是： [[(1+3)/2, (1+3)/2], [(2+4)/2, (2+4)/2]] 当axis取1，计算方式是： [[(1+2)/2, (1+2)/2], [(3+4)/2, (3+4)/2]] 当axis取2，计算方式是： [[(1+1)/2, (2+2)/2], [(3+3)/2, (4+4)/2]] 总结： 规律： 对于k维的， tf.reduce_mean(x,axis=k-1)的结果是对最里面的一维所有元素求和取平均 tf.reduce_mean(x,axis=k-2)的结果是对倒数第二层里的向量对应的元素进行求和取平均 tf.reduce_mean(x,axis=k-3)的结果是对倒数第三层的每个向量对应元素进行求和取平均 参考链接 附图理解： 在TensorFlow 1.0版本中，reduction_indices被改为了axis，在所有的reduce_xxx系列操作中，都有axis也就是reduction_indices这个参数。]]></content>
+      <categories>
+        <category>深度学习</category>
+      </categories>
+      <tags>
+        <tag>TensorFlow</tag>
+        <tag>深度学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[曹晨每周必做题--2]]></title>
+    <url>%2F2018%2F05%2F19%2F%E6%9B%B9%E6%99%A8%E6%AF%8F%E5%91%A8%E5%BF%85%E5%81%9A%E9%A2%982%2F</url>
+    <content type="text"><![CDATA[除了下面每天必做的题目外，这周还需要把以下课后习题做了 39页习题7.3： 1、2题 41页的A组复习题：2(第二题中的4、5、6小问)、4 43页的B组复习题：3、5 44页的C组复习题：2、3 77页习题8.5：2、4、5、6 别怕，后面我只出了三天的题，你可以在五天内挑出三天来完成😝，这些题也不会太难了，I believe you！加油！ 周一计算题1.解不等式组 答：原不等式组的解集为－7＜x≤1．答：x&lt;1 2.解方程组 答：$x=-\frac{3}{2}$，$y=-2$ 答：x=0，y=-2 答：x=3，y=-1 答：x=2，y=13.选择题1. 答：D2. 答：A3. 答：D4. 答：D4.填空题1. 答：-22. 答：1，23. 答：k=2，m=3应用题 周二计算题1.解不等式组（1） 2+\frac{3(x+1)}{8} < 3-\frac{x-1}{4}\frac{3x-1}{3} - \frac{9-2x}{3} ≤ \frac{5x+1}{2}答：原不等式组的解集为$-\frac{23}{5}≤ x &lt; \frac{7}{5}$． —(2) 答：x≤1 —(3) 答：3&lt;x≤4 2.解方程组(1) 答：$x=2$，$y=2$ —(2) 答：a=2，b= -1 —(3) 答：x=5，y=7 答：x=2，y=13.选择题(1) 答：D —(2) 答：C —(3) 答：C —(4) 答：A4.填空题(1) 答：$x=\frac{7}{3}, y=-\frac{1}{3}, a = -2$ —(2) 答：$k=-\frac{3}{2}$ —(3) 答：3 —(4) 答：m=1，n=0 应用题 某储运站现有甲种货物1530吨，乙种货物1150吨，安排用一列货车将这批货物运往青岛，这列货车可挂A，B两种不同规格的货厢50节．已知甲种货物35吨和乙种货物15吨可装满一节A型货厢，甲种货物25吨和乙种货物35吨可装满一节B型货厢，按此要求安排A,B两种货厢的节数，有哪几种运输方案？请设计出来． 解：设用A型货厢x节，则用B型货厢（50-x）节，由题意，得 35x+25(50-x) ≥ 153015x + 35(50-x)≥1150 解得28≤x≤30． 因为x为整数，所以x只能取28，29，30．相应地（50-x）的值为22，21，20． 所以共有三种调运方案： 第一种调运方案：用 A型货厢 28节,B型货厢22节； 第二种调运方案：用A型货厢29节,B型货厢21节； 第三种调运方案：用A型货厢30节,用B型货厢20节． 周三计算题1.解不等式组1. 答：原不等式组的解集为$-1≤ x &lt; 2$． —(2) 答：x≤1 —(3) 答：3&lt;x≤4 2.解方程组1. 答：$\frac{5}{2}$ —2.计算 答：$16x^4-y^4$ —3. 答：x=3，y=-1 4. 4x-y-5=0\frac{1}{2}x + \frac{1}{3}y = 2答：x=2，y=3 — 3.选择题1. 答：D —2. 答：A —3. 答：C —4. 答：C — 4.填空题1. 答：36 —2 答：-1 —3. 答：1、3 —4. 答：2 应用题 —]]></content>
+      <categories>
+        <category>家教</category>
+      </categories>
+      <tags>
+        <tag>曹晨</tag>
+        <tag>家教</tag>
+        <tag>案例</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[分式方程应用各个类型案例讲解]]></title>
+    <url>%2F2018%2F05%2F18%2F%E5%88%86%E5%BC%8F%E6%96%B9%E7%A8%8B%E5%BA%94%E7%94%A8%E9%A2%98%E5%88%86%E7%B1%BB%E8%AE%B2%E8%A7%A3%2F</url>
+    <content type="text"><![CDATA[一、【行程中的应用性问题】例1 甲、乙两个车站相距96千米，快车和慢车同时从甲站开出，1小时后快车在慢车前12千米，快车比慢车早40分钟到达乙站，快车和慢车的速度各是多少？ === 分析：等量关系是什么？ —- 慢车用时 = 快车用时 + $\frac{40}{60}$ 所行距离 速度 时间 快车 96 km x km/h 慢车 96 km x-12 km/h 解：设快车速度为 x km/h，则慢车的速度为 （x - 12）km/h 所以： \frac{96}{x-12} = \frac{96}{x} + \frac{40}{60}解得：x = 48 km/h , x - 12 = 36 km/h 答：快车速度为 48 km/h , 慢车速度为 36 km/h。 例2 甲、乙两地相距828km，一列普通快车与一列直达快车都由甲地开往乙地，直达快车的平均速度是普通快车平均速度的1.5倍．直达快车比普通快车晚出发2h，比普通快车早4h到达乙地，求两车的平均速度． == 解：设普通快车车的平均速度为 x km／h，则直达快车的平均速度为 1.5x km／h，依题意，得： \frac{828-6x}{x} = \frac{828}{1.5x}解得：x = 46. 经检验，x = 46 是方程的根，且符合题意。 ∴ x = 46，1.5x = 69 答：普通快车车的平均速度为46km／h，直达快车的平均速度为69km／h。 例3 A、B两地相距87千米，甲骑自行车从A地出发向B地驶去，经过30分钟后，乙骑自行车由B地出发，用每小时比甲快4千米的速度向A地驶来，两人在距离B地45千米C处相遇，求甲乙的速度。 分析： 所行距离 速度 时间 甲 87-45 km x km/h 乙 45 km x+4 km/h 等量关系：：甲用时间=乙用时间+ $\frac{30}{60}$ （小时） 解：设甲的速度为 x km/h ，则乙的速度为 (x+4) km/h 所以， \frac{87-45}{x} = \frac{45}{x+4} + \frac{30}{60}解得：$x{1} = -24$（不符合题意，舍去）$x{2} = 14 km/h$，所以乙的速度为 18 km/h 答：……. 例4 某客车从甲地到乙地走全长480Km的高速公路，从乙地到甲地走全长600Km的普通公路。又知在高速公路上行驶的平均速度比在普通公路上快45Km，由高速公路从甲地到乙地所需的时间是由普通公路从乙地到甲地所需时间的一半，求该客车由高速公路从甲地到乙地所需要的时间。 二、【工程类应用性问题】例1 甲乙两个工程队合作一项工程，两队合作2天后，由乙队单独做1天就完成了全部工程。已知乙队单独做所需天数是甲队单独做所需天数的 $\frac{3}{2}$ 倍，问甲乙单独做各需多少天？ 解：设甲单独做需要 x 天，则乙单独做需要 $\frac{3x}{2}$天，则： \frac{2}{x} + \frac{3}{\frac{3x}{2}} = 1解得：x = 4，则$\frac{3x}{2} = 6$ 答：甲单独做需要4天，乙单独做需要6天。 分析：这个等式的意思是什么？我们知道设 甲单独做需要 x 天，则按照题意，甲在这个项目中一共做了2天，则这两天完成了这个项目的百分之多少呢？ 不就是 $\frac{2}{x}$；则乙在这个项目中一共做了 3天，则这三天做了整个项目的百分之多少呢？ 不就是 $\frac{3}{\frac{3x}{2}}$。 所以加起来就是把这个项目完成了百分之百，即1. 所以等式为： \frac{2}{x} + \frac{3}{\frac{3x}{2}} = 1例2 甲、乙两个施工队共同完成某居民小区绿化改造工程，乙队先单独做2天后，再由两队合作10天就能完成全部工程．已知乙队单独完成此项工程所需天数是甲队单独完成此项工程所需天数的$\frac{4}{5}$，求甲、乙两个施工队单独完成此项工程各需多少天？ 解：设甲施工队单独完成此项工程需x天，则乙施工队单独完成此项工程需$\frac{4x}{5}$天，根据题意，得: \frac{10}{x}＋\frac{12}{\frac{4x}{5}}＝1解这个方程，得x＝25，经检验，x＝25是所列方程的根，所以 $\frac{4x}{5} = 20$ 答：甲单独完成需要25天，乙单独完成需要20天。 三、【营销类应用性问题】 营销类应用性问题，涉及 进货价、售货价、利润率、单价、混合价、赢利、亏损 等概念，要结合实际问题对它们表述的意义有所了解，同时，要掌握好基本公式，巧妙建立关系式．随着市场经济体制的建立，这类问题具有较强的时代气息，因而成为中考常考不衰的热点问题． 例1 某校办工厂将总价值为2000元的甲种原料与总价值为4800元的乙种原料混合后，其平均价比原甲种原料每千克少3元，比乙种原料每千克多1元，问混合后的单价每千克是多少元？ 解：设混合后的单价为每千克 x 元，则甲种原料的单价为每千克 (x+3) 元，混合后的总价值为 $(2000＋4800)$ 元，混合后的重量为 $\frac{2000+4800}{x}$ 斤，甲种原料的重量为 $\frac{2000}{x+3}$ ，乙种原料的重量为 $\frac{4800}{x-1}$，依题意，得： \frac{2000}{x+3} + \frac{4800}{x-1} = \frac{2000+4800}{x}解得：x = 17，经检验，x = 17 是原方程的根，所以 x=17．即混合后单价每千克为17元。 答：…….. 例2 某商场销售某种商品，一月份销售了若干件，共获得利润30000元;二月份把这种商品的单价降低了 0.4元，但是销售量比一月份增加了5000件，从而获得利润比一月份多2000元，调价前每件商品的利润为多少元？ == 分析： 可以列出三个等量关系 1．2月份销售量一1月份销售量=5000 2．2月份销售量×2月份利润=2月份总利润 3．1月份利润一2月份利润=0.4 解：由题意知，根据 二月所获利润 = 30000 + 2000 等式列方程，设调价前每件商品利润为 x 元，则调价后即2月份每件商品利润为 （x-0.4）元，得： (x-0.4)(\frac{30000}{x} + 5000) = 30000 + 2000化简得：$5x^2 -4x -12 = 0$，所以$(x-2)(5x+6) = 0$ 解得 x=2 或 x=-1.2（舍去） 答：调价前每件商品利润是2元。 例三 某商厦进货员预测一种应季衬衫能畅销市场，就用8万元购进这种衬衫，面市后果然供不应求，商厦又用17.6万元购进了第二批这种衬衫，所购数量是第一批购进量的2倍，但单价贵了4元，商厦销售这种衬衫时每件定价都是58元，最后剩下的150件按八折销售，很快售完，在这两笔生意中，商厦共赢利多少元。 解：由题意知，设商场第一次购进 x 件衬衫，则第二次购进 2x 件， \frac{80000}{x} = \frac{176000}{2x} -4解得：x = 2000，经检验，x=2000是这个方程的根，∴ 2x=4000。 商场利润 = 两次总共所买获得总钱 - 两次进购所花总钱。 (2000+4000-150)*58+58*0.8*150 - 80000 - 176000 = 90260 （元）答：在这两笔生意中，商场总共盈利90260元。 例4 一个批发兼零售的文具店规定：凡一次购买铅笔300枝以上，（不包括300枝），可以按批发价付款，购买300枝以下，（包括300枝）只能按零售价付款。小明来该店购买铅笔，如果给八年级学生每人购买1枝，那么只能按零售价付款，需用120元，如果多购买60枝，那么可以按批发价付款，同样需要120元， （1）这个八年级的学生总数在什么范围内？ （2）若按批发价购买6枝与按零售价购买5枝的款相同，那么这个学校八年级学生有多少人？ 解：（1）由题意知，设八年级总人数为 x 人，每人购买一支，只能按零售价，所以 x≤300，如果多购买60支，则可按批发价，则 x + 60 &gt; 300 所以， 240 &lt; x ≤ 300 （2）根据按批发价购买6支与零售价购买5支的所需钱相同，列等式求解： \frac{120}{x}*5 = \frac{120}{x+60}*6解得，x = 300，经检验，x=300是原方程的根。 答：这个学校八年级人数有300人。 例5 某种商品价格，每千克上涨1/3，上回用了15元，而这次则是30元，已知这次比上回多买5千克，求这次的价格。 例6 小明和同学一起去书店买书，他们先用15元买了一种科普书，又用15元买了一种文学书，科普书的价格比文学书的价格高出一半，因此他们买的文学书比科普书多一本，这种科普和文学书的价格各是多少 四、【轮船顺逆水应用问题】例1 轮船顺流、逆流各走48千米，共需5小时，如果水流速度是4千米/小时，求轮船在静水中的速度。 === 分析：顺流速度=轮船在静水中的速度+水流的速度 逆流速度=轮船在静水中的速度-水流的速度 解：设轮船在净水中的速度为 x km/h，得： \frac{48}{x+4}+\frac{48}{x-4} = 5解得：x = 20 或 x=-0.8（舍去） 答：船在静水中速度为 20 km/h。 例2 例2 轮船在顺水中航行30千米的时间与在逆水中航行20千米所用的时间相等，已知水流速度为2千米／时，求船在静水中的速度。（10） 例3 轮船顺水航行80千米所需要的时间和逆水航行60千米所用的时间相同。已知水流的速度是3千米/时，求轮船在静水中的速度。 例4 已知一个汽船在顺流中航行46千米和逆流中航行34千米共用去的时间正好等于它在静水中航行80千米用去的时间并且水流的速度是每小时2千米求汽船在静水中的速度。 例5 9、一艘轮船在静水中的最大航速为30千米/时，它沿江以最大航速顺流航行100千米所用的时间与以最大航速逆流航行60千米所用的时间相等，问：江水的流速为多少？设江水的流速为x千米/时，则可列方程? 五、【其他应用性问题】例1 例1 要在15%的盐水40千克中加入多少盐才能使盐水的浓度变为20%． 分析：设加入盐千克．浓度问题的基本关系是：$\frac{溶质}{溶液}=浓度$ 解：设应加入盐 x 千克，依题意，得 \frac{40*15\%+x}{40+x} = 20\%解得：x=2.5，经检验，x=2.5是原方程的根 答：需要加入2.5kg的盐。 例2 某校招生录取时，为了防止数据输入出错，2640名学生的成绩数据分别由两位程序操作员各向计算机输入一遍，然后让计算机比较两人的输入是否一致，已知甲的输入速度是乙的2倍，结果甲比乙少用2小时输完。问这两个操作员每分钟各能输入多少名学生的成绩？ 例3 供电局的电力维修工要到30千米远的郊区进行电力抢修，技术工人骑摩托车先走，15分钟后，抢修车装载这所需材料出发，结果他们同时到达，，已知抢修的速度是摩托车的1.5倍。求这两种车的速度。]]></content>
+      <categories>
+        <category>家教</category>
+      </categories>
+      <tags>
+        <tag>曹晨</tag>
+        <tag>家教</tag>
+        <tag>案例</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[基于网格的运动统计，用于快速、超鲁棒性的匹配]]></title>
+    <url>%2F2018%2F05%2F16%2FGMS-Grid-base%20Motion%20Statistics%20for%20Fast%EF%BC%8CUltra-robust%20Feature%20Correspondence%2F</url>
+    <content type="text"><![CDATA[前序今天分为两个部分讲解： 关于Feature Matching 的介绍，可能有些人对feature matching本身不太了解。 最近几年关于关于feature matching的文章，主要有三篇。 前两篇文章主要的工作是：把feature matching做的特别的robust，之前的一些作法可能能基本的实现基本的match，但是因为match的质量不高，导致很多应用是不能用的，比如三维重构。但是经过前两篇文章，就可以实现之前不能实现的了，提升了鲁棒性，具有了很大的提高。该篇文章主要是对前两篇文章的优化，因为前两篇虽然最终效果很好，但是速度很慢。对于三维重构来说速度勉强可以，但是对于机器人导航、SLAM、无人机这些应用来说，速度就不够了，作者就对这个问题进行了时间的优化，最终达到的效果就是：性能和前两篇文章实现的相近，时间提升了很多，很快。希望能把这个算法应用到更多实时应用上。 Feature Matching Introduction 我们可以看一下这两张图，图中山峰是同一个山峰，但是是由人由两个角度进行拍照。所以我们如果能把两张图片中对应的点找来，找出来有什么用呢？我们知道上面的两幅图是由人从不同的角度拍照得来的，那么这两幅图中间是有一个几何关系，这个几何关系可以由一个方程来表示。那么每一个匹配点就相当于这个方程的解，如果我们有足够多的正确匹配的点，我们就可以用这些点来估算这个方程里面的参数，相当于我们知道了两张图片中对应的几何关系 Correct Correspondences的应用你把两张图片中相同的点匹配起来有什么用？ Geometry between 2 views，Geometry就是两张图片中的几何关系，这样我们便可以用来做很多事情：比如：Estimate Camera Pose Localization(SFM)、Tracking(SLAM):就是你能把一帧一帧图像之间的相对应的几何关系能算出来，如果很准的话，你就能画出来人运动的轨迹，就是一个人导航问题。 Similarity（Number of matches），根据Feature matching的多少评测两张图片的相似度。然后我们就可以用来做Image Retrieval(图像检索)、Object Recognition(目标识别)、Loop Closing(SLAM)…. 如何实现Feature Matching就是在两张Image中相同的这些部分找到，再把它们匹配起来。 首先是如何找到，包含两个步骤：Detection、Description。 Detection：首先找到的是角点，再者比较容易找的是边缘的点。 Description：对于这些每一个点计算出周围的特征，比如sift是用128维的数字去描述他的一个description。 matching的时候，只要用这个128维的数字计算跟哪个点的距离最小，就是最相似的 Geometry：你拿到这些点的匹配后，去做一个他们之间的相关的几何匹配，模拟几何关系，符合这个几何关系的就是正确匹配的点，不符合的就是错误的点。有了几何关系就可以坐后面的事情了。 LIFT：是用深度学习做的，他认为用深度学习得到的feature比手动提取的feature 更加有用 Matching Algorithms：CODE、RepMatch、GMS。因为Brute-Force和Approximate（FLANN）所获取的匹配点是杂乱的，大量的，这样你最后算几何关系就会很慢，效果还不好。我们这些Matching Algorithms算法是用来从Nearest-Nerighbor match中找出正确的匹配点，错的剔除去。 如何估计两张图片之间的几何关系一般用的是RANSAC-based方法。 RANSAC：Random Sample Consensus，它是根据一组包含异常数据的样本数据集，计算出数据的数据模型参数，得到有效样本数据的算法。 RANSAC也做了一下假设：给定一组（通常很小的）局内点（符合最优模型的点为局内点，不符合的定义为据外点），存在一个可以估计模型参数的过程而该模型能够解释或者适用于局内点 一个简单的例子就是从一组观测数据中找到合适的2维直线。假设检测到的数据如上图左图。简单的最小二乘法不能找出适应与局内点的直线，原因是最小二乘法尽量去适应包括局外点在内的所有的点。相反，RANSAC能够得出一个仅仅用局内点计算出模型，并且概率还足够高。但是RANSAC并不能保证结果一定正确，为了保证算法有足够搞得合理概率，我们必须小心的选择算法的参数。 在我们的Feature matching里面，它的RANSAC就不是一条直线了，而是两张图片中的几何关系。这里有两个普遍的几何关系： Fundamental Matrix（for 3D scenes）：Point to Line(weak, general)只能是点对线的匹配，就是给定第一张图片中的一个点，它会在第二张图片中画出这个点所在的线。能把一个点和一条线对应起来，这就是它们之间的几何关系，这个几何关系能够恢复出来相机的旋转和平移，用的方法主要是RANSAC方法 Homography (for 2D scenes)：Point to Point（strong，narrow range）只对2D场景有效，比如你拍一张墙的照片，然后对其中一个点，就能匹配到第二张图片的点。 Recent Robust MatchersCODE [1] 该算法解决的是 wide-baseline matching问题。 wide-baseline matching ？基线的本意是指立体视觉系统中量摄像机光心之间的距离。一句拍摄两幅图，像的视点位置可将对应点匹配问题分为宽基线和窄基线。宽基线一词用于匹配时，泛指两幅图像有明显不同的情况下匹配。产生这种情况的原因有可能为摄像机之间的位置相差很大，也有可能由于摄像机旋转或焦距的变化等因素产生。 每一幅图片中的其实是两幅图片，图片中的墙是相同的一个墙，只是由于拍摄的角度特别的大，传统的一些算法处理的不是很好，但是code算法可以，匹配的比较多，准确率也比较高 Idea 整体思想如上图，包含了三个回归模型，likelihood是第一个模型，affine motion 为第二第三个模型。这些回归模型就相当于分类器。 首先输入的是 Selected matches ，就是先挑一些比较好的match，把它们记录下来，去fit第一个模型，其实就相当于是一个分类器，然后用这个分类器把所有match做一个过滤，符合这个的留下来，不符合的剔除。 然后再用后面两个模型（即分类器）去过滤，最后都通过的才算最终正确的匹配点。 这三个回归是怎么做的？看下图（回归模型） 有一堆散的点，用这些数据去fit一个平面，这个平面上的你认为是对的，不在这个平面上，你认为是错误的。这样的regression总共有三步。 Likelihood train data：是我们选出来的那些好的match test data：是所有的的match features of a correspondence：把每一个match点定义为8位的向量，x,y是它的空间位置，dx，dy描述了它的motion，就是一对match点，左右各有一个点，用第二个点（第二幅图）的x2 减去 第一个点x1得到dx。T1-T4是一个矩阵的变换。我们看到的是点对点的匹配，其实是区域的匹配，这四个参数就是描述了左边的这个小区域到右边的对应的小区域的变换。 Label：我们开始初始化为都是1，认为都是对的。 Non-linear Optimization：描述了所有correspondence之间的相似性，相似性大的就是1，小的就是0 likelihood模型为什么有用，它就是用来区分连续的Motion和不连续的Motion，作者认为不连续的Motion一般就是错的。第一个模型就是找那些correspondened是连续的。第二个模型就是把它的精度提升了一下，把x和y都预测了一下。作者认为 (a) (b) 这样的图像中的点是正确的点，而像 (c) 这两个比较近的点的方向还差这么大，就认为是错的。第一个模型likelihood就是找到连续的motion，那些点的motion是连续的。第二个模型就是提升了它的精度，把x和y都测了一下。 结果code算法的input就是那个Nearest Neighbor match，它里面是乱七八糟，所有的match都有，而code就是把其中的对的找出来。 应用 主要是三维重构，你上面第二幅图是用商业软件做的，并不是很好，第三幅是用SFM做的，第四幅还是用SFM做的，但是它把SFM中的Feature matching替换成CODE算法得出的feature matching，效果就好很多。 Run time comparison 纵轴是时间表示，以 s 为单位，横轴是matches的数量，可以看到code运行的时间要比其他的好很多，但是对于slam ，机器人导航，一秒钟要读取几十帧，code这个算法的时间还是不够的。 RepMatch [2] 基于第一个算法之上，解决一个重复结构（repeated structure）的问题。它是用第一个算法的输出，然后在这个输出上再做一次优化，筛选一些对的点。 repeated structure到底是一个什么问题 比如 (a) 图中，我们拍了一栋楼的正面，侧面，反面等照片，然后进行SFM三维重构，发现结果它是给我化成了四个部分，但其实它是一栋楼，就是说三维重构并没有重构出这栋楼。原因：因为（a）图像中的楼的各个面的窗口都很像，你也不能确定正面的窗口和背面的窗口有什么不一样，所以导致一个问题：比如SFM就给你标出四个独立的模型，这明明是一栋楼，它合不起来。主要是因为他们之间错误的匹配太多了，你把楼的前面跟后面匹配在一起，它脑子就乱了，根本不知道这是个什么模型。 然后用了RepMatch，就能构造一个完整的模型，周围的每一个点是每一张相片拍照的位置，中间这一圈就是楼的俯视图，你他最后dense reconstruction的结果就是最右边的图 Repetitive Structure（怎么做到的构建成功的）idea:是做分类它是建立在CODE 输出结果之上的。它把输出结果分为了几类： 第一类：把结果放的严一些，然后结果数就很少。 GMS这篇文章主要是把前面两篇文章的主要思想掌握到，然后把它变快，能够把它应用到更多上面。 首先我们看一个小视频，上面的是作者的GMS算法，下面的是sift，我们可以发现，GMS的match首先在数量上就比sift的多很多，这样我们就能保证最后验证那个几何关系比较准，如果点比较少的话，你做RANSAC的话，就会不稳定，出错之类的。作者的算法比sift这个算法更快更好。 Motivation：为什么又要质量好又要速度快 最常用的算法可能就是Ratio Test，比较流行，比较快，但是不具备鲁棒性。当前的算法比如code等，效果很好，但是很慢。GMS特点就是：又快又好。 论文GMS的方法实际上是消除错误匹配的一种方案，比如可以替换ransac。算法执行的大致流程是：先执行任意一种特征点的检测和特征点的描述子计算，论文中采用的是ORB特征。然后执行暴力匹配BF，最后执行GMS以消除错误匹配。 Key IdeaTrue matches(green) are visually smooth while false matches(cyan) are not. 正确匹配的点我们用绿色的标注出来，错误匹配的点用青涩标注出来。首先我们可以看到正确匹配的点，举个例子，假设随便拿出来两个正确匹配的点（绿色标注的）记为1号点和2号点，1、2号点在另一幅图中对应匹配的点为1‘和2’。我们可以看到1号点对应的匹配点1‘与2号点对应的匹配点2’位置差不多，相似，整个过程是一个比较smooth的过程。而两个相近错误的点（青色的标注），对应的匹配点一个去了楼上，一个去了天上，这就是我们从观察上得到的信息。那么如何把这个观察的信息变成一个算法去验证这个点是对还是不对，这就是算法的核心。 首先我们说了一个正确的match看起来比较smooth，所以我们有没有办法把这些看起来比较smooth的match提取出来，我们就认为这些match是对的。根据贝叶斯上讲，既然正确的match看起来比较smooth，那么比较smooth的match应该也是正确的。 Key Idea：核心思想就是我们如何把match中比较smooth的match拿出来。 方法主要分为三部分： Motion Statistics：motion统计 Grid Framework：grid结构是用来加速的 Motion Kernels：也是用来加速的 后面两个部分都是为了实现第一个部分Motion统计，让它变得很快。 Motion StatisticsMotion Statistics Model首先看一下统计模型是怎么样的，对每一个match，比如说match xi，给他左边和右边各画一个圈，数一下圈中还有多少个其他的match 这个有什么道理：如果一个正确的match，它旁边还有正确的match的话，应该是支持它的。（就像之前的图中显示那样，对的，周围一般Motion是相似的）道理就是一个正确的match旁边可能有对的点在帮你，而对于一个错误的match，你的这个错误是随机发生的，你很难再找到一个点跟你犯一样的错误。所以这两个的概率相差非常大的，第一种正确的match这个圈里面总会有一些点来支持它，而错误的match 支持它的点可能有，但是会很少，这就是这个算法的模型。 这个图中Si就是表示统计值，这张图中Si = 2，Sj是下面那个，没有人支持他，所以是0.所以motion统计就是这样一件事情。 Si = 2；Sj = 0. 我们分析一下这个模型为什么对于判断“这个点是否正确”有效我们假设一个点的统计值 Si ， 它应该服从这个binomial distribution（二项分布）。就假设这个 xi 是正确的的话，那么用 pt 表示这个概率，这个概率是指：假设上图中左边的圈为A，右边的圈为B，那么如果这个点 xi 匹配是正确的话，它周围的点从A到B的可能性是多少，就是支持这个点 xi 的可能性是多少。对于这个 pf ，如果这个 xi 匹配是错的，那么它周围的点支持它的概率是多少。 我们用 fa 表示 A 这个圈中额外支持它的n个点中的一个点。然后去算这个概率，我们要给出一个事件和假设，如下图： 第一个事件表示：fa这个点匹配正确，它的概率为 t，这个概率跟这个算法有关，匹配的质量越高，那么这个概率当然要高 第二个事件表示：fa 这个点匹配错误，它的概率就是 1-t 第三个事件表示：fa 这个点 匹配到了 B 圈中的一个点（但不一定是正确的） 定义这三个事件后，我们给出一个假设：如果一个点它匹配错了，它的匹配还是从A到B的话，那么它的概率是多少 。我们知道如果是A中的一个点匹配错了，那有可能匹配到右边Image中的任何一个点，而它恰好匹配到B圈中的点，如果是随机分布的话，那么这个概率应该为 (m / M), m为B圈中的点的个数，M 为右边图中所有的点的个数。但是可能很多Image是这样的分布，但是有一些Image不是，我们为了弥补这个假设（随机分布），我们给它乘以一个 “贝塔”参数，当这个参数比较大的时候，这个假设就不那么成立了 。这个参数为1的时候，这个假设正好成立。 我们算一下这个概率，如下图： 因为m很小，所以 pf 是一个接近 0 的概率。而 pt 是一个接近 t 的数，因为 pf 是接近 0 的数 。所以这两个的差异很大，另外我们要怎么才能让这个差异变得更大？ 我们上面是在两张图中各画了一个小圈AB，这个小的区域中，他们的正确的点motion是连续的，通常一个Image中，不是只有这个一个小的区域中的motion是连续的，更大的区域应该也是连续的。 比如，之前那张狗的图片，我们只是画了狗的鼻子的一小块区域，但是其实鼻子旁边的区域也是连续的，当然我们不是画整张图片，只是比那个小圈更大一些，所以扩展到了 3*3的这样一个区域，相当于比之前的一个圈扩大了9倍，如下图： 我们之前只是画了a、b这两个圈，现在我们画了9个这样圈，并且统计这个 3 * 3 这样的区域中的 Si。这样便能增大这个distribution之间的差异，如下图： 因为是3*3，所以 K=9 ，这个Si的分布中 pt 和 pf 是跟之前的一样的，因为只有K变化了。所以计算一下均值和方差，如下图： 这个是后面要用到。 现在我们分析一下这个模型有什么用 Analysis Model Partionalbility 这个词是表示，对的点和错的点之间有多大的差距，看起来在这个模型中有多么不一样。P就是用来定义这两个分布（错的和正确的分布）的距离。P越大，表示这个错误的点和正确的点看起来越不一样，那么这个模型就越强。 Quantity-Quality equivalence 我们可以看到这个 P 是正比于这个 Kn 的，就是说你用越多的点在里面，那么这个模型就越强，错的点和对的点的区别就越大。 Relationship to Descriptors 看与这个descriptors的关系，这个descriptors就是 t ，比如你用sift特征点，假如这个sift特征特别强的话，那么这个P是趋近于无穷大的。这就能验证我们的算法是对的。，也比较合乎道理，你特征越强，你越好分割，所以 P 趋近于无穷大。 Experiments on real data该模型在Oxford Affine Dataset上进行评估。 在这里，我们运行SIFT匹配并根据基础事实将所有匹配标记为内点或外点。 我们计算每个匹配的一个小区域内的支持的个数。 纵轴表示了每个matching旁边画了两个小圈，然后数一数这个小圈中 正确的Inlier周围中到底有多少个点支持它，错的点到底有几个点支持它。 它有8的小的datasets，每个dataset里面有五对张照片，这五对照片匹配起来一对比一对难，就是越来越难，每个数据，是用8个datasets的数据做了平均得到的。 所以从上图可以看出：对于正确的点，就算是最难得时候，也有接近8个点支持它，而对于错误的点，始终没有超过1个点支持它。所以可以看出这个模型对于正确的点和错误的点的认识性还是很强的。 这个算法我们已经知道了，那么如何去加速实现它呢？ Grid Framework我们刚才是给每对匹配点画两个圈，一个点一个圈，这样的问题就是：你要想知道有多少个点这个圈内，那你必须要把所有的点过滤一遍。 所以现在我们的做法是不要给这个匹配点画圈，我们直接把image 打成网格，然后这个匹配点自然就会落在这个Image的网格中，那么它这个网格就代表他的这个小圈，就没有了两个小圈的匹配，而变成了两个网格的匹配，你只要数一下这个网格中有多少个点跟它一样就可以了。 只要你一开始把这些 Feature matching丢进这些网格中，你很容易数清楚。这样算法的时间复杂度就从O(n) -&gt; O(1). 所以会变得很快。 Motion Kernel因为我们之前已经知道用更多的region会产生更好的结果，因为我们进行统计的时候就变成了统计这九个小网格的正确点的数量就好了，就很容易能数清楚。 Empirical parameters（经验参数） 你用多少个网格？ 太细的话，统计不好 太粗的话，精度太低 经验上作者是说用 20 * 20 How to set the threshold？怎么设置阈值？就是认为计算出来的这个值（用 τ 表示）过了多少是对的，没过多少是错的。用的是一个平均值加一个方差，这是经验得到的，并没有什么道理可言。这个 α 参数一般我们设置为 0.6 。 Grid Motion Statistics Algorithm首先是给定这个 Correspondences（匹配点）、scale、rotation，然后产生这个 Kernel 和 Grid（20 * 20）。确定好了，去计算每一个点的统计值 Si ，然后去计算这个 τ，如果这个 Si &gt; τ，那么这个点就是对的。没过就是错的。 Full feature matching pipeline这是一个完整的流程，首先获取 feature 然后做 match，然后交给GMS，因为这个scale、rotation可能有多个值，你可以多试几遍，找到一个最好的值。 Run time这里是提取10000个点为例。这个值可以再Video上实时的，因为ORB和Nearest neighbor可以并行 Evaluation 我们测试了4个dataset，第一个是TUM。做slam的可能知道，下面是6个视频，然后从中提取出很多帧做测试，所以这个数据集上有3000多个照片。 0-30是表示两张图片的角度，就是baseline。至于在Strecha和VGG上，Ratio算法表现并不差，是因为这两个数据集太水了，大家是用来发paper的。像TUM这样真正的应用数据上来看，一般的算法根本就不太行了，质量会很差。 X轴是时间，用的是ms表示，Y轴是performance，红色的是作者的算法表现。可以看出GMS实现了结果上差不多，但是时间上快很多倍的效果。 我们从上图可以看出，第一幅图，是在平面上，GMS和SIFT比来看，SIFT经过RANSAC后，结果还是勉强可以的。就是说在平面上，这个sift加上RANSAC结果还是可以的。但是在3D中，sift匹配的全都是错误的点，但是GMS依然是表现很好。说明我们这个算法对于wide-baseline问题是真的解决了，不像sift只有在实验中（那些dataset上）表现的还可以接受，但是在现实中的dataset就不行了。 再就是解决了重复结构的问题，如下图： 之前我们是假设物体是静止的，但是这些猫狗是会动的，动了之后，你拍的图片用sift去匹配的话，如果有的匹配错，并且没有那些RANSAC方法去帮它修正的，那么你匹配对的就是对的，错的就是错的，没有办法去修改。而作者的算法是可以匹配正确的，根本不需要去修正。]]></content>
+      <categories>
+        <category>论文</category>
+      </categories>
+      <tags>
+        <tag>GMS</tag>
+        <tag>CVPR 2017</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[曹晨每周必做题答案详解 -- 1]]></title>
+    <url>%2F2018%2F05%2F15%2F%E6%9B%B9%E6%99%A8%E6%AF%8F%E5%91%A8%E5%BF%85%E5%81%9A%E9%A2%98%E7%AD%94%E6%A1%88%E8%AF%A6%E8%A7%A31%2F</url>
+    <content type="text"><![CDATA[5.12 遗留问题 数列1、3、6、10、15……的一个通项公式为_ == 解：仔细观察数列1、3、6、10、15...可以发现： 1 = 1 3 = 1+2 6 = 1+2+3 10 = 1+2+3+4 ... 所以第 n 项为1+2+3+…+n = $\frac{n(n+1)}{2}$ 每周必做题详解周一第一题 解: 由题意知，设所混入的乙种糖果为 x 千克，所以列不等式为： （1）8 * 20 + 18x ≤ 400 （2）8 + x ≥ 15 解得：7 ≤ x ≤ $\frac{40}{3}$答：所以所混合的乙种糖果最多是 $\frac{40}{3}$千克，最少是7千克 第二题解： （1）由题意知，m = 3x + 8（2）根据题意得： 3x + 8 - 5(x-1) &gt; 0 (1) 3x + 8 - 5(x-1) &lt; 3 (2) 解得：$5 &lt; x &lt; \frac{13}{2}$ ，因为 x 是整数，所以 x 取 6. 答：该校的获奖人数为6人,所买的课外读物的本数为26本. 第三题解：分式的加减运算，所以由原式得： \frac{a^2+3}{a^2-1} - \frac{(a+1)^2}{a^2-1}+1\qquad \quad = \frac{a^2+3-(a^2+2a+1) - (a^2-1)}{a^2-1}= \frac{(a-1)^2}{a^2-1}\qquad \quad \qquad \quad= \frac{(a-1)}{a+1} \qquad \qquad \qquad周二第一题解：由题意知：设该植物种植在海拔高度为 x 米的山区较适宜, 每升高100米,气温下降0.6,那么每升高1米,气温下降了$\frac{0.6}{100}$米；海拔为x米,每升高了x米,气温就在22的基础上下降了 $ \frac{x • 0.6}{100}$ ,温度适宜的范围是18～22.所以列方程为 18≤ 22 - \frac{x}{100} •0.6≤22解得：0 ≤ x ≤ 667 答：该植物种在山上的0-667米的高度之间为宜。 第二题解： （1）设购进甲种商品x件，乙种商品（20-x）件，根据题意得： 190≤12x+8（20-x）≤200解得：7.5 ≤ x ≤ 10，因为 x 必须为非负整数，所以，x 取 8、9、10，所有有如下三种进货方案： ①购甲种商品8件，乙种商品12件； ②购甲种商品9件，乙种商品11件； ③购甲种商品10件，乙种商品10件。 （2）由题意知，得 利润 = x•(14.5-12）+（20-x）•（10-8）=0.5x+40∴ 购甲种商品10件，乙种商品10件时，可获得最大利润，最大利润是45万元。 （3） ①全进甲，能购买3件，利润为（14.5-12）×3=7.5万元； ②全进乙，能购买5件，利润为（10-8）×5=10万元； ③甲进1件，同时乙进4件，利润为（14.5-12）×1+（10-8）×4=10.5万； ④甲进2件，同时乙进2件，利润为2.5×2+2×2=9万元； ⑤甲进3件，同时乙进1件，利润为2.5×3+2×1=9.5万元； 所以购甲种商品1件，乙种商品4件时，可获得最大利润为10.5万元。 周三第一题解：由题意知，设共到x个交通路口值勤，有学生（4x+78）人，所以列不等式为： 8(x-1)+4≤4x+784x+78 < 8x \qquad \qquad解得：19.5 ＜ x ≤ 20.5 根据题意x取20，这时学生为158人． 答：学校派出的是158名学生，分到了20个交通路口安排值勤． 第二题解：设安排生产A种产品x件，则生产B种产品（80-x）件，根据题意得： 5x+2.5(80-x)≤290 1.5x+3.5(80-x) ≤212 解得：34 ≤ x ≤ 36 。 因为x是整数，所以x只能取34或35或36。该厂现有的原料能保证生产，有三种生产方案。 第一种：A产品34件，B产品46件； 第二种：A产品35件，B 产品45件； 第三种：A 产品36件，B 产品44件。 第三题解得： 原式 = \frac{3-a}{(3-a)(3+a)} - \frac{6}{(3-a)(3+a)} \\ = \frac{3-a -6}{(3-a)(3+a)} \qquad \qquad \\ = \frac{-(3+a)}{(3+a)(3-a)} \qquad \qquad \\ = \frac{1}{a-3} \qquad \qquad\qquad \quad周四第一题解：(1)设商店购进电视机 x 台，则购进洗衣机(100－x)台，列不等式得： x ≥ \frac{100-x}{2} \qquad \qquad \qquad \quad1800x + 1500(100-x) ≤ 16180解不等式组，得 $\frac{100}{3}≤x≤\frac{118}{3}$ 所以，购进电视机最少 34 台，最多 39 台，商店有 6 种进货方案． （2）根据题意，得 利润 ＝ (2 000－1 800)x＋(1 600－1 500)(100－x)＝100x＋10 000 \qquad \qquad \qquad \qquad∵100&gt;0，∴当 x 最大时，利润的值最大．即当 x＝39 时，商店获利最多，为 13900 元 答：购进电视机39台时洗衣机61台时，商店获利最多，为 13900 元 第二题（1）由题意知，每亩年租金为 500 元，所以租用 n 亩，年租金为 500 n元 （2） 每亩收益=4×1400+20×160=8800 \qquad \qquad \qquad \qquad每亩成本=4×（75+525）+20×（15+85）+500=4900每亩利润=8800 - 4900=3900．\qquad \qquad \qquad \qquad \quad \quad（3）设租n亩，则贷款（4900n﹣25000）元． 4900n - 25000 ≤ 25000 \qquad \qquad \quad3900n - 8\% \quad(4900n﹣25000) > 35000解得：$\frac{33000}{3508} ≤ n ≤ \frac{50000}{4900}$因为 x 为整数，取 x =10 则应向银行贷款为：4900 * 10 - 25000 = 24000元 答：李大爷应该租10亩水面，并向银行贷款24000元，可使年利润超过35000元。 周五第一题原式 = \frac{3}{2(3+x)} - \frac{1}{2(3-x)} + \frac{3}{(3+x)(3-x)}= \frac{3(3-x) - (3+x) + 2 * 3}{2(3+x)(3-x)} \qquad= \frac{12 - 4x}{2(3+x)(3-x)} \qquad \qquad \qquad= \frac{2}{3+x} \qquad \qquad \qquad \qquad \qquad第二题解，由题意知，设该班有 x 个学生.根据题意有 0 < x - \frac{x}{2} - \frac{x}{4} - \frac{x}{7} < 6解得:0 &lt; x &lt; 56, 又是整数,且是2,4,7,的公倍数，所以 x = 28. 答:这个班有28个学生. 第三题解：这是一道分式方程的题目，设甲同学每分钟打字 x 个，所以得： \frac{3000}{x} = \frac{2400}{x-12}解得：x = 60，验证 60 不是增根，所以 甲每分钟打字60个，乙每分钟打字 48 个。]]></content>
+      <categories>
+        <category>家教</category>
+      </categories>
+      <tags>
+        <tag>曹晨</tag>
+        <tag>家教</tag>
+        <tag>答案</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[曹晨每周必做题 -- 1]]></title>
+    <url>%2F2018%2F05%2F14%2F%E6%9B%B9%E6%99%A8%E6%AF%8F%E5%91%A8%E5%BF%85%E5%81%9A%E9%A2%981%2F</url>
+    <content type="text"><![CDATA[将下面每天需要做的题目，写在一个本子上，要按照考试的步骤写，把每一步骤都写清楚。下次课我回去检查，不会做的到时候会给你详细讲解。 周一第一题 把价格为每千克20元的甲种糖果8千克和价格为每千克18元的乙种糖果若干千克混合，要使总价不超过400元，且糖果不少于15千克，所混合的乙种糖果最多是多少？最少是多少？ 第二题 某校为了奖励在数学竞赛中获奖的学生,买了若干本课外读物准备送给他们.如果每人送3本,则还余8本;如果前面每人送5本,最后一人得到的课外读物不足3本.设该校买了m本课外读物,有x名学生获奖,请解答下列问题: (1)用含x的代数式表示m; (2)求出该校的获奖人数及所买课外读物的本数. 第三题 周二第一题 某种植物适宜生长在温度为18℃～22℃的山区,已知山区海拔每升高100m,气温下降0.6℃,现测 出山脚下的平均气温为22℃,问该植物种在山上的哪一部分为宜(设山脚下的平均海拔高度为0m). 第二题 某公司经营甲、乙两种商品，每件甲种商品进价12万元，售价14.5万元．每件乙种商品进价8万元，售价10万元，且它们的进价和售价始终不变．现准备购进甲、乙两种商品共20件，所用资金不低于190万元不高于200万元． （1）该公司有哪几种进货方案？ （2）该公司采用哪种进货方案可获得最大利润？最大利润是多少？ （3）利用（2）中所求得的最大利润再次进货，请直接写出获得最大利润的进货方案． 周三第一题 为了加强学生的交通安全意识，某中学和交警大队联合举行了“我当一日小交警”活动，星期天选派部分学生到交通路口值勤，协助交通警察维护交通秩序．若每一个路口安排4人，那么还剩下78人；若每个路口安排8人，那么最后一个路口不足8人，但不少于4人．求这个中学共选派值勤学生多少人？共有多少个交通路口安排值勤？ 第二题 我市某化工厂现有甲种原料290千克，乙种原料212千克，计划利用这两种原料生产A、B两种产品共80件，生产一件A产品需要甲种原料5千克，乙种原料1.5千克；生产一件B种产品需要甲种原料2.5千克，乙种原料3.5千克，该化工厂现有的原料能否保证生产顺利进行？若能的话，有几种方案？请你设计出来。 第三题 周四第一题 第二题 苏州地处太湖之滨，有丰富的水产养殖资源，水产养殖户李大爷准备进行大闸蟹与河虾的混合养殖，他了解到如下信息： ①每亩水面的年租金为500元，水面需按整数亩出租； ②每亩水面可在年初混合投入4kg蟹苗和20kg虾苗； ③每千克蟹苗的价格为75元，其饲养费用为525元，当年可获1 400元收益； ④每千克虾苗的价格为15元，其饲养费用为85元，当年可获160元收益． (1）若租用水面n亩，则年租金共需_元； (2）水产养殖的成本包括水面年租金、苗种费用和饲养费用，求每亩水面蟹虾混合养殖的年利润（利润=收益－成本）； （3）李大爷现有资金25 000元，他准备再向银行贷不超过25 000元的款，用于蟹虾混合养殖，已知银行贷款的年利率为8%，试问李大爷应该租多少亩水面，并向银行贷款多少元，可使年利润超过35 000元？ 周五第一题 第二题 有人问一位老师他所教的班上有多少学生，老师说：“一半的学生在学数学，四分之一的学生在学音乐，七分之一的学生在读外语，不足六位同学在操场上踢足球。”试问这个班共有多少名学生？ 第三题 甲、乙两同学学习计算机打字，甲打一篇3000字的文章与乙打一篇2400字的文章所用的时间相同。已知甲每分钟比乙每分钟多打12个字，问甲、乙两人每分钟各打多少个字？]]></content>
+      <categories>
+        <category>家教</category>
+      </categories>
+      <tags>
+        <tag>曹晨</tag>
+        <tag>家教</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Mac常用快捷键教程]]></title>
+    <url>%2F2018%2F05%2F08%2FMac%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[用option快速输入一些特殊符号 option V： 输入 √ option /： 输入 ÷ option =： 输入 ≠ option &gt;： 输入 ≥ option &lt;： 输入 ≤ option K： 输入 ˚ option X： 输入 ≈ option =： 输入 ≠ option 2： 输入 ™ option R： 输入 ® option Y： 输入 ¥ option P： 输入 π option G： 输入 © option + shift + K：  通知中心开关 按住 option 点击桌面右上角通知中心，即可直接关闭或开启通知。不用在通知中心中打开了。 比如用 Mac 全屏看电影又不想被右上角的消息弹出打扰的话，暂时开启勿扰（关闭通知）就是了. WIFI状态按住 option 点击 Wi-Fi 图标即可查看 IP 地址、Wi-Fi 信号强度等等 Wi-Fi 的详细信息。 通用快捷键 command + M：最小化窗口 command + H：隐藏窗口 command + N：新建窗口 command + O：打开 command + Shift + S：另存为 command + P：打印 command + W：关闭 command + Q：退出 文件管理器 command + I：显示简介 command + F：搜索 command + delete：删除 command + Shift + delete：清空回收站 option + 方向键左：将光标移动到前一个单词 command + option + I：查看多个文件一共有多大 option + 方向键上：将光标移动到当前段落的开头 command + shift + 方向键左/右：可以选中一句话 command + 方向键左：将光标移动到句子的开头 command + 方向键上：将光标快速移动到整篇文本开头 浏览器 command + +\=：放大 command + --：缩小 command + T：新建一个选项卡 command + N：新建一个新窗口 command + R：刷新 command + F：搜索 command + W：关闭当前选项卡 command + D：将网页加入个人收藏 command + Z：恢复刚才关闭的网页 command + shift + B：显示或隐藏收藏栏 command + shift + N：打开一个全新的隐私浏览器窗口比较合适 space / space + shift：向下或向上滚动一整页 command + option + Q：退出 Safari，在下次打开的时候，会自动加载上次的所有窗口 option + 方向键上/方向键下：网页向上或向下滚动一整页 系统 command + option + esc：强制退出程序 command + shift + Y：生成便签 command + space：切换输入法 command：按住command即可用鼠标移动拖动顶部图标排列 control + command + space：快速调出emoji表情和各种特殊符号输入 shift + option + F1 / F2：可以以1/4格为单位对屏幕亮度调整，音量也是如此。 总结后续会继续补充。有什么遗漏的，可以留言。]]></content>
+      <categories>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>快捷键</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[吵架]]></title>
+    <url>%2F2018%2F04%2F28%2F2018.4.27%2F</url>
+    <content type="text"><![CDATA[今天是怎么了，或者说这几天是怎么了，天天惹你生气，心情很烦躁，我准备开始写日记，抒发一下自己的心情，要不我可能会被憋死的。 前序环顾四周和手机应用，竟然没有一个地方可以让我肆无忌惮的畅所欲言的发泄。在朋友圈、空间、微博你敢发吗，人长大了，总是要顾虑这顾虑那，我不想发在朋友圈后，让你再多想，我只是想找一个地方写写我的心情，要不我可能真的会被郁闷死的。 回忆中学初中时候，我个人的品性很差，现在想想那可能是最灰暗的三年了，没有知心朋友，脾气古怪，小心眼，自己一个人卑微的活着，也不知道打了多少架，现在想想，心中只是一阵痛。我只能说，有时候真的不是我的错，我还记得初中上学时，学校不让住校，我就只能在学校外跟同学合租房子，大约有5、6个人吧。其中有一个是邻班的班长，有天晚上，他就突然找我的茬。有人可能说，人家怎么会莫名其妙的找你的茬，但我可以摸着良心说，我真的没有做错什么。那天晚上，他跟我打了一架，我被揍了，哭着跑了出去，大晚上自己一个人走在马路上，一个人哭，最终我还是去给我妈妈打了个电话，最终的结果就是，我妈妈来了学校，他妈妈也来了学校，和解。后来我才知道，他为什么要跟我打架，因为他想让他一个好朋友住进来，把我踢出去，现在想起来我还是很痛恨他。 事情原委话扯远了，今天晚上也不知道为啥心情这么暴躁，刚开始和你打游戏时的心态可能就不对，最后因为我想用法师貂蝉，而队伍中已经有个法师，你就说别让我用法师，换个吧。我当时可能心情就很不爽了，因为之前打了几局都不好，然后就反驳，最后凶了你一句，然后我们就各删了游戏。呵呵，然后就在微信上聊了起来，你说你哭了，觉得自己很委屈，只不过是玩个游戏，我就凶你了，那以后生活的不得水深火热。我当时心中还很烦躁，我这个人要是心情烦躁起来，就不会讲理了。 聊着聊着，我就问了你一句：“现在后悔还来得及”，其实说完这句话，我很还忐忑，我心中在期待，你肯定的回答，但是没有。但也不意外，毕竟都在气头上，而且还是我的错。 我很害怕失去你，又不想表达出来，想听你心中最真实的想法，我自己心中的想法是“你要是想离开，我不会挽留”，因为你既然都想好了，我不想要个勉强的你。 自我反省话说回来，也该批评自己了，最近是很膨胀啊。毕竟这几年过得都顺风顺水，没什么大的坎坷，可能自己在心态上就有了变化，脾气也见长了，价值观也有了变化，喜欢购物，花钱，穿好看的。没有了高中那种一花钱就想到父母的辛苦。我觉得这样很不好，我要改变自己，虽然之前删游戏是一时之快，但是我想坚持下来，把更多的时间用在学习上。 改进之处 把更多的时间花在学习和陪你上 脾气暴躁需要改改，以后多读书，去图书馆借本自控力的书，每天阅读半个小时 爱说脏话，这个要改，但是没啥很好的方法，就平时多自己注意吧 总结自己写完这些字，心情果然好了点。继续加油，明天会是美好的一天！加油！]]></content>
+      <categories>
+        <category>心情笔记</category>
+      </categories>
+      <tags>
+        <tag>丹岑</tag>
+        <tag>心情</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2017%2F11%2F07%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+  </entry>
+  <entry>
+    <title><![CDATA[iTerm 2 实用快捷键]]></title>
+    <url>%2F2017%2F11%2F02%2FiTerm%202%20%E5%AE%9E%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%2F</url>
+    <content type="text"><![CDATA[⌘ + Click：可以打开文件，文件夹和链接 ⌘ + n：新建窗口 ⌘ + t：新建标签页 ⌘ + w：关闭当前页 ⌘ + 数字 &amp; ⌘ + 方向键：切换标签页 ⌥⌘ + 数字：切换窗口 ⌘ + enter：切换全屏 ⌘ + d：左右分屏ß ⇧⌘ + d：上下分屏 ⌘ + ;：自动补全历史记录 ⇧⌘ + h：自动补全剪贴板历史 ⌥⌘ + e：查找所有来定位某个标签页 ⌘ + r &amp; ⌃ + l：清屏 ⌘ + /：显示光标位置 ⌥⌘ + b：历史回放 ⌘ + f：查找，然后用 tab 和 ⇧ + tab 可以向右和向左补全，补全之后的内容会被自动复制， 还可以用 ⌥ + enter 将查找结果输入终端 选中即复制，鼠标中键粘贴 很多快捷键都是通用的，和 Emace 等都是一样的 ⌃ + u：清空当前行 ⌃ + a：移动到行首 ⌃ + e：移动到行尾 ⌃ + f：向前移动 ⌃ + b：向后移动 ⌃ + p：上一条命令 ⌃ + n：下一条命令 ⌃ + r：搜索历史命令 ⌃ + y：召回最近用命令删除的文字 ⌃ + h：删除光标之前的字符 ⌃ + d：删除光标所指的字符 ⌃ + w：删除光标之前的单词 ⌃ + k：删除从光标到行尾的内容 ⌃ + t：交换光标和之前的字符]]></content>
+      <categories>
+        <category>Mac</category>
+      </categories>
+      <tags>
+        <tag>Mac</tag>
+        <tag>iTem2</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[密钥分发中心（KDC）]]></title>
+    <url>%2F2017%2F11%2F02%2F%E5%AF%86%E9%92%A5%E5%88%86%E5%8F%91%E4%B8%AD%E5%BF%83%EF%BC%88KDC%EF%BC%89%2F</url>
+    <content type="text"><![CDATA[简言 密钥分发中心是一种运行在物理安全服务器上的服务，KDC维护着领域中所有安全主体账户信息数据库。 与每一个安全主体的其他信息一起，KDC存储了仅安全主体和KDC知道的加密密钥，这个密钥也称长效密钥（主密钥），用于在安全主体和KDC之间进行交换。 KDC是作为发起方和接收方共同信任的第三方，因为他维护者一个存储着该域中所有账户的账户数据库，也就是说，他知道属于每个账户的名称和派生于该账户密码的Master Key（主密钥）。而用于Alice和Bob相互认证的会话密钥就是由KDC分发的，下面详细讲解KDC分发会话密钥的过程。 分发会话密钥过程1、首先客户端向KDC发送一个会话密钥申请。这个申请的内容可以简单概括为”我是某客户端，我需要个Session Key用于与某服务器通话“。 2、KDC在接收到这个请求的时候，生成一个会话密钥。为了保证这个会话密钥仅仅限于发送请求的客户端和它希望访问的服务器知道，KDC会为这个会话密钥生成两个副本，分别被客户端和服务器使用。然后从账户数据库中提取客户端和服务器的主密钥分别对这两个副本进行对称加密。对于服务器，与会话密钥一起被加密的还包含关于客户端的一些信息，以便对发起连接请求的客户端进行身份认证。 注意：KDC不是直接把这两个会话密钥副本分发客户端和服务器的，因为如果这样做，对于服务器来说会 出现下面两个问题。由于一个服务器会面对若干不同的客户端，而每个客户端都具有一个不同的Session Key。那么服务器就会为所有的客户端维护这样一个会话密钥的列表，这样对服务器来说工作量就非常 大了。由于网络传输的不确定性，可能会出现这样一种情况：客户端很快获得会话密钥用于副本，并将 这个会话密钥作为凭据随同访问请求发送到服务器，但是用于服务器的会话密钥却还没有收到，并且很 有可能这个会话密钥永远也到不了服务器端，这样客户端将永远得不到认证。为了解决这个问题， Kerberos将这两个被加密的副本一同发送给客户端，属于服务器的那份由客户端发送给服务器。因为 这两个会话密钥副本分别是由客户端和服务器端的主密钥加密的，所以不用担心安全问题。 3、通过上面的过程，客户端实际上获得了两组信息：一个是通过自己主密钥加密的会话密钥；另一个是被Server的主密钥加密的数据包，包含会话密钥和关于自己的一些确认信息。在这个基础上，我们再来看看服务器是如何对客户端进行认证的。 4、客户端通过用自己的主密钥对KDC加密的会话密钥进行解密从而获得会话密钥，随后创建认证符（Authenticator，包括客户端信息和时间戳（Timestamp）），并用会话密钥对其加密。最后连同从KDC获得的、被服务器的主密钥加密过的数据包（客户端信息和会话密钥）一并发送到服务器端。我们把通过服务器的主密钥加密过的数据包称为服务票证（Session Ticket）。 5、当服务器接收到这两组数据后，先使用它自己的主密钥对服务票证进行解密，从而获得会话密钥。随后使用该会话密钥解密认证符，通过比较由客户端发送来的认证符中的客户端信息（Client Info）和服务票证中的客户端信息实现对客户端身份的验证。 双方进行了身份认证的同时也获得了会话密钥，那么双方可以进行会话了。 流程图如下： 客户端简称为Alice，服务端简称为Bob 总结参考文章]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>KDC</tag>
+        <tag>密钥</tag>
+      </tags>
+  </entry>
 </search>
