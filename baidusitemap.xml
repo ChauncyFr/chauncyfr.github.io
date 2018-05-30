@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://fengxru.cn/photoPostName/</loc>
+    <lastmod>2018-05-30T12:06:14.480Z</lastmod>
+    <data>
+        <display>
+        <title>测试博客照片墙功能</title>
+        <pubTime>2018-05-27T15:18:51.000Z</pubTime>
+        
+        <tag>照片</tag>
+         
+         
+           
+             
+              <breadCrumb title="相册" url="http://fengxru.cn/categories/%E7%9B%B8%E5%86%8C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fengxru.cn/%E6%B5%8B%E8%AF%952/</loc>
     <lastmod>2018-05-30T11:48:38.871Z</lastmod>
     <data>
@@ -38,26 +58,6 @@
            
              
               <breadCrumb title="hexo" url="http://fengxru.cn/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://fengxru.cn/photoPostName/</loc>
-    <lastmod>2018-05-27T15:40:12.740Z</lastmod>
-    <data>
-        <display>
-        <title>测试博客照片功能</title>
-        <pubTime>2018-05-27T15:18:51.000Z</pubTime>
-        
-        <tag>照片</tag>
-         
-         
-           
-             
-              <breadCrumb title="相册" url="http://fengxru.cn/categories/%E7%9B%B8%E5%86%8C/"/>
           
         </display>
     </data>
