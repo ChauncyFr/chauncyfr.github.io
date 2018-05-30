@@ -2126,7 +2126,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffd925;
+  background: #091475;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3668,6 +3668,7 @@ adjust the position of gitter,
     color: #c8c8c8;
   }
 }
+*
 #coding:link,
 #coding:visited {
   color: #999;
@@ -3678,7 +3679,19 @@ adjust the position of gitter,
   color: #999;
   text-decoration: none;
 }
-*
+.highlight {
+  border-radius: 1px;
+}
+.highlight,
+pre {
+  overflow: auto;
+  margin: 20px 0;
+  padding: 0;
+  font-size: 13px;
+  color: #4d4d4c;
+  background: #f7f7f7;
+  line-height: 1.6;
+}
 .site-author-name {
   margin: 48px 0 0;
   font-family: 'Comic Sans MS', sans-serif;
