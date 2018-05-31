@@ -2126,7 +2126,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #d9ffc9;
+  background: #1aff28;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3311,10 +3311,10 @@ code {
   margin-top: 15px;
 }
 #heart {
-  animation: heartAnimate 1s ease-in-out infinite;
+  animation: heartAnimate 1.33s ease-in-out infinite;
 }
 .with-love {
-  color: #ec191b;
+  color: #ff71a8;
 }
 .post-sticky-flag {
   font-size: inherit;
