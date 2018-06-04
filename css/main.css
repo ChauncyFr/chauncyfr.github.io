@@ -2126,7 +2126,7 @@ img:hover {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #0e3d8f;
+  background: #4b6fc4;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3163,6 +3163,11 @@ hr {
   .site-search {
     float: none;
     padding: 0 10px;
+  }
+}
+@media (max-width: 767px) {
+  .container .main-inner {
+    width: auto;
   }
 }
 @media (max-width: 767px) {
