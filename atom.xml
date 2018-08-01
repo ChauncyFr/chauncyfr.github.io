@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://fengxru.cn/"/>
-  <updated>2018-08-01T03:16:27.291Z</updated>
+  <updated>2018-08-01T11:30:49.783Z</updated>
   <id>http://fengxru.cn/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>android studio 如何配置OpenCV的</title>
+    <link href="http://fengxru.cn/android-studio-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEOpenCV%E7%9A%84/"/>
+    <id>http://fengxru.cn/android-studio-如何配置OpenCV的/</id>
+    <published>2018-08-01T11:29:12.000Z</published>
+    <updated>2018-08-01T11:30:49.783Z</updated>
+    
+    <content type="html"><![CDATA[<hr><p><blockquote>讲解了如何在Android studio中配置opencv</blockquote></p><a id="more"></a><h3 id="android-studio-如何配置OpenCV的"><a href="#android-studio-如何配置OpenCV的" class="headerlink" title="android studio 如何配置OpenCV的"></a>android studio 如何配置OpenCV的</h3><p>前期准备工作，你需要在OpenCV官网下载指定的安装包，是OpenCV for Android类型的，如下图<br><img src="http://odl86bwkg.bkt.clouddn.com/a.png" alt=""></p><p>下载完后解压后的目录如下图：<br><img src="http://odl86bwkg.bkt.clouddn.com/b.png" alt=""></p><h4 id="只写java版的OpenCV环境配置"><a href="#只写java版的OpenCV环境配置" class="headerlink" title="只写java版的OpenCV环境配置"></a>只写java版的OpenCV环境配置</h4><p>现在将OpenCV引进android studio中</p><p>1、新建一个android 工程</p><p>2、点击File—&gt; New —&gt; Import Module<br>   如下图<img src="http://odl86bwkg.bkt.clouddn.com/c.png" alt=""></p><p>3、在第2步后，会弹出如下窗口<br><img src="http://odl86bwkg.bkt.clouddn.com/d.png" alt=""></p><p>4、找到OpenCV解压的路径，选择sdk/java文件夹，如下图<br><img src="http://odl86bwkg.bkt.clouddn.com/e.png" alt=""></p><p>5、之后直接点击Next —&gt; Finish。然后右击该项目—&gt; Open Module Settings —&gt; Dependencies —&gt; 点击右边的 加号 —&gt; Module dependency —&gt; 选择openCVLibrary310 —&gt; 点击 OK。如下图<br><img src="http://odl86bwkg.bkt.clouddn.com/g.png" alt=""><br><img src="http://odl86bwkg.bkt.clouddn.com/h.png" alt=""></p><p>6、此时项目可能报错，此时我们可以更新build.gradle文件。这是因为opencv-Android的在这里的bulid文件和项目中的不一样,将划红线部分的信息改为和app文件夹下的build.gradle中信息相一致，主要是修改以下四个参数的值：compileSdkVersion、buildToolsVersion、minSdkVersion、targetSdkVersion。如下图<br><img src="http://odl86bwkg.bkt.clouddn.com/k.png" alt=""><br><img src="http://odl86bwkg.bkt.clouddn.com/l.png" alt=""></p><p>7、复制libs文件夹中。在OpenCV的解压包中，将sdk/native/libs文件夹复制，粘贴到 Project视图下的<br>app —&gt; libs 下，然后双击打开 app —&gt; build.gradle 文件，在 android 模块中添加以下代码：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">sourceSets &#123;</div><div class="line">        main &#123;</div><div class="line">            jniLibs.srcDirs = [&apos;libs&apos;]</div><div class="line">            java.srcDirs = [&apos;src/main/java&apos;, &apos;src/main/java-gen&apos;]</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure><p>要注意括号匹配，是填yunyong写在android模块下，而不是buildTypes模块下。填写完该代码后，该文件的右上方会有一个 Sync Now，点击就Ok了，此时返回android 视图，会发现多出一个jniLibs文件。</p><p>到此，第一种配置就完成了。当然可能大家对第7步有异议，其实也可以如下操作：<br>在OpenCV的解压包中，将sdk—&gt;native—&gt;libs文件夹复制，粘贴在Project视图下app—&gt;src—&gt;main目录下，并将其重命名为jniLibs。这种作法等同于我之前讲的。</p><h3 id="C-代码中配置OpenCV环境"><a href="#C-代码中配置OpenCV环境" class="headerlink" title="C++代码中配置OpenCV环境"></a>C++代码中配置OpenCV环境</h3><p>因为有时我们可能需要在android中编写C++代码，有时会在C++代码中调用OpenCV的库，这时候我们应该怎么配置呢？<br>因为android中编写C++代码是需要NDK的支持，其实自从android studio出了2.2版本后直接可以在创建工程时添加NDK支持了，添加之后main文件夹下会多出一个native-lib.cpp这个文件，如果只是为了一个简单的NDK接口，貌似这样就结束了，直接在该cpp文件下编程即可。</p><p>但是，如果使用第三方库，就得重新配置了。到目前为止，网上大半文章都是.mk的配置方法。android studio 2.2使用Cmake作为跨平台编译工具，创建完一个工程后，JNI的配置都是由Cmake来管理，在project文件夹下的CmakeList文件中。Cmake有自己的编写规则，最好去官网看一下语法。下面就开始C++配置OpenCV环境，你只需要在CmakeList文件中添加上这几句话就可以了。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">include_directories(/home/fxr/Android/OpenCV-android-sdk/sdk/native/jni/include)</div><div class="line">add_library(lib_opencv SHARED IMPORTED)</div><div class="line">set_target_properties(lib_opencv</div><div class="line">                      PROPERTIES IMPORTED_LOCATION</div><div class="line">                      /home/fxr/Android/OpenCV-android-sdk/sdk/native/libs/$&#123;ANDROID_ABI&#125;/libopencv_java3.so)</div></pre></td></tr></table></figure><p>将之前的target_link_libraties模块换成以下这个</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">target_link_libraries( # Specifies the target library.</div><div class="line">                       native-lib</div><div class="line"></div><div class="line">                       # Links the target library to the log library</div><div class="line">                       # included in the NDK.</div><div class="line">                       $&#123;log-lib&#125;</div><div class="line">                       lib_opencv )</div></pre></td></tr></table></figure><p>这样应该就可以在C++文件中调用OpenCV的库了。</p><p><strong>注意：将其中的路径换成你自己的</strong></p><p>上面添加的几句话可以做如下解释：</p><blockquote><p>1 <figure class="highlight plain"><figcaption><span>#添加ffmpeg对应的头文件目录,```$&#123;pathToFFMPEG&#125;```为前面配置过的路径,可以替换为```include_directories(E:/ffmpeg/include)```这种路径格式</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&gt; 2 ```add_library( ffmpeg SHARED IMPORTED)``` #添加库文件，实际上就是引入so文件,IMPORT代表从第三方引入的意思</div><div class="line">&gt; </div><div class="line">3 ```set_target_properties( ffmpeg PROPERTIES IMPORTED_LOCATION $&#123;pathToProject&#125;/app/src/main/jniLibs/$&#123;ANDROID_ABI&#125;/libffmpeg.so```#这句话是ffmpeg对应的so文件,so文件是放到JNILibs这个文件夹中 </div><div class="line">&gt;</div><div class="line">4 ```target_link_libraries( $\&#123;log-lib&#125; native-lib ffmpeg)```#为native-lib加载ffmpeg库.</div><div class="line"></div><div class="line"></div><div class="line">这样配置好就可以在native-lib里调用ffmpeg模块了</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">##### 附加</div><div class="line">如果是自己编写的CPP文件，只需做如下变化</div></pre></td></tr></table></figure></p></blockquote><p>add_library(coreAlg SHARED src/main/cpp/coreAlg.cpp )#添加库文件,这种实际上是有AS给编译成so文件了<br>target_link_libraries(native-lib ${log-lib} coreAlg)#native-lib里调用coreAlg<br>```</p><p>参考：</p><p><a href="http://www.jianshu.com/p/7f0cc055c05f" target="_blank" rel="external">http://www.jianshu.com/p/7f0cc055c05f</a></p><p><a href="http://www.cnblogs.com/meadow-glog/p/6130568.html" target="_blank" rel="external">http://www.cnblogs.com/meadow-glog/p/6130568.html</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;hr&gt;
+
+&lt;p&gt;&lt;blockquote&gt;讲解了如何在Android studio中配置opencv&lt;/blockquote&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="配置" scheme="http://fengxru.cn/categories/%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="Android studio" scheme="http://fengxru.cn/tags/Android-studio/"/>
+    
+      <category term="opencv" scheme="http://fengxru.cn/tags/opencv/"/>
+    
+  </entry>
   
   <entry>
     <title>Mac安装opencv3并在pycharm中运用</title>

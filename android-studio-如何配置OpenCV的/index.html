@@ -109,7 +109,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="xiangru" />
+  <meta name="keywords" content="Android studio,opencv," />
 
 
 
@@ -127,16 +127,28 @@
 
 
 
-<meta name="description" content="如无必要，勿增实体 -- be simple">
-<meta property="og:type" content="website">
-<meta property="og:title" content="SeaBaby">
-<meta property="og:url" content="http://fengxru.cn/page/2/index.html">
+<meta name="description" content="讲解了如何在Android studio中配置opencv">
+<meta name="keywords" content="Android studio,opencv">
+<meta property="og:type" content="article">
+<meta property="og:title" content="android studio 如何配置OpenCV的">
+<meta property="og:url" content="http://fengxru.cn/android-studio-如何配置OpenCV的/index.html">
 <meta property="og:site_name" content="SeaBaby">
-<meta property="og:description" content="如无必要，勿增实体 -- be simple">
+<meta property="og:description" content="讲解了如何在Android studio中配置opencv">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://odl86bwkg.bkt.clouddn.com/a.png">
+<meta property="og:image" content="http://odl86bwkg.bkt.clouddn.com/b.png">
+<meta property="og:image" content="http://odl86bwkg.bkt.clouddn.com/c.png">
+<meta property="og:image" content="http://odl86bwkg.bkt.clouddn.com/d.png">
+<meta property="og:image" content="http://odl86bwkg.bkt.clouddn.com/e.png">
+<meta property="og:image" content="http://odl86bwkg.bkt.clouddn.com/g.png">
+<meta property="og:image" content="http://odl86bwkg.bkt.clouddn.com/h.png">
+<meta property="og:image" content="http://odl86bwkg.bkt.clouddn.com/k.png">
+<meta property="og:image" content="http://odl86bwkg.bkt.clouddn.com/l.png">
+<meta property="og:updated_time" content="2018-08-01T11:30:49.783Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SeaBaby">
-<meta name="twitter:description" content="如无必要，勿增实体 -- be simple">
+<meta name="twitter:title" content="android studio 如何配置OpenCV的">
+<meta name="twitter:description" content="讲解了如何在Android studio中配置opencv">
+<meta name="twitter:image" content="http://odl86bwkg.bkt.clouddn.com/a.png">
 
 
 
@@ -165,13 +177,13 @@
 
 
 
-  <link rel="canonical" href="http://fengxru.cn/page/2/"/>
+  <link rel="canonical" href="http://fengxru.cn/android-studio-如何配置OpenCV的/"/>
 
 
 
 
 
-  <title> xiangru - SeaBaby</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>android studio 如何配置OpenCV的 | SeaBaby</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -196,9 +208,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left 
-   page-home 
- ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <a href="https://github.com/ChauncyFr" class="github-corner" aria-label="View source on Github"><svg width="129" height="129" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -338,9 +348,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -353,7 +363,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://fengxru.cn/photoPostName/">
+    <link itemprop="mainEntityOfPage" href="http://fengxru.cn/android-studio-如何配置OpenCV的/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="SeaBaby">
@@ -370,9 +380,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/photoPostName/" itemprop="url">测试博客照片墙功能</a></h1>
+          <h1 class="post-title" itemprop="name headline">android studio 如何配置OpenCV的</h1>
         
 
         <div class="post-meta">
@@ -385,8 +393,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-27T23:18:51+08:00">
-                2018-05-27
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-01T19:29:12+08:00">
+                2018-08-01
               </time>
             
 
@@ -401,8 +409,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-30T20:06:14+08:00">
-                2018-05-30
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-01T19:30:49+08:00">
+                2018-08-01
               </time>
             
           </span>
@@ -420,8 +428,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/相册/" itemprop="url" rel="index">
-                    <span itemprop="name">相册</span>
+                  <a href="/categories/配置/" itemprop="url" rel="index">
+                    <span itemprop="name">配置</span>
                   </a>
                 </span>
 
@@ -437,7 +445,7 @@
 
           
           
-             <span id="/photoPostName/" class="leancloud_visitors" data-flag-title="测试博客照片墙功能">
+             <span id="/android-studio-如何配置OpenCV的/" class="leancloud_visitors" data-flag-title="android studio 如何配置OpenCV的">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -466,7 +474,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  0
+                  1,074
                 </span>
               
 
@@ -482,268 +490,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-        <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
-          
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg" rel="gallery_cjkb1w017000j41wdu7uwpmtx"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg" itemprop="contentUrl"/>
-              </a>
-            
-          
-            
-              <a class="post-gallery-img fancybox"
-                 href="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg" rel="gallery_cjkb1w017000j41wdu7uwpmtx"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-1.jpg" itemprop="contentUrl"/>
-              </a>
-            
-          
-            
-              <a class="post-gallery-img fancybox"
-                 href="https://ws1.sinaimg.cn/large/006tKfTcly1frp7z57mjuj30p00fr0ta.jpg" rel="gallery_cjkb1w017000j41wdu7uwpmtx"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="https://ws1.sinaimg.cn/large/006tKfTcly1frp7z57mjuj30p00fr0ta.jpg" itemprop="contentUrl"/>
-              </a>
-            </div>
-          
-            <div class="post-gallery-row">
-              <a class="post-gallery-img fancybox"
-                 href="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg" rel="gallery_cjkb1w017000j41wdu7uwpmtx"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg" itemprop="contentUrl"/>
-              </a>
-            
-          
-            
-              <a class="post-gallery-img fancybox"
-                 href="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg" rel="gallery_cjkb1w017000j41wdu7uwpmtx"
-                 itemscope itemtype="http://schema.org/ImageObject" itemprop="url">
-                <img src="http://bruce.u.qiniudn.com/2013/11/27/reading/photos-0.jpg" itemprop="contentUrl"/>
-              </a>
-            
-          
-
-          
-          </div>
-        </div>
-      
-
-      
-        
-          测试照片功能，心情美美哒，亲爱的
-          <!--noindex-->
-          <div class="post-button text-center">
-            <center>
-              <a class="btn" href="/photoPostName/">
-                阅读全文
-              </a>
-            </center>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-
-
-    
-
-    
-
-    
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://fengxru.cn/TensorFlow中的维度和shape的理解/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SeaBaby">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SeaBaby">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/TensorFlow中的维度和shape的理解/" itemprop="url">TensorFlow中的维度和shape的理解</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-26T10:59:33+08:00">
-                2018-05-26
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-27T22:57:43+08:00">
-                2018-05-27
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/深度学习/" itemprop="url" rel="index">
-                    <span itemprop="name">深度学习</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/TensorFlow中的维度和shape的理解/" class="leancloud_visitors" data-flag-title="TensorFlow中的维度和shape的理解">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          <span class="post-meta-divider">|</span>
-
-
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  1,396
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  6
+                  4
                 </span>
               
             </div>
@@ -764,21 +511,42 @@
       
 
       
-        
-          <p><img src="https://ws1.sinaimg.cn/large/006tKfTcly1frp7z57mjuj30p00fr0ta.jpg" alt=""></p>
+        <hr>
+
+<p><blockquote>讲解了如何在Android studio中配置opencv</blockquote></p>
+
+
+
+<a id="more"></a>
+<h3 id="android-studio-如何配置OpenCV的"><a href="#android-studio-如何配置OpenCV的" class="headerlink" title="android studio 如何配置OpenCV的"></a>android studio 如何配置OpenCV的</h3><p>前期准备工作，你需要在OpenCV官网下载指定的安装包，是OpenCV for Android类型的，如下图<br><img src="http://odl86bwkg.bkt.clouddn.com/a.png" alt=""></p>
+<p>下载完后解压后的目录如下图：<br><img src="http://odl86bwkg.bkt.clouddn.com/b.png" alt=""></p>
+<h4 id="只写java版的OpenCV环境配置"><a href="#只写java版的OpenCV环境配置" class="headerlink" title="只写java版的OpenCV环境配置"></a>只写java版的OpenCV环境配置</h4><p>现在将OpenCV引进android studio中</p>
+<p>1、新建一个android 工程</p>
+<p>2、点击File—&gt; New —&gt; Import Module<br>   如下图<img src="http://odl86bwkg.bkt.clouddn.com/c.png" alt=""></p>
+<p>3、在第2步后，会弹出如下窗口<br><img src="http://odl86bwkg.bkt.clouddn.com/d.png" alt=""></p>
+<p>4、找到OpenCV解压的路径，选择sdk/java文件夹，如下图<br><img src="http://odl86bwkg.bkt.clouddn.com/e.png" alt=""></p>
+<p>5、之后直接点击Next —&gt; Finish。然后右击该项目—&gt; Open Module Settings —&gt; Dependencies —&gt; 点击右边的 加号 —&gt; Module dependency —&gt; 选择openCVLibrary310 —&gt; 点击 OK。如下图<br><img src="http://odl86bwkg.bkt.clouddn.com/g.png" alt=""><br><img src="http://odl86bwkg.bkt.clouddn.com/h.png" alt=""></p>
+<p>6、此时项目可能报错，此时我们可以更新build.gradle文件。这是因为opencv-Android的在这里的bulid文件和项目中的不一样,将划红线部分的信息改为和app文件夹下的build.gradle中信息相一致，主要是修改以下四个参数的值：compileSdkVersion、buildToolsVersion、minSdkVersion、targetSdkVersion。如下图<br><img src="http://odl86bwkg.bkt.clouddn.com/k.png" alt=""><br><img src="http://odl86bwkg.bkt.clouddn.com/l.png" alt=""></p>
+<p>7、复制libs文件夹中。在OpenCV的解压包中，将sdk/native/libs文件夹复制，粘贴到 Project视图下的<br>app —&gt; libs 下，然后双击打开 app —&gt; build.gradle 文件，在 android 模块中添加以下代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">sourceSets &#123;</div><div class="line">        main &#123;</div><div class="line">            jniLibs.srcDirs = [&apos;libs&apos;]</div><div class="line">            java.srcDirs = [&apos;src/main/java&apos;, &apos;src/main/java-gen&apos;]</div><div class="line">        &#125;</div><div class="line">    &#125;</div></pre></td></tr></table></figure>
+<p>要注意括号匹配，是填yunyong写在android模块下，而不是buildTypes模块下。填写完该代码后，该文件的右上方会有一个 Sync Now，点击就Ok了，此时返回android 视图，会发现多出一个jniLibs文件。</p>
+<p>到此，第一种配置就完成了。当然可能大家对第7步有异议，其实也可以如下操作：<br>在OpenCV的解压包中，将sdk—&gt;native—&gt;libs文件夹复制，粘贴在Project视图下app—&gt;src—&gt;main目录下，并将其重命名为jniLibs。这种作法等同于我之前讲的。</p>
+<h3 id="C-代码中配置OpenCV环境"><a href="#C-代码中配置OpenCV环境" class="headerlink" title="C++代码中配置OpenCV环境"></a>C++代码中配置OpenCV环境</h3><p>因为有时我们可能需要在android中编写C++代码，有时会在C++代码中调用OpenCV的库，这时候我们应该怎么配置呢？<br>因为android中编写C++代码是需要NDK的支持，其实自从android studio出了2.2版本后直接可以在创建工程时添加NDK支持了，添加之后main文件夹下会多出一个native-lib.cpp这个文件，如果只是为了一个简单的NDK接口，貌似这样就结束了，直接在该cpp文件下编程即可。</p>
+<p>但是，如果使用第三方库，就得重新配置了。到目前为止，网上大半文章都是.mk的配置方法。android studio 2.2使用Cmake作为跨平台编译工具，创建完一个工程后，JNI的配置都是由Cmake来管理，在project文件夹下的CmakeList文件中。Cmake有自己的编写规则，最好去官网看一下语法。下面就开始C++配置OpenCV环境，你只需要在CmakeList文件中添加上这几句话就可以了。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">include_directories(/home/fxr/Android/OpenCV-android-sdk/sdk/native/jni/include)</div><div class="line">add_library(lib_opencv SHARED IMPORTED)</div><div class="line">set_target_properties(lib_opencv</div><div class="line">                      PROPERTIES IMPORTED_LOCATION</div><div class="line">                      /home/fxr/Android/OpenCV-android-sdk/sdk/native/libs/$&#123;ANDROID_ABI&#125;/libopencv_java3.so)</div></pre></td></tr></table></figure>
+<p>将之前的target_link_libraties模块换成以下这个</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">target_link_libraries( # Specifies the target library.</div><div class="line">                       native-lib</div><div class="line"></div><div class="line">                       # Links the target library to the log library</div><div class="line">                       # included in the NDK.</div><div class="line">                       $&#123;log-lib&#125;</div><div class="line">                       lib_opencv )</div></pre></td></tr></table></figure>
+<p>这样应该就可以在C++文件中调用OpenCV的库了。</p>
+<p><strong>注意：将其中的路径换成你自己的</strong></p>
+<p>上面添加的几句话可以做如下解释：</p>
 <blockquote>
-<p>TensorFlow 的名字已经说明了它最重要的两个概念—Tensor和Flow。Tensor就是张量，Flow翻译成中文就是“流”，它直观的表达了张量之间通过计算相互转化的过程。</p>
+<p>1 <figure class="highlight plain"><figcaption><span>#添加ffmpeg对应的头文件目录,```$&#123;pathToFFMPEG&#125;```为前面配置过的路径,可以替换为```include_directories(E:/ffmpeg/include)```这种路径格式</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&gt; 2 ```add_library( ffmpeg SHARED IMPORTED)``` #添加库文件，实际上就是引入so文件,IMPORT代表从第三方引入的意思</div><div class="line">&gt; </div><div class="line">3 ```set_target_properties( ffmpeg PROPERTIES IMPORTED_LOCATION $&#123;pathToProject&#125;/app/src/main/jniLibs/$&#123;ANDROID_ABI&#125;/libffmpeg.so```#这句话是ffmpeg对应的so文件,so文件是放到JNILibs这个文件夹中 </div><div class="line">&gt;</div><div class="line">4 ```target_link_libraries( $\&#123;log-lib&#125; native-lib ffmpeg)```#为native-lib加载ffmpeg库.</div><div class="line"></div><div class="line"></div><div class="line">这样配置好就可以在native-lib里调用ffmpeg模块了</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">##### 附加</div><div class="line">如果是自己编写的CPP文件，只需做如下变化</div></pre></td></tr></table></figure></p>
 </blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <center>
-              <a class="btn" href="/TensorFlow中的维度和shape的理解/#more" rel="contents">
-               阅读全文
-              </a>
-            <center>
-          </div>
-          <!--/noindex-->
-        
+<p>add_library(coreAlg SHARED src/main/cpp/coreAlg.cpp )#添加库文件,这种实际上是有AS给编译成so文件了<br>target_link_libraries(native-lib ${log-lib} coreAlg)#native-lib里调用coreAlg<br>```</p>
+<p>参考：</p>
+<p><a href="http://www.jianshu.com/p/7f0cc055c05f" target="_blank" rel="external">http://www.jianshu.com/p/7f0cc055c05f</a></p>
+<p><a href="http://www.cnblogs.com/meadow-glog/p/6130568.html" target="_blank" rel="external">http://www.cnblogs.com/meadow-glog/p/6130568.html</a></p>
+
       
     </div>
     
@@ -790,662 +558,115 @@
     
 
     
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
 
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpeg" alt="SeaBaby WeChat Pay"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpeg" alt="SeaBaby Alipay"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    SeaBaby
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://fengxru.cn/android-studio-如何配置OpenCV的/" title="android studio 如何配置OpenCV的">http://fengxru.cn/android-studio-如何配置OpenCV的/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
     
 
     <div>
       
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
+        <div>
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://fengxru.cn/分式方程应用题分类讲解/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SeaBaby">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SeaBaby">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/分式方程应用题分类讲解/" itemprop="url">分式方程应用各个类型案例讲解</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-18T22:42:18+08:00">
-                2018-05-18
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-19T10:59:31+08:00">
-                2018-05-19
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/家教/" itemprop="url" rel="index">
-                    <span itemprop="name">家教</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/分式方程应用题分类讲解/" class="leancloud_visitors" data-flag-title="分式方程应用各个类型案例讲解">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          <span class="post-meta-divider">|</span>
-
-
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  2,907
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  11
-                </span>
-              
-            </div>
-          
-
-          
-
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
         </div>
-      </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p><img src="https://ws3.sinaimg.cn/large/006tKfTcly1frggs2s4j5j30sg0iztbk.jpg" alt=""><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <center>
-              <a class="btn" href="/分式方程应用题分类讲解/#more" rel="contents">
-               阅读全文
-              </a>
-            <center>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-
-
-    
-
-    
-
-    
-
-    <div>
+</div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://fengxru.cn/GMS-Grid-base Motion Statistics for Fast，Ultra-robust Feature Correspondence/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SeaBaby">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SeaBaby">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/GMS-Grid-base Motion Statistics for Fast，Ultra-robust Feature Correspondence/" itemprop="url">基于网格的运动统计，用于快速、超鲁棒性的匹配</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-16T09:54:41+08:00">
-                2018-05-16
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-18T13:27:07+08:00">
-                2018-05-18
-              </time>
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/论文/" itemprop="url" rel="index">
-                    <span itemprop="name">论文</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Android-studio/" rel="tag"><i class="fa fa-tag"></i>Android studio</a>
           
-
+            <a href="/tags/opencv/" rel="tag"><i class="fa fa-tag"></i>opencv</a>
           
-            
-          
-
-          
-          
-             <span id="/GMS-Grid-base Motion Statistics for Fast，Ultra-robust Feature Correspondence/" class="leancloud_visitors" data-flag-title="基于网格的运动统计，用于快速、超鲁棒性的匹配">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          <span class="post-meta-divider">|</span>
-
-
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  6,273
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  22
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
+      
+        <div class="post-widgets">
         
-          <p><img src="https://ws1.sinaimg.cn/large/006tNc79ly1frd3ed5h5jj30dw07twf9.jpg" alt=""><br>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <center>
-              <a class="btn" href="/GMS-Grid-base Motion Statistics for Fast，Ultra-robust Feature Correspondence/#more" rel="contents">
-               阅读全文
-              </a>
-            <center>
+          <div class="wp_rating">
+          <div style="color:rgb(0, 0, 0); font-size:13px; letter-spacing:3px;">看完记得五星好评哦亲～</div>
+            <div id="wpac-rating"></div>
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-
-
-    
-
-    
-
-    
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://fengxru.cn/Mac常用快捷键教程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SeaBaby">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SeaBaby">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/Mac常用快捷键教程/" itemprop="url">Mac常用快捷键教程</a></h1>
         
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-08T23:38:49+08:00">
-                2018-05-08
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-05-09T13:08:47+08:00">
-                2018-05-09
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Mac/" itemprop="url" rel="index">
-                    <span itemprop="name">Mac</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/Mac常用快捷键教程/" class="leancloud_visitors" data-flag-title="Mac常用快捷键教程">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          <span class="post-meta-divider">|</span>
-
-
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  613
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">阅读时长</span>
-                
-                <span title="阅读时长">
-                  2
-                </span>
-              
-            </div>
-          
-
-          
-
+        
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
       
 
       
-        
-          <p><img src="https://ws4.sinaimg.cn/large/006tNc79ly1fr4czzw6xfj312s0ny4f3.jpg" alt=""></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <center>
-              <a class="btn" href="/Mac常用快捷键教程/#more" rel="contents">
-               阅读全文
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/Mac安装opencv3并在python中运用/" rel="next" title="Mac安装opencv3并在pycharm中运用">
+                <i class="fa fa-chevron-left"></i> Mac安装opencv3并在pycharm中运用
               </a>
-            <center>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
 
+          <span class="post-nav-divider"></span>
 
-
-    
-
-    
-
-    
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1455,14 +676,11 @@
   </article>
 
 
-    
-  </section>
 
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -1470,6 +688,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -1490,8 +712,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.JPG"
@@ -1614,6 +845,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#android-studio-如何配置OpenCV的"><span class="nav-number">1.</span> <span class="nav-text">android studio 如何配置OpenCV的</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#只写java版的OpenCV环境配置"><span class="nav-number">1.1.</span> <span class="nav-text">只写java版的OpenCV环境配置</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C-代码中配置OpenCV环境"><span class="nav-number">2.</span> <span class="nav-text">C++代码中配置OpenCV环境</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -1733,10 +980,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -2249,6 +1496,23 @@
 
 
   
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 7914,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
 
   
   
