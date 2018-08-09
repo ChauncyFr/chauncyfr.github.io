@@ -115,7 +115,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="SeaBaby" type="application/atom+xml" />
+  <link rel="alternate" href="/atom.xml" title="疯狂的戈多" type="application/atom+xml" />
 
 
 
@@ -132,7 +132,7 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="android studio 如何配置OpenCV的">
 <meta property="og:url" content="http://fengxru.cn/android-studio-如何配置OpenCV的/index.html">
-<meta property="og:site_name" content="SeaBaby">
+<meta property="og:site_name" content="疯狂的戈多">
 <meta property="og:description" content="讲解了如何在Android studio中配置opencv">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://odl86bwkg.bkt.clouddn.com/a.png">
@@ -144,7 +144,7 @@
 <meta property="og:image" content="http://odl86bwkg.bkt.clouddn.com/h.png">
 <meta property="og:image" content="http://odl86bwkg.bkt.clouddn.com/k.png">
 <meta property="og:image" content="http://odl86bwkg.bkt.clouddn.com/l.png">
-<meta property="og:updated_time" content="2018-08-01T11:30:49.783Z">
+<meta property="og:updated_time" content="2018-08-01T11:34:42.723Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="android studio 如何配置OpenCV的">
 <meta name="twitter:description" content="讲解了如何在Android studio中配置opencv">
@@ -183,7 +183,7 @@
 
 
 
-  <title>android studio 如何配置OpenCV的 | SeaBaby</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>android studio 如何配置OpenCV的 | 疯狂的戈多</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -222,7 +222,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">SeaBaby</span>
+        <span class="site-title">疯狂的戈多</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -366,13 +366,13 @@
     <link itemprop="mainEntityOfPage" href="http://fengxru.cn/android-studio-如何配置OpenCV的/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="SeaBaby">
+      <meta itemprop="name" content="戈多">
       <meta itemprop="description" content="">
       <meta itemprop="image" content="/images/avatar.JPG">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="SeaBaby">
+      <meta itemprop="name" content="疯狂的戈多">
     </span>
 
     
@@ -409,7 +409,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-08-01T19:30:49+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-08-01T19:34:42+08:00">
                 2018-08-01
               </time>
             
@@ -540,7 +540,7 @@
 <p><strong>注意：将其中的路径换成你自己的</strong></p>
 <p>上面添加的几句话可以做如下解释：</p>
 <blockquote>
-<p>1 <figure class="highlight plain"><figcaption><span>#添加ffmpeg对应的头文件目录,```$&#123;pathToFFMPEG&#125;```为前面配置过的路径,可以替换为```include_directories(E:/ffmpeg/include)```这种路径格式</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">&gt; 2 ```add_library( ffmpeg SHARED IMPORTED)``` #添加库文件，实际上就是引入so文件,IMPORT代表从第三方引入的意思</div><div class="line">&gt; </div><div class="line">3 ```set_target_properties( ffmpeg PROPERTIES IMPORTED_LOCATION $&#123;pathToProject&#125;/app/src/main/jniLibs/$&#123;ANDROID_ABI&#125;/libffmpeg.so```#这句话是ffmpeg对应的so文件,so文件是放到JNILibs这个文件夹中 </div><div class="line">&gt;</div><div class="line">4 ```target_link_libraries( $\&#123;log-lib&#125; native-lib ffmpeg)```#为native-lib加载ffmpeg库.</div><div class="line"></div><div class="line"></div><div class="line">这样配置好就可以在native-lib里调用ffmpeg模块了</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">##### 附加</div><div class="line">如果是自己编写的CPP文件，只需做如下变化</div></pre></td></tr></table></figure></p>
+<p>1 <figure class="highlight plain"><figcaption><span>#添加ffmpeg对应的头文件目录,```$&#123;pathToFFMPEG&#125;```为前面配置过的路径,可以替换为```include_directories(E:/ffmpeg/include)```这种路径格式</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&gt;</div><div class="line">&gt; 2 ```add_library( ffmpeg SHARED IMPORTED)``` #添加库文件，实际上就是引入so文件,IMPORT代表从第三方引入的意思</div><div class="line">&gt; </div><div class="line">&gt; 3 ```set_target_properties( ffmpeg PROPERTIES IMPORTED_LOCATION $&#123;pathToProject&#125;/app/src/main/jniLibs/$&#123;ANDROID_ABI&#125;/libffmpeg.so```#这句话是ffmpeg对应的so文件,so文件是放到JNILibs这个文件夹中</div><div class="line">&gt;  </div><div class="line">&gt; 4 ```target_link_libraries( $\&#123;log-lib&#125; native-lib ffmpeg)```#为native-lib加载ffmpeg库.</div><div class="line"></div><div class="line"></div><div class="line">这样配置好就可以在native-lib里调用ffmpeg模块了</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">##### 附加</div><div class="line">如果是自己编写的CPP文件，只需做如下变化</div></pre></td></tr></table></figure></p>
 </blockquote>
 <p>add_library(coreAlg SHARED src/main/cpp/coreAlg.cpp )#添加库文件,这种实际上是有AS给编译成so文件了<br>target_link_libraries(native-lib ${log-lib} coreAlg)#native-lib里调用coreAlg<br>```</p>
 <p>参考：</p>
@@ -568,14 +568,14 @@
 
     
       <div id="wechat" style="display: inline-block">
-        <img id="wechat_qr" src="/images/wechatpay.jpeg" alt="SeaBaby WeChat Pay"/>
+        <img id="wechat_qr" src="/images/wechatpay.jpeg" alt="戈多 WeChat Pay"/>
         <p>微信支付</p>
       </div>
     
 
     
       <div id="alipay" style="display: inline-block">
-        <img id="alipay_qr" src="/images/alipay.jpeg" alt="SeaBaby Alipay"/>
+        <img id="alipay_qr" src="/images/alipay.jpeg" alt="戈多 Alipay"/>
         <p>支付宝</p>
       </div>
     
@@ -593,7 +593,7 @@
         <ul class="post-copyright">
   <li class="post-copyright-author">
     <strong>本文作者：</strong>
-    SeaBaby
+    戈多
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
@@ -726,8 +726,8 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.JPG"
-               alt="SeaBaby" />
-          <p class="site-author-name" itemprop="name">SeaBaby</p>
+               alt="戈多" />
+          <p class="site-author-name" itemprop="name">戈多</p>
            
               <p class="site-description motion-element" itemprop="description">如无必要，勿增实体 -- be simple</p>
           
