@@ -4,6 +4,48 @@
 
     
   <url>
+    <loc>http://fengxru.cn/DeepLab%20V1/</loc>
+    <lastmod>2018-10-14T09:58:36.649Z</lastmod>
+    <data>
+        <display>
+        <title>DeepLab V1</title>
+        <pubTime>2018-10-14T05:12:04.000Z</pubTime>
+        
+        <tag>语义分割</tag>
+         
+        <tag>深度学习</tag>
+         
+         
+           
+             
+              <breadCrumb title="深度学习" url="http://fengxru.cn/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://fengxru.cn/%E6%B5%8B%E8%AF%952/</loc>
+    <lastmod>2018-10-14T09:58:32.959Z</lastmod>
+    <data>
+        <display>
+        <title>测试</title>
+        <pubTime>2018-05-28T05:12:04.000Z</pubTime>
+        
+        <tag>hexo</tag>
+         
+         
+           
+             
+              <breadCrumb title="hexo" url="http://fengxru.cn/categories/hexo/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://fengxru.cn/android-studio-%E5%A6%82%E4%BD%95%E9%85%8D%E7%BD%AEOpenCV%E7%9A%84/</loc>
     <lastmod>2018-08-01T11:34:42.723Z</lastmod>
     <data>
@@ -72,26 +114,6 @@
     
     
   <url>
-    <loc>http://fengxru.cn/%E6%B5%8B%E8%AF%952/</loc>
-    <lastmod>2018-05-30T15:05:28.708Z</lastmod>
-    <data>
-        <display>
-        <title>测试</title>
-        <pubTime>2018-05-28T05:12:04.000Z</pubTime>
-        
-        <tag>hexo</tag>
-         
-         
-           
-             
-              <breadCrumb title="hexo" url="http://fengxru.cn/categories/hexo/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://fengxru.cn/photoPostName/</loc>
     <lastmod>2018-05-30T12:06:14.480Z</lastmod>
     <data>
@@ -139,9 +161,9 @@
         <title>TensorFlow中的维度和shape的理解</title>
         <pubTime>2018-05-26T02:59:33.000Z</pubTime>
         
-        <tag>TensorFlow</tag>
-         
         <tag>深度学习</tag>
+         
+        <tag>TensorFlow</tag>
          
          
            
