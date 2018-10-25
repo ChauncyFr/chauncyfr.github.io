@@ -140,6 +140,7 @@
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fw7t1ewbdfj30bw06nq2y.jpg">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fw7slgbthwj30gb0aiq39.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwly1fw7t7jyv7qj30z90cl760.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fwkhmp6ha6j30d207o759.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwly1fw7v9ln48pj308h0erdga.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwly1fw7vkgmq88j30y10ekjsq.jpg">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fw7vlbpysej313c0e8q59.jpg">
@@ -147,7 +148,7 @@
 <meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNbRwly1fw7w7div4sj31170i2q5r.jpg">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fw7w9m4yefj313a0e4q55.jpg">
 <meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fw7wb68315j3138080t9p.jpg">
-<meta property="og:updated_time" content="2018-10-14T10:04:21.170Z">
+<meta property="og:updated_time" content="2018-10-25T07:13:31.741Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DeepLab V1">
 <meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006tNbRwly1fw7wl5q3xlj31ko0s8djq.jpg">
@@ -411,8 +412,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-14T18:04:21+08:00">
-                2018-10-14
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-25T15:13:31+08:00">
+                2018-10-25
               </time>
             
           </span>
@@ -572,7 +573,8 @@
 <script type="math/tex; mode=display">H(p) = \sum_i{p(i) * log \frac{1}{p(i)}}</script><p>这和逻辑回归的损失函数是一样，只是将2类拓展到多类。</p>
 </li>
 </ol>
-<h4 id="2-Controlling-the-network‘s-respective-field-size"><a href="#2-Controlling-the-network‘s-respective-field-size" class="headerlink" title="2. Controlling the network‘s respective field size"></a>2. Controlling the network‘s respective field size</h4><ol>
+<h4 id="2-Controlling-the-network‘s-respective-field-size"><a href="#2-Controlling-the-network‘s-respective-field-size" class="headerlink" title="2. Controlling the network‘s respective field size"></a>2. Controlling the network‘s respective field size</h4><p>   <img src="https://ws3.sinaimg.cn/large/006tNbRwly1fwkhmp6ha6j30d207o759.jpg" alt=""></p>
+<ol>
 <li><p>对FC6的卷积核直接降采样</p>
 <ul>
 <li>因为之前的Fc layer种，计算量相对较小（VGG第一个fc layer为1*1*4096），而改为fully convolutional layer之后，大小变成了 7*7*4096，这大大增加了计算量核存储空间，因此将其size进行缩减，变成4*4或者3*3，减少参数量。（直接从7x7的范围中抽取4x4或者3x3的范围以减少计算量，计算时间比原来减少了2-3倍）</li>
