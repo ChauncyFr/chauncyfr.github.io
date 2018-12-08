@@ -109,7 +109,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="xiangru" />
+  <meta name="keywords" content="深度学习,卷积," />
 
 
 
@@ -127,16 +127,26 @@
 
 
 
-<meta name="description" content="如无必要，勿增实体 -- be simple">
-<meta property="og:type" content="website">
-<meta property="og:title" content="疯狂的戈多">
-<meta property="og:url" content="http://fengxru.cn/archives/2017/index.html">
+<meta name="keywords" content="深度学习,卷积">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MobileNet V2">
+<meta property="og:url" content="http://fengxru.cn/MobileNetV2- Inverted Residuals and Linear Bottlenecks/index.html">
 <meta property="og:site_name" content="疯狂的戈多">
-<meta property="og:description" content="如无必要，勿增实体 -- be simple">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNbRwly1fxyny7ime8j30q00eijt3.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNbRwly1fxzbe85gs8j30xy08kmxn.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNbRwly1fxyp3at5ojj30si0jot9o.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fxypn1cp71j30qg08kwey.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fxzciinv17j30ne0hy3zj.jpg">
+<meta property="og:image" content="https://ws2.sinaimg.cn/large/006tNbRwly1fxzcnkg501j30ea0foglz.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNbRwly1fxzcpibnavj30k00ecdga.jpg">
+<meta property="og:image" content="https://ws4.sinaimg.cn/large/006tNbRwly1fxzcshm9olj30kc08iwew.jpg">
+<meta property="og:image" content="https://ws3.sinaimg.cn/large/006tNbRwly1fxzct3valzj30jy0760sx.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006tNbRwly1fxzcud9npkj30ki0aiaaf.jpg">
+<meta property="og:updated_time" content="2018-12-08T07:27:05.822Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="疯狂的戈多">
-<meta name="twitter:description" content="如无必要，勿增实体 -- be simple">
+<meta name="twitter:title" content="MobileNet V2">
+<meta name="twitter:image" content="https://ws2.sinaimg.cn/large/006tNbRwly1fxyny7ime8j30q00eijt3.jpg">
 
 
 
@@ -165,13 +175,13 @@
 
 
 
-  <link rel="canonical" href="http://fengxru.cn/archives/2017/"/>
+  <link rel="canonical" href="http://fengxru.cn/MobileNetV2- Inverted Residuals and Linear Bottlenecks/"/>
 
 
 
 
 
-  <title>归档 | 疯狂的戈多</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  <title>MobileNet V2 | 疯狂的戈多</title><!-- hexo-inject:begin --><!-- hexo-inject:end -->
   
 
 
@@ -196,7 +206,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left  page-archive  ">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <a href="https://github.com/ChauncyFr" class="github-corner" aria-label="View source on Github"><svg width="129" height="129" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
@@ -337,148 +347,410 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://fengxru.cn/MobileNetV2- Inverted Residuals and Linear Bottlenecks/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="戈多">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="疯狂的戈多">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">MobileNet V2</h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-12-08T11:24:07+08:00">
+                2018-12-08
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-12-08T15:27:05+08:00">
+                2018-12-08
+              </time>
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 17 篇日志。 继续努力。
-      </span>
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/深度学习/" itemprop="url" rel="index">
+                    <span itemprop="name">深度学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/MobileNetV2- Inverted Residuals and Linear Bottlenecks/" class="leancloud_visitors" data-flag-title="MobileNet V2">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          <span class="post-meta-divider">|</span>
+
+
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  3,161
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长</span>
+                
+                <span title="阅读时长">
+                  12
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
-        
-        
-        
+      
+        <hr>
 
-        
+
+<a id="more"></a>
+<h2 id="论文动机"><a href="#论文动机" class="headerlink" title="论文动机"></a>论文动机</h2><blockquote>
+<p>神经网络在机器智能的很多领域都有革命性的改进，在图像识别的领域精确度已经超过人类。然而，为了提高精确度尝尝会带来消耗，需要更高的计算资源，是很多手机和嵌入式设备所不具有的。这篇文章介绍了一个新的神经网络结构，是专门为手机和资源有限的环境量身定制的。该网络通过减少计算次数和内存占用，推进了为移动设备量身定制的计算机视觉模型达到了一个更先进的水平。</p>
+<p>本文是Google团队在<strong>MobileNet基础上提出的MobileNet V2</strong>，实现分类、目标检测、语义分割多目标任务</p>
+<p>主要贡献是具有<strong>线性瓶颈的倒置残差</strong>。 该模块将低维压缩的输入，首先扩展到高维，并使用轻量级深度卷积进行过滤。 随后通过<strong>线性卷积</strong>将特征投影回低维表示。</p>
+</blockquote>
+<h2 id="Preliminaries-discussion-and-intuition"><a href="#Preliminaries-discussion-and-intuition" class="headerlink" title="Preliminaries, discussion and intuition"></a>Preliminaries, discussion and intuition</h2><h3 id="Depthwise-Separable-Convolutions"><a href="#Depthwise-Separable-Convolutions" class="headerlink" title="Depthwise Separable Convolutions"></a>Depthwise Separable Convolutions</h3><blockquote>
+<p>Depthwise Separable Convolutions已经在MobileNet V1 中讲过，其基本思想：<strong>将标准卷积差分为两个卷积：深度卷积（depthwise convolution）和逐点卷积（pointwise convolution）。</strong></p>
+</blockquote>
+<ul>
+<li>深度卷积：对每个输入通道应用单通道的轻量级滤波器（即，深度卷积后，通道数不变，是单独分别对每个通道进行卷积）</li>
+<li>逐点卷积：负责计算通道的线性组合构建新的特征（即此时用 1*1 的卷积核对深度卷积后的所有的通道进行卷积操作，不再是单独分别卷积了）</li>
+</ul>
+<p>标准卷积 $L_i$ 为 $h_i <em> w_i </em> d_i$，应用 $k<em>k$ 的卷积核产生输出 $L_j$ 为 $h_i </em> w_i * d_j $</p>
+<ul>
+<li>标准卷积的计算消耗为：$h_i <em> w_i </em> d_j <em> k </em> k * d_i$</li>
+<li>拆分后深度分离卷积计算消耗为：$h_i <em> w_i </em> d_j <em> d_i  + h_i </em> w_i <em> d_i </em> k <em> k = h_i </em> w_i *  d_i (k^2 +d_j)$</li>
+</ul>
+<p>计算消耗比例因子为：$\frac{k^2d_j}{k^2+d_j}$</p>
+<p>MobileNet V2 中使用的卷积核大小 k = 3，与标准卷积相比计算量减少了 8~9倍，精读上有略微的损失。</p>
+<p><strong>注：对于计算消耗如何算出来的，可以从卷积得到后feature map大小进行计算。</strong>比如标准卷积，卷积后的feature map 为：$L_j$ 为 $h_i <em> w_i </em> d_j $ ，所以 卷积后的feature map 有 <strong>$h_i <em> w_i </em> d_j$</strong> 个点，每个点是由 $k <em> k </em> d_i$ 次计算得到的，所以标准卷积的计算消耗为：$h_i <em> w_i </em> d_j <em> k </em> k * d_i$</p>
+<h3 id="Linear-Bottlenecks"><a href="#Linear-Bottlenecks" class="headerlink" title="Linear Bottlenecks"></a>Linear Bottlenecks</h3><p>这部分论文中的理论很难理解，我先说我个人看完论文理论部分和网上博客讲解后的个人见解</p>
+<h4 id="个人见解"><a href="#个人见解" class="headerlink" title="个人见解"></a>个人见解</h4><p>当channel 的个数比较少的时候，所有的信息都集中在比较窄的channel中，这时候进行非线性激活函数ReLU，会丢失很多信息。而在MobileNet V1中引入了一个超参数 width multiplier会缩减channel，这样看起来就像一个瓶子的颈部一样，这个时候用ReLU激活函数会丢失掉不少的信息，造成精度低。</p>
+<p>看一张论文中关于 ReLU 变换导致丢失信息的的图解：</p>
+<p><img src="https://ws2.sinaimg.cn/large/006tNbRwly1fxyny7ime8j30q00eijt3.jpg" alt=""></p>
+<p>注：input 是一张2维数据，其中<strong>manifold of interest</strong>是蓝色的螺纹线；使用随机矩阵 T 将数据嵌入到 n 维空间汇总，后接ReLU，再使用$T^{-1}$将其投影回2D平面</p>
+<p><strong>由上图可以看出，n=2、3时信息丢失严重，中心点坍塌。当n=15……30之间，恢复的信息明显增多了。</strong></p>
+<p>所以我们经过上图可以得出，当channel越小，丢失的信息越多，当channel越大，丢失的信息越少。其实不难理解。如果channel为2时，信息都集中在这两个channel中，如果有部分数值小于0就会被ReLU激活丢失掉。如果channel 为30 其实信息是分散的，而且具有冗余，所以通过ReLU激活后归于0的值可能在其他的通道中还存在，便不会影响太多信息的存储。</p>
+<p>所以作者建议<strong>对于channel数很少的那些层（即低维空间时）做线性激活代替原本的ReLU非线性激活。</strong><br>所以优化网络架构的思路就出来了：通过在卷及模块后插入<strong>linear bottlenecks</strong>来捕获<strong>感兴趣特征</strong>实验证明，使用linear bottlenecks可以防止非线性破坏太多信息。</p>
+<p>bottleneck就表示缩减的层，linear bottleneck表示对channel缩减的层做线性激活。如果要用ReLU激活就需要先增加channel数再做ReLU。</p>
+<h4 id="论文中两个结论"><a href="#论文中两个结论" class="headerlink" title="论文中两个结论"></a>论文中两个结论</h4><p>这里我直记录文章中的两个结论。至于论文中其余的理论讲解，我很难讲述出来，但是上面的个人见解我认为已经将这一结构讲述清楚了，如果直接看论文，恐怕会被理论搞糊涂。</p>
+<blockquote>
+<pre><code>1. If the **manifold of interest** remains non-zero volume after ReLU transformation, it corresponds to a linear transformation. (感兴趣区域在ReLU之后保持非零的区域，近似认为是线性变换。可以从ReLU的曲线中得到！)
+
+2. ReLU is capable of preserving complete information about the input manifold, but only if the input manifold lies in a low-dimensional subspace of the input space. （ReLU能够保持输入信息的完整性，但仅限于输入特征位于输入空间的**低维子空间中**）
+</code></pre></blockquote>
+<p>首先对于结论1中的<strong>manifold of interest</strong>概念说一下：</p>
+<ul>
+<li>manifold of interest：作者将 $w<em>h</em>c$ 的一个feature map 理解特征图上的一个点有 <strong>c</strong>维特征！而<strong>manifold of interest</strong> 表示对于我们分类或者识别任务有用的特征，显然要提高分类识别精度，则 <strong>manifold of interest</strong> 需要分布在这c维特征空间或其子空间中！，这就是 <strong>manifold of interest</strong>索要表到的意思。</li>
+</ul>
+<hr>
+<h4 id="bottleneck-convolution-的基本实现"><a href="#bottleneck-convolution-的基本实现" class="headerlink" title="bottleneck convolution 的基本实现"></a>bottleneck convolution 的基本实现</h4><blockquote>
+<p>根据上面个人理解和论文中的两个结论，我们可以就可以知道如何搭建这个网络了。</p>
+</blockquote>
+<ol>
+<li>首先借助结论2，假设输入特征图中包含了分类识别所需的所有特征分布（manifold of interest）在输入的c个维度中。因此我们首先将输入维度进行拓展，拓展成 <strong>t*c</strong>个维度（t&gt;1,论文中为6）。因此此时<strong>manifold of interest</strong>分布在 <strong>t*c</strong>的子空间中，这时候，根据前面的推论，高纬度时，ReLU不会损失太多信息，所以可以采用ReLU激活函数保留输入的特征，而且ReLU还可以增加一些复杂性可以更好地提升性能。</li>
+<li>然后借助结论1，通过ReLU激活函数之后，特征的维度依然是<strong>t*c</strong>，这时候缩小其特征维度变成 c’,相当于对于<strong>manifold of interest</strong>进行了维度压缩，当然这些特征都是非0的，因此，按照结论1，ReLU对非0的特征相当于做了一个线性的映射，因此，就可以去掉ReLU激活函数。</li>
+</ol>
+<p>所以根据以上两个步骤，我们就可以理解bottleneck的结构，如下表，由如下的三个部分构成：：<br><img src="https://ws2.sinaimg.cn/large/006tNbRwly1fxzbe85gs8j30xy08kmxn.jpg" alt=""></p>
+<ul>
+<li>首先是<strong>1*1 conv2d</strong>变换通道，后接ReLU6激活（ReLU6即最高输出为6，超过了会clip下来）</li>
+<li>中间是深度卷积，后接ReLU</li>
+<li>最后是<strong>1*1 conv2d</strong>后面不接ReLU了，而是论文中提出的linear bottleneck</li>
+</ul>
+<p><strong>注：论文中扩张系数 t 为6</strong></p>
+<h3 id="Inverted-residuals"><a href="#Inverted-residuals" class="headerlink" title="Inverted residuals"></a>Inverted residuals</h3><p><img src="https://ws4.sinaimg.cn/large/006tNbRwly1fxyp3at5ojj30si0jot9o.jpg" alt=""></p>
+<ul>
+<li>a. 普通结果使用标准卷积将空间合同到信息一起映射到下一层，参数和计算量会比较大</li>
+<li>b. MobileNet V1中使用的深度可分离卷积</li>
+<li>c和d图是MobileNet V2的结构（c、d图其实是从模型不同起点观看形成的图，d是c的下一个连接状态）</li>
+</ul>
+<hr>
+<p>下图是普通的residual block 与 inverted residual block之间的对比<br><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fxypn1cp71j30qg08kwey.jpg" alt=""></p>
+<ul>
+<li>每个长方体的厚度代表通道数</li>
+<li>a为传统的residual block。结构为： 1 <em> 1卷积（降维）+ ReLU -&gt; 3 </em> 3卷积 + ReLU -&gt; 1 * 1卷积（升维）+ ReLU</li>
+<li>b为倒置的residual block（inverted residual block）。结构为：1 <em> 1卷积（升维）+ ReLU -&gt; 3 </em> 3depthwise separable卷积 + ReLU -&gt; 1 * 1卷积（降维）（注意这里是不带ReLU的，即前面提到的linear bottleneck）。</li>
+</ul>
+<h4 id="为什么用-inverted-residual-block-而不直接用residual-block？"><a href="#为什么用-inverted-residual-block-而不直接用residual-block？" class="headerlink" title="为什么用 inverted residual block 而不直接用residual block？"></a>为什么用 inverted residual block 而不直接用residual block？</h4><blockquote>
+<p>至于为什么这么做，我们可以尝试理解一下</p>
+</blockquote>
+<p>我们知道 MobileNet V1 最大特点就是采用了<strong>depthwise separable convolution</strong>来减少运算量以及参数量，而在网络结构中没有采用<strong>shortcut</strong>（shortcut实现的方式就是residual block，其实两者算是一回事）的方式。</p>
+<p>但是我们也知道ResNet以及Densenet等一系列采用shortcut的网络的成功，表明这个shortcut是个非常好的东西，于是MobileNet V2就将这个结构拿来用。</p>
+<p>但是也不能直接拿来用啊，毕竟要适应自身的特点（depthwise separable convolution），如果直接把depthwise separable convolution应用到 residual block中，会碰到下面两个问题：</p>
+<ol>
+<li><p>DWConv layer层提取得到的特征受限于输入的通道数，若是采用以往的residual block，先“压缩”，再卷积提特征，那么DWConv layer可提取得特征就太少了，因此一开始不“压缩”，MobileNetV2反其道而行，一开始先“扩张”，本文实验“扩张”倍数为6。 通常residual block里面是 “压缩”→“卷积提特征”→“扩张”，MobileNetV2就变成了 “扩张”→“卷积提特征”→ “压缩”，因此称为Inverted residuals</p>
+</li>
+<li><p>当采用“扩张”→“卷积提特征”→ “压缩”时，在“压缩”之后会碰到一个问题，那就是Relu会破坏特征。为什么这里的Relu会破坏特征呢？这得从Relu的性质说起，Relu对于负的输入，输出全为零；而本来特征就已经被“压缩”，再经过Relu的话，又要“损失”一部分特征，因此这里不采用Relu，实验结果表明这样做是正确的，这就称为Linear bottlenecks</p>
+</li>
+</ol>
+<h2 id="模型结构"><a href="#模型结构" class="headerlink" title="模型结构"></a>模型结构</h2><h3 id="MobileNet-V2"><a href="#MobileNet-V2" class="headerlink" title="MobileNet V2"></a>MobileNet V2</h3><p><img src="https://ws3.sinaimg.cn/large/006tNbRwly1fxzciinv17j30ne0hy3zj.jpg" alt=""><br>其中：t表示“扩张”倍数，c表示输出通道数，n表示重复次数，s表示步长stride。 </p>
+<p>先说两点有误之处吧： </p>
+<ol>
+<li>第五行，也就是第7~10个bottleneck，stride=2，分辨率应该从28降低到14；如果不是分辨率出错，那就应该是stride=1； </li>
+<li>文中提到共计采用19个bottleneck，但是这里只有17个。</li>
+</ol>
+<p>注：文中已经说明n表示重复次数，比如表中第4行，n=3，stride=2，不是说重复的这三次stride都为2，只有第一次操作时，stride为2，后面重复的两次stride都为1</p>
+<p>特别的，针对 stride=1 和 stride=2 ，在block上有稍微的不同，主要是为了与<strong>shortcut的维度匹配</strong>。因此，stride=2时，不采用shortcut结构，具体如下图：<br><img src="https://ws2.sinaimg.cn/large/006tNbRwly1fxzcnkg501j30ea0foglz.jpg" alt=""></p>
+<h3 id="MobileNet-V1、MobileNet-V2和ResNet微结构对比"><a href="#MobileNet-V1、MobileNet-V2和ResNet微结构对比" class="headerlink" title="MobileNet V1、MobileNet V2和ResNet微结构对比"></a>MobileNet V1、MobileNet V2和ResNet微结构对比</h3><p><img src="https://ws4.sinaimg.cn/large/006tNbRwly1fxzcpibnavj30k00ecdga.jpg" alt=""><br>可以看到 MobileNetV2 和 ResNet 基本结构很相似。不过 ResNet 是先降维（0.25 倍）、提特征、再升维。而 MobileNetV2 则是先升维（6 倍）、提特征、再降维。</p>
+<h2 id="实验结果"><a href="#实验结果" class="headerlink" title="实验结果"></a>实验结果</h2><h3 id="ImageNet-Classification"><a href="#ImageNet-Classification" class="headerlink" title="ImageNet Classification"></a>ImageNet Classification</h3><p><img src="https://ws4.sinaimg.cn/large/006tNbRwly1fxzcshm9olj30kc08iwew.jpg" alt=""></p>
+<p> 在 ImageNet 数据集对比了 MobileNetV1、ShuffleNet，MobileNetV2 三个模型的 Top1 精度，Params 和 CPU（Google Pixel 1 phone）执行时间。MobileNetV2 运行时间 143ms，参数 6.9M，Top1 精度 74.7</p>
+<h3 id="Object-Detectio"><a href="#Object-Detectio" class="headerlink" title="Object Detectio"></a>Object Detectio</h3><p> <img src="https://ws3.sinaimg.cn/large/006tNbRwly1fxzct3valzj30jy0760sx.jpg" alt=""><br> 论文以 MobileNetV2 为基本分类网络，实现 MNet V2 + SSDLite，耗时 200ms，mAP 22.1，参数<br> 只有 4.3M。相比之下，YOLOv2 mAP 21.6，参数50.7M。模型的精度比 SSD300 和 SSD512 略低</p>
+<h3 id="Semantic-Segmentation"><a href="#Semantic-Segmentation" class="headerlink" title="Semantic Segmentation"></a>Semantic Segmentation</h3><p><img src="https://ws1.sinaimg.cn/large/006tNbRwly1fxzcud9npkj30ki0aiaaf.jpg" alt=""><br> 当前 Semantic Segmentation 性能最高的架构是 DeepLabv3，论文在 MobileNetV2 基础上实现<br> DeepLabv3，同时与基于 ResNet-101 的架构做对比，实验效果显示 MNet V2 mIOU 75.32，参数<br> 2.11M，而 ResNet-101 mIOU80.49，参数 58.16M，明显 MNet V2 在实时性方面具有优势。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p>CNN 在 CV 领域突破不断，但是在小型化性能方面却差强人意。目前 MobileNet、ShuffleNet 参数个位数（单位 M）在 ImageNet 数据集，依 top-1 而论，比 ResNet-34，VGG19 精度高，比 ResNet-50 精度低。实时性和精度是一对欢喜冤家。 </p>
+<p>本文最难理解的其实是 Linear Bottlenecks，论文中用很多公式表达这个思想，但是实现上非常简单，就是在 MobileNetV2 微结构中第二个 PW 后无 ReLU6。对于低维空间而言，进行线性映射会保存特征，而非线性映射会破坏特征。</p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
+<li><a href="https://blog.csdn.net/stesha_chen/article/details/82744320" target="_blank" rel="external">https://blog.csdn.net/stesha_chen/article/details/82744320</a></li>
+<li><a href="https://blog.csdn.net/u011974639/article/details/79199588" target="_blank" rel="external">https://blog.csdn.net/u011974639/article/details/79199588</a></li>
+<li><a href="https://blog.csdn.net/c9yv2cf9i06k2a9e/article/details/79237932" target="_blank" rel="external">https://blog.csdn.net/c9yv2cf9i06k2a9e/article/details/79237932</a></li>
+<li><a href="https://blog.csdn.net/hongbin_xu/article/details/82992589" target="_blank" rel="external">https://blog.csdn.net/hongbin_xu/article/details/82992589</a></li>
+<li><a href="https://blog.csdn.net/u014380165/article/details/79200958" target="_blank" rel="external">https://blog.csdn.net/u014380165/article/details/79200958</a></li>
+<li><a href="https://blog.csdn.net/Charel_CHEN/article/details/81281778?utm_source=blogxgwz0" target="_blank" rel="external">https://blog.csdn.net/Charel_CHEN/article/details/81281778?utm_source=blogxgwz0</a></li>
+<li><a href="https://blog.csdn.net/u011995719/article/details/79135818" target="_blank" rel="external">https://blog.csdn.net/u011995719/article/details/79135818</a></li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+
+
+    
+
+    
+      <div>
+        <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+  <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+  <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+    <span>打赏</span>
+  </button>
+  <div id="QR" style="display: none;">
+
+    
+      <div id="wechat" style="display: inline-block">
+        <img id="wechat_qr" src="/images/wechatpay.jpeg" alt="戈多 WeChat Pay"/>
+        <p>微信支付</p>
+      </div>
+    
+
+    
+      <div id="alipay" style="display: inline-block">
+        <img id="alipay_qr" src="/images/alipay.jpeg" alt="戈多 Alipay"/>
+        <p>支付宝</p>
+      </div>
+    
+
+    
+
+  </div>
+</div>
+
+      </div>
+    
+
+    
+      <div>
+        <ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者：</strong>
+    戈多
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://fengxru.cn/MobileNetV2- Inverted Residuals and Linear Bottlenecks/" title="MobileNet V2">http://fengxru.cn/MobileNetV2- Inverted Residuals and Linear Bottlenecks/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>
+    本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+
+      </div>
+    
+
+    <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">
+            -------------本文结束
+            <i class="fa fa-paw"></i>
+            感谢您的阅读-------------
+        </div>
+    
+</div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
           
-          <div class="collection-title">
-            <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+            <a href="/tags/深度学习/" rel="tag"><i class="fa fa-tag"></i>深度学习</a>
+          
+            <a href="/tags/卷积/" rel="tag"><i class="fa fa-tag"></i>卷积</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+          <div class="wp_rating">
+          <div style="color:rgb(0, 0, 0); font-size:13px; letter-spacing:3px;">看完记得五星好评哦亲～</div>
+            <div id="wpac-rating"></div>
           </div>
         
-        
 
         
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/hello-world/" itemprop="url">
-              
-                <span itemprop="name">Hello World</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-07T23:46:15+08:00"
-              content="2017-11-07" >
-          11-07
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        </div>
+      
       
 
-        
-        
-        
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/深度卷积可分离参数计算/" rel="next" title="深度卷积可分离参数计算">
+                <i class="fa fa-chevron-left"></i> 深度卷积可分离参数计算
+              </a>
+            
+          </div>
 
-        
-        
+          <span class="post-nav-divider"></span>
 
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/iTerm 2 实用快捷键/" itemprop="url">
-              
-                <span itemprop="name">iTerm 2 实用快捷键</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-02T23:47:44+08:00"
-              content="2017-11-02" >
-          11-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/密钥分发中心（KDC）/" itemprop="url">
-              
-                <span itemprop="name">密钥分发中心（KDC）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-11-02T23:46:15+08:00"
-              content="2017-11-02" >
-          11-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-    </div>
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -486,6 +758,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -506,8 +782,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.JPG"
@@ -630,6 +915,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#论文动机"><span class="nav-number">1.</span> <span class="nav-text">论文动机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Preliminaries-discussion-and-intuition"><span class="nav-number">2.</span> <span class="nav-text">Preliminaries, discussion and intuition</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Depthwise-Separable-Convolutions"><span class="nav-number">2.1.</span> <span class="nav-text">Depthwise Separable Convolutions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Linear-Bottlenecks"><span class="nav-number">2.2.</span> <span class="nav-text">Linear Bottlenecks</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#个人见解"><span class="nav-number">2.2.1.</span> <span class="nav-text">个人见解</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#论文中两个结论"><span class="nav-number">2.2.2.</span> <span class="nav-text">论文中两个结论</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#bottleneck-convolution-的基本实现"><span class="nav-number">2.2.3.</span> <span class="nav-text">bottleneck convolution 的基本实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Inverted-residuals"><span class="nav-number">2.3.</span> <span class="nav-text">Inverted residuals</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么用-inverted-residual-block-而不直接用residual-block？"><span class="nav-number">2.3.1.</span> <span class="nav-text">为什么用 inverted residual block 而不直接用residual block？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模型结构"><span class="nav-number">3.</span> <span class="nav-text">模型结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#MobileNet-V2"><span class="nav-number">3.1.</span> <span class="nav-text">MobileNet V2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#MobileNet-V1、MobileNet-V2和ResNet微结构对比"><span class="nav-number">3.2.</span> <span class="nav-text">MobileNet V1、MobileNet V2和ResNet微结构对比</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实验结果"><span class="nav-number">4.</span> <span class="nav-text">实验结果</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ImageNet-Classification"><span class="nav-number">4.1.</span> <span class="nav-text">ImageNet Classification</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-Detectio"><span class="nav-number">4.2.</span> <span class="nav-text">Object Detectio</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Semantic-Segmentation"><span class="nav-number">4.3.</span> <span class="nav-text">Semantic Segmentation</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论"><span class="nav-number">5.</span> <span class="nav-text">结论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考链接"><span class="nav-number">6.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -749,11 +1050,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
 
 
   
@@ -1267,6 +1566,23 @@
 
 
   
+  <script type="text/javascript">
+  wpac_init = window.wpac_init || [];
+  wpac_init.push({widget: 'Rating', id: 7914,
+    el: 'wpac-rating',
+    color: 'fc6423'
+  });
+  (function() {
+    if ('WIDGETPACK_LOADED' in window) return;
+    WIDGETPACK_LOADED = true;
+    var mc = document.createElement('script');
+    mc.type = 'text/javascript';
+    mc.async = true;
+    mc.src = '//embed.widgetpack.com/widget.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(mc, s.nextSibling);
+  })();
+  </script>
+
 
   
   
